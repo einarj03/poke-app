@@ -4,15 +4,20 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :profile_questions
+
   mount_uploader :photo, PhotoUploader
 
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :date_of_birth, presence: true
   validates :gender, presence: true
-  validate :positive_age
 
   def positive_age
     date_of_birth < Date.today
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
   end
 end
