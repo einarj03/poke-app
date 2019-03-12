@@ -13,7 +13,7 @@
     for: "user_profile_questions"
     )
 
-  UserProfileQuestion.create(
+  ProfileQuestion.create(
     user: User.last,
     suggestion: Suggestion.last,
     answer: Faker::Creature::Animal.name
