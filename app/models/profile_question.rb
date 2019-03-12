@@ -1,4 +1,4 @@
-class UserProfileQuestion < ApplicationRecord
+class ProfileQuestion < ApplicationRecord
   belongs_to :suggestion
   belongs_to :user
 
