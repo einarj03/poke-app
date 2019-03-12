@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_12_120540) do
+
+ActiveRecord::Schema.define(version: 2019_03_12_111541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "blocks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,6 +30,23 @@ ActiveRecord::Schema.define(version: 2019_03_12_120540) do
     t.integer "reporter_id"
     t.integer "reportee_id"
     t.text "description"
+=======
+  create_table "suggestions", force: :cascade do |t|
+    t.text "content"
+    t.string "for"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_profile_questions", force: :cascade do |t|
+    t.bigint "suggestion_id"
+    t.bigint "user_id"
+    t.text "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["suggestion_id"], name: "index_user_profile_questions_on_suggestion_id"
+    t.index ["user_id"], name: "index_user_profile_questions_on_user_id"
+>>>>>>> master
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,8 +67,11 @@ ActiveRecord::Schema.define(version: 2019_03_12_120540) do
     t.float "longitude"
     t.float "latitude"
     t.date "location_updated_at"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "user_profile_questions", "suggestions"
+  add_foreign_key "user_profile_questions", "users"
 end
