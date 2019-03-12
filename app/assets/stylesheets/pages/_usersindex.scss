@@ -1,0 +1,27 @@
+.orbit {
+  position: relative;
+  width: 375px;
+  height: 812px;
+
+  background: #916AD0;
+}
+
+.outer-circle {
+  position: absolute;
+  width: 654px;
+  height: 654px;
+  left: -141px;
+  top: 98px;
+
+  background: radial-gradient(168.80px at 50% 74.19%, #794EBF 0%, rgba(73, 40, 127, 0) 100%);
+}
+
+.inner-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 36px;
+  top: 263px;
+
+  background: radial-gradient(77.43px at 50% 74.19%, #2E1852 0%, rgba(73, 40, 127, 0) 100%);
+}
