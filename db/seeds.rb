@@ -9,7 +9,7 @@
     )
 
   Suggestion.create(
-    content: Faker::ChuckNorris.fact,
+    content: Faker::TvShows::HowIMetYourMother.quote,
     for: "user_profile_questions"
     )
 
@@ -19,3 +19,12 @@
     answer: Faker::Creature::Animal.name
     )
 end
+
+  User.create(
+    first_name: "Barney",
+    last_name: "Stinson",
+    email: "toriasusann@gmail.com",
+    password: "password",
+    date_of_birth: Faker::Date.birthday(12, 65),
+    gender: Faker::Gender.binary_type
+    )

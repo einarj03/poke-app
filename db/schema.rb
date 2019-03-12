@@ -22,13 +22,6 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
     t.integer "blockee_id"
   end
 
-  create_table "reports", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "reporter_id"
-    t.integer "reportee_id"
-    t.text "description"
-
   create_table "messages", force: :cascade do |t|
     t.bigint "poke_id"
     t.bigint "user_id"
@@ -56,6 +49,14 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
     t.datetime "updated_at", null: false
     t.index ["suggestion_id"], name: "index_profile_questions_on_suggestion_id"
     t.index ["user_id"], name: "index_profile_questions_on_user_id"
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "reporter_id"
+    t.integer "reportee_id"
+    t.text "description"
   end
 
   create_table "suggestions", force: :cascade do |t|
