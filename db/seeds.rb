@@ -19,4 +19,3 @@
     answer: Faker::Creature::Animal.name
     )
 end
-
