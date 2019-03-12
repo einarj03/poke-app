@@ -24,3 +24,12 @@ User.destroy_all
       )
   end
 end
+
+User.create(
+  first_name: "Einar",
+  last_name: "Jonsson",
+  email: "einarjonsson@mac.com",
+  password: "password",
+  date_of_birth: Faker::Date.birthday(12, 65),
+  gender: "male"
+  )
