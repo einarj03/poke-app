@@ -15,6 +15,20 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "blocks", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "blocker_id"
+    t.integer "blockee_id"
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "reporter_id"
+    t.integer "reportee_id"
+    t.text "description"
+
   create_table "messages", force: :cascade do |t|
     t.bigint "poke_id"
     t.bigint "user_id"
