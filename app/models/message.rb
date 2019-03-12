@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
-  belongs_to :poke_id
-  belongs_to :user_id
+  belongs_to :poke
+  belongs_to :user
 
   validates :content, presence: true
 end
