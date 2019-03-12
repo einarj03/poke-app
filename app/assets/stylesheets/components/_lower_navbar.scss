@@ -1,0 +1,39 @@
+.lower-navbar {
+  position: relative;
+
+  .lower-navbar-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #2E1852;
+  }
+
+  .lower-navbar-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .poke-btn {
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: calc(50vw - 32px);
+      height: 64px;
+      width: 64px;
+      background-color: white;
+      border: 7px solid #2E1852;
+    }
+
+    .fas {
+      color: white;
+      font-size: 30px;
+    }
+  }
+}
