@@ -15,6 +15,13 @@ ActiveRecord::Schema.define(version: 2019_03_12_111541) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "pokes", force: :cascade do |t|
+    t.text "content"
+    t.boolean "accepted"
+    t.integer "sender_id"
+    t.integer "receiver_id"
+  end
+
   create_table "suggestions", force: :cascade do |t|
     t.text "content"
     t.string "for"
