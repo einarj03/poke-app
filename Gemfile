@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
-gem 'bootsnap', require: false
+gem 'bootsnap', "~> 1.1.8", require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
-gem 'rails', '5.2.2'
+gem 'rails', '5.2.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
@@ -29,6 +29,5 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails'
   gem 'dotenv-rails'
 end
