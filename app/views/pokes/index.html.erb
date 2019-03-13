@@ -2,18 +2,17 @@
 <p>Find me in app/views/pokes/index.html.erb</p>
 
 
-<!-- <div class="page-content">
-    <div class="profile-details">
-      <h1 class="profile-name"><%= @user.first_name %></h1>
-      <h3 class="profile-tagline">come poke me</h3>
-    </div>
-  <div class="profile-qs">
-    <% @user.profile_questions.each do |question| %>
-      <div class="profile-q">
-        <h5 class="question"><%= question.suggestion.content %></h5>
-        <h6 class="answer"><%= question.answer %></h6>
-      </div>
-    <% end %>
+<div class="poke">
+  <img class="avatar-large" src="">
+  <div class="poke-name">
+    <h3><%= @pokes.first.sender.first_name %></h3>
+    <p>10/07/17</p>
   </div>
-</div> -->
+  <div class="poke-body">
+    <p><strong>Poked 30s ago</strong></p>
+    <p>
+      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+    </p>
+  </div>
+</div>
 

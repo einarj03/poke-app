@@ -25,11 +25,28 @@ User.destroy_all
   end
 end
 
-User.create(
+einar = User.create(
   first_name: "Einar",
   last_name: "Jonsson",
   email: "einarjonsson@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male"
-  )
+)
+
+ferdi = User.create(
+  first_name: "Feri",
+  last_name: "Nussbaum",
+  email: "ferdinuss@mac.com",
+  password: "password",
+  date_of_birth: Faker::Date.birthday(12, 65),
+  gender: "male"
+)
+
+Poke.create(
+  content: "Hey sweetie. Fancy a fuck?",
+  sender_id: einar.id,
+  receiver_id: ferdi.id
+)
+
+
