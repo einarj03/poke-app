@@ -13,7 +13,7 @@
       left: 0;
       right: 0;
       height: 50px;
-      background-color: #2E1852;
+      background-color: $dark-purple;
     }
 
     .lower-navbar-buttons {
@@ -34,7 +34,7 @@
         height: 64px;
         width: 64px;
         background-color: white;
-        border: 7px solid #2E1852;
+        border: 7px solid $dark-purple;
       }
 
       .fas {
