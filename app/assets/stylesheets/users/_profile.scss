@@ -8,7 +8,7 @@
   color: white;
 
   .profile-photo-gradient {
-    background-image: linear-gradient(rgba(0,0,0,0), #49287F);
+    background-image: linear-gradient(rgba(0,0,0,0), $purple);
     position: absolute;
     bottom: -1px;
     height: 50vh;
@@ -42,12 +42,12 @@
 }
 
 .profile-qs {
-  background-color: #49287F;
+  background-color: $purple;
   padding: 0 20px 20px 20px;
   color: white;
 
   .profile-q {
-    background-color: #6640A6;
+    background-color: $light-purple;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     padding: 15px;
