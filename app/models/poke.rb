@@ -6,7 +6,7 @@ class Poke < ApplicationRecord
 
   def poke_created_time
     t = (Time.now - self.created_at).to_i
-    Time.at(t).strftime("%l\h %M\m %S\s")
+    Time.at(t).strftime("%lh%Mm%Ss")
   end
 
   # def poke_time_left
