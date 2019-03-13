@@ -1,17 +1,9 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:300,300i,400,700");
 
 // Define fonts for body and headers
 $body-font: "Roboto", "Helvetica", "sans-serif";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
-
-h3 {
-  color: black;
-}
-
-h2 {
-  color: white;
-}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
