@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :find_user, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def new
@@ -34,6 +33,10 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :gender,
     :date_of_birth, :search_gender, :interest_gender, :photo)
+  end
+
+  def find_user
+    @user = User.find(params[:id])
   end
 
 end
