@@ -3,16 +3,30 @@
 
 
 <div class="poke">
-  <img class="avatar-large" src="">
-  <div class="poke-name">
-    <h3><%= @pokes.first.sender.first_name %></h3>
-    <p>10/07/17</p>
-  </div>
-  <div class="poke-body">
-    <p><strong>Poked 30s ago</strong></p>
-    <p>
-      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
-    </p>
-  </div>
-</div>
+  <% @my_sent_pokes.each do |poke|%>
+      <img class="md-avatar"src="<%= image_path 'boy1.jpg' %>">
+      <div class="poke-name">
+        <h3><%= poke.receiver.first_name %></h3>
+      </div>
+      <div class="poke-body">
+        <p><strong> Poked
 
+          <%= poke.poke_created_time %>
+           ago
+        </strong></p>
+      </div>
+  <% end %>
+  <% @my_received_pokes.each do |poke|%>
+      <img class="avatar-large" src="">
+      <div class="poke-name">
+        <h3><%= poke.sender.first_name %></h3>
+      </div>
+      <div class="poke-body">
+        <p><strong> Poked
+
+          <%= poke.poke_created_time %>
+           ago
+        </strong></p>
+      </div>
+  <% end %>
+</div>
