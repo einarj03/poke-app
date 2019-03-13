@@ -20,8 +20,8 @@ class PokesController < ApplicationController
 
   def show
       @poke = Poke.find(params[:id])
-      @pokee = @poke.get_receiver
-      @poker = @poke.get_sender
+      @pokee = @poke.receiver_id
+      @poker = @poke.sender_id
       # Poke has a receiver_id and sender_id
       # If I send the poke, the poke.sender_id has my user_id
       # If I receive the poke, the poke.receiver_id has my user_id
