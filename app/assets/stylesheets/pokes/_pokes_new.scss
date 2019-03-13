@@ -1,7 +1,29 @@
+.page-content {
+}
+
+.messages-heading {
+  position: relative;
+  // padding: 15px;
+    h3 {
+      position: absolute;
+      left: 25px;
+      top: 20px;
+      color: white;
+      font-weight: lighter;
+      font-variant: all-small-caps;
+      letter-spacing: 15px;
+    }
+    h1 {
+      position: absolute;
+      right: 25px;
+      top: 20px;
+    }
+}
+
 .poke-container {
   display: flex;
   align-items: center;
-  padding: 40px 20px 10px 20px;
+  padding: 100px 20px 10px 20px;
 }
 
 .poke-text {
@@ -22,7 +44,8 @@
 }
 
 .messaging-container {
-  position: relative;
+  text-align: center;
+
 }
 
 .btn-inspire {
@@ -32,10 +55,15 @@
 }
 
 .textfield-container {
-  position: absolute;
-  border: 1px solid $purple;
+  border-top: 1px solid $purple;
   width: 100%;
   height: 10vh;
   background-color: white;
   align-self: center;
+}
+
+.poke-content {
+  width: 90%;
+  height: 7vh;
+  margin: auto;
 }

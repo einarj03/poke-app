@@ -5,7 +5,14 @@
 $body-font: "Roboto 300", "Helvetica", "sans-serif";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
 
+h1 {
+  color: white;
+}
 
+h3 {
+  color: white;
+  letter-spacing: 25%;
+}
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
