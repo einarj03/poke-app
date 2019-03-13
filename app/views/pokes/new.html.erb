@@ -3,33 +3,29 @@
   <div class="gradient-background">
 
     <div class="poke-container">
-
-        <div class="lg-avatar msg-avatar-left">
+        <div class="lg-avatar msg-avatar-left avatar-img" style="background-image: url('<%= image_path "boy2"%>')">
         </div>
-
         <div class="poke-text">
-
+          Hit me with your best shot!
         </div>
-
     </div>
-
   </div>
 
   <div class="messaging-container">
 
-  <div class="btn btn-primary">
+        <div class="btn btn-primary btn-inspire">
+          Inspire me!
+        </div>
 
-  </div>
-
-  <div class="textfield-container">
-    <div class="messaging-form">
-      <%= simple_form_for(@poke) do |f| %>
-        <%= f.input :content %>
-        <%= f.input :sender_id, as: :hidden, input_html: {value: current_user.id} %>
-        <%= f.input :receiver_id, as: :hidden, input_html: {value: @receiver.id} %>
-      <% end %>
+    <div class="textfield-container">
+      <div class="messaging-form">
+        <%= form_for(@poke) do |f| %>
+          <%= f.text_field :content %>
+          <%= f.hidden_field :sender_id, input_html: {value: current_user.id} %>
+          <%= f.hidden_field :receiver_id, input_html: {value: @receiver.id} %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
 
   </div>
