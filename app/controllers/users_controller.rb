@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @report = Report.new
   end
 
   def new
