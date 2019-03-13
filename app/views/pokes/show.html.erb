@@ -1,0 +1,35 @@
+<div class="page-content">
+
+  <div class="match_show" style="background-image: url(<%= 'pulse_poke.png' %>);">
+
+    <%= cl_image_tag @poker.photo %>
+    <%= cl_image_tag @pokee.photo %>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+  <div class="profile-photo" style="background-image: url('http://res.cloudinary.com/dmyu0qotf/image/upload/v1552059610/avzow2sowlqwhxzy9ccz.jpg');">
+    <div class="profile-photo-gradient">
+    </div>
+    <div class="profile-details">
+      <h1 class="profile-name"><%= @user.full_name %></h1>
+      <!-- @poke.get_receiver -->
+      <!-- @poke.get_sender -->
+      <h3 class="profile-tagline">come poke me</h3>
+    </div>
+  </div>
+  <div class="profile-qs">
+    <% @poke.profile_questions.each do |question| %>
+    <% end %>
+  </div>
+
+  <%= link_to 'Report', new_user_report_path(@user) %>
+
+
