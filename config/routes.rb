@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :user_profile_questions, only: [:update, :destroy]
 
-  resources :pokes, only: [:index] do
+  resources :pokes, only: [:index, :show] do
     resources :messages, only: [:index, :create]
   end
 end

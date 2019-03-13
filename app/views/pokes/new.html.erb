@@ -1,0 +1,39 @@
+<div class="page-content">
+
+  <div class="gradient-background">
+
+    <div class="poke-container">
+
+        <div class="lg-avatar msg-avatar-left">
+        </div>
+
+        <div class="poke-text">
+
+        </div>
+
+    </div>
+
+  </div>
+
+  <div class="messaging-container">
+
+  <div class="btn btn-primary">
+
+  </div>
+
+  <div class="textfield-container">
+    <div class="messaging-form">
+      <%= simple_form_for(@poke) do |f| %>
+        <%= f.input :content %>
+        <%= f.input :sender_id, as: :hidden, input_html: {value: current_user.id} %>
+        <%= f.input :receiver_id, as: :hidden, input_html: {value: @receiver.id} %>
+      <% end %>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+</div>
