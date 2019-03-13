@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, except: [:destroy] do
     resources :pokes, only: [:new, :create]
-    resources :block, only: [:new, :create]
-    resources :report, only: [:new, :create]
+    resources :blocks, only: [:new, :create]
+    resources :reports, only: [:new, :create]
     resources :user_profile_questions, only: [:create]
   end
 
