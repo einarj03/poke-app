@@ -16,11 +16,16 @@ User.destroy_all
       content: Faker::GreekPhilosophers.name,
       for: "user_profile_questions"
       )
+    
+    Suggestion.create(
+      content: Faker::TvShows::HowIMetYourMother.quote,
+      for: "user_profile_questions"
+      )
 
     ProfileQuestion.create(
       user: User.last,
       suggestion: Suggestion.last,
-      answer: Faker::GreekPhilosophers.quote
+      answer: Faker::Creature::Animal.name
       )
   end
 end

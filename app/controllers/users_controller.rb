@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+    @users = User.all
   end
 
   def show
@@ -31,7 +33,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :gender,
-    :date_of_birth, :search_gender, :interest_gender)
+    :date_of_birth, :search_gender, :interest_gender, :photo)
   end
 
 end
