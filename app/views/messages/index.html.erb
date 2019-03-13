@@ -1,0 +1,16 @@
+ <div class="page-content">
+  <div class="index-flex">
+    <div class="flats-list">
+      <h1 class="main-title text-center">Interest Name</h1>
+      <%= message.poke.content %>
+      <div class="row">
+          <% @messages.each do |message| %>
+            <div class="col-md-6 col-lg-4">
+                  <%= message.content %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
