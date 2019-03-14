@@ -1,0 +1,2 @@
+class PokeSuggestion < ApplicationRecord
+end

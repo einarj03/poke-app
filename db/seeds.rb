@@ -1,4 +1,4 @@
-ProfileQuestion.destroy_all
+ProfileAnswer.destroy_all
 Suggestion.destroy_all
 Message.destroy_all
 User.destroy_all
@@ -16,13 +16,11 @@ User.destroy_all
     )
   5.times do
     Suggestion.create(
-      content: Faker::GreekPhilosophers.name,
-      for: "user_profile_questions"
+      content: Faker::GreekPhilosophers.name
       )
 
     Suggestion.create(
-      content: Faker::TvShows::HowIMetYourMother.quote,
-      for: "user_profile_questions"
+      content: Faker::TvShows::HowIMetYourMother.quote
       )
 
     ProfileQuestion.create(
