@@ -1,13 +1,33 @@
 // <--------------orbit circles-------------->
-.page-content.users-index {
+.page-content {
+  background-color: $light-purple;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
+.users-index {
+  height: 100vh;
+  width: 120%;
+}
 
 .orbit-container {
   position: relative;
-  background: radial-gradient(300px at 50%, #2E1852 0%, #916AD0 100%);
+  height: 100vh;
+  width: 50vw;
+  margin: auto;
+}
+
+@media(max-width: 768px) {
+  .users-index {
+    width: 100%;
+  }
+}
+
+@media(max-width: 375px) {
+  .users-index {
+    width: 50%;
+  }
 }
 
 .outer-circle {
@@ -15,11 +35,10 @@
   border-radius: 50%;
   width: 500px;
   height: 500px;
-  // border: .5px solid black;
   left: -60px;
   top: 156px;
   box-shadow: 0px 0px 10px #FFFFFF;
-  // background: radial-gradient(168.80px at 50% 74.19%, #794EBF 0%, rgba(73, 40, 127, 0) 100%);
+  background: radial-gradient(300px at 50%, #2E1852 0%, #916AD0 100%);
 }
 
 .middle-circle {
@@ -89,9 +108,11 @@
 
 // <--------------writing-------------->
 .index-heading {
-  margin: 30px;
   position: absolute;
-  font-variant: small-caps;
-  text-align: webkit-center;
+  color: white;
+  font-weight: lighter;
+  top: 30px;
+  left: 0;
+  right: 0;
 }
 
