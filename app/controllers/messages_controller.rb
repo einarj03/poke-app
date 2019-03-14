@@ -7,21 +7,19 @@ class MessagesController < ApplicationController
   # end
 
   def create
-    @poke = Poke.find(params[:poke_id])
     @message = Message.create(message_params)
-    @message.poke = @poke
     @message.user = current_user
     if @message.save
-      redirect_to poke_path(@poke)
+      redirect_to poke_path(@message.poke)
     else
-      render :index
+      redirect_to new_user_poke_path(@message.user)
     end
   end
 
   private
 
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :user_id, :poke_id)
   end
 
 end
