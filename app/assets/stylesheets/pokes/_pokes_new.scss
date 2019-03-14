@@ -1,10 +1,14 @@
+.gradient-background {
+  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
+  size: cover;
+}
+
 .page-content {
 }
 
-.gradient-background {
-  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
-  height: 85vh;
+.test {
 }
+
 
 .messages-heading {
   padding: 40px;
@@ -78,7 +82,11 @@
   margin: auto;
 }
 
-// <---------- messages specific ---------->
+.m-fixed {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+}
 
 
 

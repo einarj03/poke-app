@@ -18,6 +18,13 @@ class PokesController < ApplicationController
     end
   end
 
+  def show
+    @poke = Poke.find(params[:id])
+    @message = Message.new
+    @messages = @poke.messages
+    @other_user = @messages.where.not(user_id: current_user.id).first.user
+  end
+
   private
 
   def poke_params

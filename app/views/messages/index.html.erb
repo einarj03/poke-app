@@ -4,27 +4,32 @@
       <h3> Poke </h3>
       <h1> <%= @poke.receiver.first_name %> </h1>
     </div>
-    <div class="message-container message-other">
+  <% @messages.each do  |message| %>
+  <% if message.user != current_user %>
+    <div class="message-container message-me">
+        <div class="message-text-me">
+          <%= message.content %>
+           <%= message.created_at %>
+        </div>
+        <div class="lg-avatar msg-avatar-right avatar-img" style="background-image: url('<%= image_path "boy3"%>')">
+        </div>
+    </div>
+    <% else %>
+        <div class="message-container message-other">
         <%= link_to user_path(@poke.receiver) do %>
           <div class="lg-avatar msg-avatar-left avatar-img" style="background-image: url('<%= image_path "boy2"%>')">
           </div>
         <% end %>
         <div class="message-text">
-          Hit me with your best shot!
+          <% message.content %>
+          <%= message.created_at %>
         </div>
     </div>
-
-    <div class="message-container message-me">
-        <div class="message-text-me">
-          This is my best shot!
-        </div>
-        <%= link_to user_path(@poke.receiver) do %>
-          <div class="lg-avatar msg-avatar-right avatar-img" style="background-image: url('<%= image_path "boy3"%>')">
-          </div>
-        <% end %>
-    </div>
-
+  <% end %>
+  <% end %>
   </div>
+
+
   <div class="messaging-container">
         <div class="btn btn-primary btn-inspire">
           Inspire me!
