@@ -1,5 +1,6 @@
 ProfileQuestion.destroy_all
 Suggestion.destroy_all
+Message.destroy_all
 User.destroy_all
 
 5.times do
@@ -56,3 +57,16 @@ ferdi = User.create(
   )
 end
 
+Poke.create(
+  content: "Hey sweetie. Fancy a fuck?",
+  sender: einar,
+  receiver: ferdi
+)
+
+5.times do
+  Message.create(
+    content: Faker::TvShows::Friends.quote,
+    user: User.last,
+    poke: Poke.last
+    )
+end
