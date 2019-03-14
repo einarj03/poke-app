@@ -130,69 +130,69 @@ jacob = User.create(
 5.times do
   Poke.create(
     content: "Hey sweetie. Fancy a fuck?",
-    sender_id: einar.id,
-    receiver_id: ferdi.id
+    sender: einar,
+    receiver: ferdi
   )
 end
 
 Poke.create(
   content: "I like em tall and skinny",
-  sender_id: einar.id,
-  receiver_id: ferdi.id
+  sender: einar,
+  receiver: ferdi
 )
 
 Poke.create(
   content: "I'm obviously in love!",
-  sender_id: einar.id,
-  receiver_id: victoria.id
+  sender: einar,
+  receiver: victoria
 )
 
 Poke.create(
   content: "Give me a chance and I will shine your head",
-  sender_id: avalon.id,
-  receiver_id: darrick.id
+  sender: avalon,
+  receiver: darrick
 )
 
 Poke.create(
   content: "Hey cutie, can I borrow your glasses?",
-  sender_id: einar.id,
-  receiver_id: jennifer.id
+  sender: einar,
+  receiver: jennifer
 )
 
 Poke.create(
   content: "Oh how I admire your work",
-  sender_id: darrick.id,
-  receiver_id: picasso.id
+  sender: darrick,
+  receiver: picasso
 )
 
 Poke.create(
   content: "I'll by you a pony",
-  sender_id: einar.id,
-  receiver_id: avalon.id
+  sender: einar,
+  receiver: avalon
 )
 
 Poke.create(
   content: "Hey sweetie. Fancy a fuck?",
-  sender_id: ferdi.id,
-  receiver_id: andre.id
+  sender: ferdi,
+  receiver: andre
 )
 
 Poke.create(
   content: "I've been looking for good german hair",
-  sender_id: einar.id,
-  receiver_id: jacob.id
+  sender: einar,
+  receiver: jacob
 )
 
 Poke.create(
   content: "Hey could you teach me to code",
-  sender_id: jennifer.id,
-  receiver_id: inou.id
+  sender: jennifer,
+  receiver: inou
 )
 
 Poke.create(
   content: "Come here hunny buns",
-  sender_id: andre.id,
-  receiver_id: victoria.id
+  sender: andre,
+  receiver: victoria
 )
 
 5.times do
