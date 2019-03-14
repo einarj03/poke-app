@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_12_135941) do
+ActiveRecord::Schema.define(version: 2019_03_14_153356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "poke_suggestions", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pokes", force: :cascade do |t|
     t.text "content"
     t.boolean "accepted"
@@ -41,14 +47,20 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "profile_questions", force: :cascade do |t|
-    t.bigint "suggestion_id"
+  create_table "profile_answers", force: :cascade do |t|
     t.bigint "user_id"
+    t.bigint "question_id"
     t.text "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["suggestion_id"], name: "index_profile_questions_on_suggestion_id"
-    t.index ["user_id"], name: "index_profile_questions_on_user_id"
+    t.index ["question_id"], name: "index_profile_answers_on_question_id"
+    t.index ["user_id"], name: "index_profile_answers_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reports", force: :cascade do |t|
@@ -57,13 +69,6 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
     t.integer "reporter_id"
     t.integer "reportee_id"
     t.text "description"
-  end
-
-  create_table "suggestions", force: :cascade do |t|
-    t.text "content"
-    t.string "for"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -91,6 +96,6 @@ ActiveRecord::Schema.define(version: 2019_03_12_135941) do
 
   add_foreign_key "messages", "pokes"
   add_foreign_key "messages", "users"
-  add_foreign_key "profile_questions", "suggestions"
-  add_foreign_key "profile_questions", "users"
+  add_foreign_key "profile_answers", "questions"
+  add_foreign_key "profile_answers", "users"
 end
