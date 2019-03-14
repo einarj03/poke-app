@@ -46,17 +46,13 @@
   <% else %>
     <div class="container">
 
-        <div class="row position">
+        <div class="row">
 
-          <div class="col-xs-3 col-md-3 col-lg-4">
+          <div class="col-xs-4 col-md-3 col-lg-4 m-auto col-xs-offset-4">
             <%= cl_image_tag @poke.sender.photo.url, class:"img-circle" %>
           </div>
 
-          <div class="col-xs-3 col-md-3 col-lg-4">
-            <%= cl_image_tag("https://res.cloudinary.com/poke-practice/image/upload/v1552558893/240_F_99206372_U48Rwojx56Kd6V93wJuoYcOpux2wbRvw.jpg") %>
-          </div>
-
-          <div class="col-xs-3 col-md-3 col-lg-4">
+          <div class="col-xs-4 col-md-3 col-lg-4 col-xs-offset-4">
             <%= cl_image_tag @poke.receiver.photo, class:"img-circle" %>
           </div>
 
@@ -71,6 +67,3 @@
     </div>
   <% end %>
 </div>
-
-
->>>>>>> master

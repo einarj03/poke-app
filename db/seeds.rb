@@ -34,7 +34,7 @@ einar = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570435/best-face-moisturizer.png'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552579334/d201369b9bd924f183ce5da88aacc42c--lord-of-the-rings-the-lord.jpg'
 )
 
 ferdi = User.create(
@@ -44,7 +44,7 @@ ferdi = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570650/800px_COLOURBOX6899073.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552575762/ffa8df39ce894bd78a843d8465832d4f.jpg'
 )
 
 darrick = User.create(
