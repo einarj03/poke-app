@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :report, only: [:new, :create]
   end
 
-  resources :profile_questions, only: [:update, :destroy, :index, :create]
+  resources :profile_answers, only: [:update, :destroy, :index, :create]
 
   resources :pokes, only: [:index, :show] do
     resources :messages, only: [:index, :create]

@@ -49,10 +49,10 @@ ActiveRecord::Schema.define(version: 2019_03_14_153356) do
 
   create_table "profile_answers", force: :cascade do |t|
     t.bigint "user_id"
+    t.bigint "question_id"
     t.text "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "question_id"
     t.index ["question_id"], name: "index_profile_answers_on_question_id"
     t.index ["user_id"], name: "index_profile_answers_on_user_id"
   end
@@ -96,5 +96,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_153356) do
 
   add_foreign_key "messages", "pokes"
   add_foreign_key "messages", "users"
+  add_foreign_key "profile_answers", "questions"
   add_foreign_key "profile_answers", "users"
 end
