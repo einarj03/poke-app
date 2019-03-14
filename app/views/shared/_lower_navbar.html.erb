@@ -16,10 +16,8 @@
             </div>
           <% end %>
         </div>
-        <% if user_signed_in? %>
-          <%= link_to pokes_path, class: "navbar-messages" do %>
-            <i class="fas fa-comment-alt"></i>
-          <% end %>
+        <%= link_to pokes_path, class: "navbar-messages" do %>
+          <i class="fas fa-comment-alt"></i>
         <% end %>
       </div>
     </div>
