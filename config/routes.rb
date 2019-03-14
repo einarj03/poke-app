@@ -6,10 +6,10 @@ Rails.application.routes.draw do
     resources :pokes, only: [:new, :create, :show, :index]
     resources :block, only: [:new, :create]
     resources :report, only: [:new, :create]
-    resources :user_profile_questions, only: [:create]
+    resources :profile_questions, only: [:create]
   end
 
-  resources :user_profile_questions, only: [:update, :destroy]
+  resources :profile_questions, only: [:update, :destroy]
 
   resources :pokes, only: [:index, :show] do
     resources :messages, only: [:index, :create]

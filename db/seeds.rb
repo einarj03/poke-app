@@ -1,5 +1,6 @@
 ProfileQuestion.destroy_all
 Suggestion.destroy_all
+Message.destroy_all
 User.destroy_all
 
 5.times do
@@ -16,7 +17,7 @@ User.destroy_all
       content: Faker::GreekPhilosophers.name,
       for: "user_profile_questions"
       )
-    
+
     Suggestion.create(
       content: Faker::TvShows::HowIMetYourMother.quote,
       for: "user_profile_questions"
@@ -48,10 +49,24 @@ ferdi = User.create(
   gender: "male"
 )
 
+5.times do
+  Poke.create(
+    content: "Hey sweetie. Fancy a fuck?",
+    sender_id: einar.id,
+    receiver_id: ferdi.id
+  )
+end
+
 Poke.create(
   content: "Hey sweetie. Fancy a fuck?",
-  sender_id: einar.id,
-  receiver_id: ferdi.id
+  sender: einar,
+  receiver: ferdi
 )
 
-
+5.times do
+  Message.create(
+    content: Faker::TvShows::Friends.quote,
+    user: User.last,
+    poke: Poke.last
+    )
+end
