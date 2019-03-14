@@ -4,21 +4,31 @@
   width: 50px;
   height: 50px;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background: white;
+  overflow: hidden;
 }
 
 .md-avatar {
   border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 60px;
   height: 60px;
   background-color: gray;
+  overflow: hidden;
 }
 
 .lg-avatar {
   border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 80px;
   height: 80px;
-  // background-color: black;
+  overflow: hidden;
 }
 
 // <--------------avatar image-------------->

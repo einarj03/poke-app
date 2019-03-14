@@ -1,9 +1,15 @@
-<div class="page-content">
-  <div class="purple-background">
-    <h1 class="company-name">Poke</h1>
+<div class="page-content home-page" style="background-image: url('<%= image_path "home-page.png" %>');">
+  <div class="top-nav">
+    <h1 class="company-name">POKE</h1>
+    <%= link_to "Login", new_user_session_path %>
+  </div>
+  <div class="tagline-container">
     <h3 class="tagline-first">You've got one shot to</h3>
     <h2 class="tagline-second">break the ice</h2>
-    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
-    <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
+  </div>
+  <div class="call-to-action-flex">
+    <div class="call-to-action-container">
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+    </div>
   </div>
 </div>
