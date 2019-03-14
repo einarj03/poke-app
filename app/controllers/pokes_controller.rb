@@ -34,4 +34,6 @@ class PokesController < ApplicationController
   def poke_params
     params.require(:poke).permit(:content, :sender_id, :receiver_id)
   end
+
+
 end
