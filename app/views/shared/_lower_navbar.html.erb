@@ -10,7 +10,11 @@
           <% end %>
         </div>
         <div class="poke-btn-container">
-          <div class="poke-btn"></div>
+          <%= link_to users_path do %>
+            <div class="poke-btn">
+              <i class="fas fa-home"></i>
+            </div>
+          <% end %>
         </div>
         <% if user_signed_in? %>
           <%= link_to pokes_path, class: "navbar-messages" do %>
