@@ -14,11 +14,6 @@ User.destroy_all
     )
   5.times do
     Suggestion.create(
-      content: Faker::GreekPhilosophers.name,
-      for: "user_profile_questions"
-      )
-
-    Suggestion.create(
       content: Faker::TvShows::HowIMetYourMother.quote,
       for: "user_profile_questions"
       )
