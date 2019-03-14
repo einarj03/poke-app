@@ -6,17 +6,31 @@
   height: 100vh;
   color: white;
 
-  .company-name {
-    font-family: "Roboto";
-    font-weight: bold;
-    font-size: 24px;
-    float: right;
-    margin: 20px;
-    letter-spacing: 0.25em;
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .company-name {
+      font-family: "Roboto";
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 0.25em;
+    }
+
+    a {
+      color: white;
+      &:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
+    }
   }
 
+
   .tagline-container {
-    padding-top: 50vh;
+    padding-top: 45vh;
     padding-left: 30px;
 
     .tagline-first {
