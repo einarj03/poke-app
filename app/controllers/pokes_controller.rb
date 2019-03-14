@@ -1,7 +1,7 @@
 class PokesController < ApplicationController
   def index
-    @my_sent_pokes = Poke.where(sender_id: current_user.id)
-    @my_received_pokes = Poke.where(receiver_id: current_user.id)
+    @sent_pokes = Poke.where(sender: current_user)
+    @received_pokes = Poke.where(receiver: current_user)
   end
 
   def new
@@ -22,7 +22,11 @@ class PokesController < ApplicationController
     @poke = Poke.find(params[:id])
     @message = Message.new
     @messages = @poke.messages
-    @other_user = @messages.where.not(user_id: current_user.id).first.user
+    if @poke.sender == current_user
+      @other_user = @poke.receiver
+    else
+      @other_user = current_user
+    end
   end
 
   private

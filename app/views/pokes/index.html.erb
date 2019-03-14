@@ -5,8 +5,8 @@
       <%= link_to "Pokes", "#", class: "tab" %>
     </div>
     <div class="pokes-container">
-      <% @my_sent_pokes.each do |poke|%>
-        <%= link_to user_poke_path(current_user, poke) do %>
+      <% @sent_pokes.each do |poke|%>
+        <%= link_to poke_path(poke) do %>
           <div class="poke-container">
             <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
             <div class="poke-content">
@@ -19,8 +19,8 @@
           </div>
         <% end %>
       <% end %>
-      <% @my_received_pokes.each do |poke|%>
-        <%= link_to user_poke_path(current_user, poke) do %>
+      <% @received_pokes.each do |poke|%>
+        <%= link_to poke_path(poke) do %>
           <div class="poke-container">
             <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
             <div class="poke-name">
