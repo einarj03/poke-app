@@ -1,11 +1,36 @@
 <div class="page-content">
 
-  <div class="match_show" style="background-image: url(<%= 'pulse_poke.png' %>);">
+<!--   <div class="match_show" style="background-image: url(< 'pulse_poke.png' %>);"> -->
+    <!-- < cl_image_tag @poker.photo.url %> -->
+    <!-- < cl_image_tag @pokee.photo %> -->
 
-    <%= cl_image_tag @poker.photo %>
-    <%= cl_image_tag @pokee.photo %>
 
+  <div class="container">
+
+      <div class="row position">
+
+        <div class="col-xs-3 col-md-3 col-lg-4">
+          <%= cl_image_tag @poker.photo.url, class:"img-circle" %>
+        </div>
+
+        <div class="col-xs-3 col-md-3 col-lg-4">
+          <%= cl_image_tag("https://res.cloudinary.com/poke-practice/image/upload/v1552558893/240_F_99206372_U48Rwojx56Kd6V93wJuoYcOpux2wbRvw.jpg") %>
+        </div>
+
+        <div class="col-xs-3 col-md-3 col-lg-4">
+          <%= cl_image_tag @pokee.photo, class:"img-circle" %>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="col-xs-12 position_statement">
+          <h1> Good Shot! Fingers Crossed! We will update you once you get a response to your POKE! </h1>
+        </div>
+
+      </div>
   </div>
+
 
 </div>
 
@@ -15,21 +40,5 @@
 
 
 
-  <div class="profile-photo" style="background-image: url('http://res.cloudinary.com/dmyu0qotf/image/upload/v1552059610/avzow2sowlqwhxzy9ccz.jpg');">
-    <div class="profile-photo-gradient">
-    </div>
-    <div class="profile-details">
-      <h1 class="profile-name"><%= @user.full_name %></h1>
-      <!-- @poke.get_receiver -->
-      <!-- @poke.get_sender -->
-      <h3 class="profile-tagline">come poke me</h3>
-    </div>
-  </div>
-  <div class="profile-qs">
-    <% @poke.profile_questions.each do |question| %>
-    <% end %>
-  </div>
-
-  <%= link_to 'Report', new_user_report_path(@user) %>
 
 
