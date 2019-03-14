@@ -11,23 +11,22 @@
           <div class="poke-content">
             <h3 class="poke-name"><%= poke.receiver.first_name %></h3>
             <p class="poke-body"><strong> Poked
-              <%= poke.poke_created_time %>
-               ago
+              <%= "#{poke.poke_created_time} ago" %>
             </strong></p>
           </div>
+          <h3 class="poke-time-left">4h39min left</h3>
         </div>
       <% end %>
       <% @my_received_pokes.each do |poke|%>
         <div class="poke-container">
           <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
           <div class="poke-name">
-            <h3><%= poke.sender.first_name %></h3>
+            <h3><%= "#{poke.sender.first_name} ago" %></h3>
           </div>
           <div class="poke-body">
             <p><strong> Poked
 
               <%= poke.poke_created_time %>
-               ago
             </strong></p>
           </div>
         </div>
