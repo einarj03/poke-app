@@ -4,7 +4,8 @@
     </div>
     <div class="profile-details">
       <h1 class="profile-name"><%= @user.full_name %></h1>
-      <h3 class="profile-tagline">come poke me</h3>
+      <!-- <h3 class="profile-tagline">come poke me</h3> -->
+      <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
   <div class="profile-qs">
