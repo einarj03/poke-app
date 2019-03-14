@@ -6,6 +6,7 @@ class PokesController < ApplicationController
 
   def new
     @poke = Poke.new
+    @message = Message.new
     @receiver = User.find(params[:user_id])
   end
 

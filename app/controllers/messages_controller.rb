@@ -8,7 +8,6 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(message_params)
-    @message.user = current_user
     if @message.save
       redirect_to poke_path(@message.poke)
     else

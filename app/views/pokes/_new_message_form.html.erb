@@ -1,0 +1,14 @@
+<div class="messaging-container">
+  <div class="btn btn-primary btn-inspire">
+    Inspire me!
+  </div>
+  <div class="textfield-container">
+    <div class="messaging-form">
+      <%= form_for [poke, message] do |f| %>
+        <%= f.text_field :content, class: "message-content" %>
+        <%= f.hidden_field :user_id, input_html: {value: current_user.id} %>
+        <%= f.hidden_field :poke_id, input_html: {value: poke.id} %>
+      <% end %>
+    </div>
+  </div>
+</div>

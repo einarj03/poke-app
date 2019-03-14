@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   resources :profile_answers, only: [:update, :destroy, :index, :create]
 
   resources :pokes, only: [:index, :show] do
-    resources :messages, only: [:index]
+    resources :messages, only: [:index, :create]
   end
 
-  resources :messages, only: [:create]
 end
