@@ -1,10 +1,8 @@
 class MessagesController < ApplicationController
 
   def index
-    @message = Message.new
-    @poke.messages = Message.where(poke_id: params[:poke_id])
     @poke = Poke.find(params[:poke_id])
-    @receiver = @poke.receiver
+    @message = Message.new
   end
 
   def create
