@@ -14,7 +14,7 @@
           <div class="poke-btn"></div>
         </div>
         <% if user_signed_in? %>
-          <%= link_to user_pokes_path(current_user), class: "navbar-messages" do %>
+          <%= link_to pokes_path, class: "navbar-messages" do %>
             <i class="fas fa-comment-alt"></i>
           <% end %>
         <% end %>
