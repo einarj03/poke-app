@@ -203,3 +203,36 @@ Poke.create(
     poke: Poke.last
     )
 end
+
+Question.create(
+  content: "Childhood celebrity crush..."
+)
+
+Question.create(
+  content: "Go-to song is..."
+)
+
+Question.create(
+  content: "My go-to karaoke song is..."
+)
+
+Question.create(
+  content: "Must-see movie..."
+)
+
+Question.create(
+  content: "My secret-skill..."
+)
+
+Question.create(
+  content: "Coolest travel story..."
+)
+
+Question.create(
+  content: "My go-to karaoke song is..."
+)
+
+
+
+
+
