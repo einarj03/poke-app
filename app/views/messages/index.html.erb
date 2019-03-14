@@ -1,16 +1,48 @@
-<div class="screen gradient-background">
-  <div class="message-container">
-
-    <div class="message-content">
-
-      <div class="avatar-lg">
-      </div>
-
-      <div class="message-text">
-      </div>
-
+<div class="page-content">
+  <div class="gradient-background">
+    <div class="messages-heading">
+      <h3> Poke </h3>
+      <h1> <%= @poke.receiver.first_name %> </h1>
     </div>
+  <% @messages.each do  |message| %>
+  <% if message.user != current_user %>
+    <div class="message-container message-me">
+        <div class="message-text-me">
+          <%= message.content %>
+           <%= message.created_at %>
+        </div>
+        <div class="lg-avatar msg-avatar-right avatar-img" style="background-image: url('<%= image_path "boy3"%>')">
+        </div>
+    </div>
+    <% else %>
+        <div class="message-container message-other">
+        <%= link_to user_path(@poke.receiver) do %>
+          <div class="lg-avatar msg-avatar-left avatar-img" style="background-image: url('<%= image_path "boy2"%>')">
+          </div>
+        <% end %>
+        <div class="message-text">
+          <% message.content %>
+          <%= message.created_at %>
+        </div>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
 
+
+  <div class="messaging-container">
+        <div class="btn btn-primary btn-inspire">
+          Inspire me!
+        </div>
+    <div class="textfield-container">
+      <div class="messaging-form">
+        <%= form_for [@poke, @message] do |f| %>
+          <%= f.text_field :content, class: "message-content" %>
+          <%= f.hidden_field :user_id, input_html: {value: current_user.id} %>
+          <%= f.hidden_field :poke_id, input_html: {value: @poke.id} %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
 

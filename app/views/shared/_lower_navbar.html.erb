@@ -1,17 +1,24 @@
 
-<div class="navbar-space"></div>
-<div class="bottom-fixed">
-  <div class="lower-navbar">
-    <div class="lower-navbar-strip"></div>
-    <div class="lower-navbar-buttons">
-      <%= link_to @back_path do %>
-        <i class="fas fa-angle-left"></i>
-      <% end %>
-      <div class="poke-btn"></div>
-      <%= link_to user_pokes_path(current_user) do %>
-        <i class="fas fa-comment-alt"></i>
-      <% end %>
+<% unless current_page?(root_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
+  <div class="navbar-space"></div>
+  <div class="bottom-fixed">
+    <div class="lower-navbar">
+      <div class="lower-navbar-strip"></div>
+      <div class="lower-navbar-buttons">
+        <div class="back-btn-container">
+          <%= link_to :back, class: "navbar-back" do %>
+            <i class="fas fa-angle-left"></i>
+          <% end %>
+        </div>
+        <div class="poke-btn-container">
+          <div class="poke-btn"></div>
+        </div>
+        <% if user_signed_in? %>
+          <%= link_to pokes_path, class: "navbar-messages" do %>
+            <i class="fas fa-comment-alt"></i>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-
+<% end %>

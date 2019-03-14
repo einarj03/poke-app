@@ -1,7 +1,13 @@
+.page-content.gradient-background {
+  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
+  height: 85vh;
+}
+
 .page-content {
 }
 
 .messages-heading {
+  padding: 40px;
   position: relative;
   // padding: 15px;
     h3 {
@@ -20,32 +26,37 @@
     }
 }
 
-.poke-container {
+.message-container {
   display: flex;
   align-items: center;
-  padding: 100px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
+  &.message-me {
+    justify-content: flex-end;
+  }
 }
 
-.poke-text {
-  background-color: $purple;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+.message-text {
+  background-color: $light-purple;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   color: white;
   padding: 15px;
   margin-left: 15px;
 }
 
-.msg-avatar-left {
-}
-
-.gradient-background {
-  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
-  height: 85vh;
+.message-text-me {
+  background-color: $white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  color: $dark-purple;
+  padding: 15px;
+  margin-right: 15px;
+  opacity: .9;
 }
 
 .messaging-container {
+  position: relative;
   text-align: center;
-
 }
 
 .btn-inspire {
@@ -55,15 +66,24 @@
 }
 
 .textfield-container {
-  border-top: 1px solid $purple;
+  border-top: 1px solid $light-purple;
   width: 100%;
   height: 10vh;
   background-color: white;
   align-self: center;
 }
 
-.poke-content {
+.message-content {
   width: 90%;
   height: 7vh;
   margin: auto;
 }
+
+.m-fixed {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+}
+
+
+

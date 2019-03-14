@@ -1,6 +1,7 @@
 ProfileQuestion.destroy_all
 Suggestion.destroy_all
 Poke.destroy_all
+Message.destroy_all
 User.destroy_all
 
 5.times do
@@ -13,11 +14,6 @@ User.destroy_all
     gender: Faker::Gender.binary_type
     )
   5.times do
-    Suggestion.create(
-      content: Faker::GreekPhilosophers.name,
-      for: "user_profile_questions"
-      )
-
     Suggestion.create(
       content: Faker::TvShows::HowIMetYourMother.quote,
       for: "user_profile_questions"
@@ -131,6 +127,14 @@ jacob = User.create(
   remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570399/5523_UnionSuit_Grey_Front2_Web_600x.jpg'
 )
 
+5.times do
+  Poke.create(
+    content: "Hey sweetie. Fancy a fuck?",
+    sender_id: einar.id,
+    receiver_id: ferdi.id
+  )
+end
+
 Poke.create(
   content: "I like em tall and skinny",
   sender_id: einar.id,
@@ -191,3 +195,10 @@ Poke.create(
   receiver_id: victoria.id
 )
 
+5.times do
+  Message.create(
+    content: Faker::TvShows::Friends.quote,
+    user: User.last,
+    poke: Poke.last
+    )
+end
