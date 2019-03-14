@@ -49,6 +49,14 @@ ferdi = User.create(
   gender: "male"
 )
 
+5.times do
+  Poke.create(
+    content: "Hey sweetie. Fancy a fuck?",
+    sender_id: einar.id,
+    receiver_id: ferdi.id
+  )
+end
+
 Poke.create(
   content: "Hey sweetie. Fancy a fuck?",
   sender: einar,
