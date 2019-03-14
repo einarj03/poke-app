@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :profile_answers
+  has_many :pokes
 
   mount_uploader :photo, PhotoUploader
 

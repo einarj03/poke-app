@@ -1,5 +1,5 @@
 ProfileAnswer.destroy_all
-Suggestion.destroy_all
+Question.destroy_all
 Message.destroy_all
 User.destroy_all
 
@@ -15,17 +15,13 @@ User.destroy_all
     gender: Faker::Gender.binary_type
     )
   5.times do
-    Suggestion.create(
-      content: Faker::GreekPhilosophers.name
-      )
-
-    Suggestion.create(
+    Question.create(
       content: Faker::TvShows::HowIMetYourMother.quote
       )
 
-    ProfileQuestion.create(
+    ProfileAnswer.create(
       user: User.last,
-      suggestion: Suggestion.last,
+      question: Question.last,
       answer: Faker::Creature::Animal.name
       )
   end

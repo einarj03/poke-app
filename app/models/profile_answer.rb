@@ -1,5 +1,5 @@
 class ProfileAnswer < ApplicationRecord
-  belongs_to :question_suggestion
+  has_one :question
   belongs_to :user
 
   validates :answer, presence: true
