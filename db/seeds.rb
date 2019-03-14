@@ -3,6 +3,8 @@ Suggestion.destroy_all
 Message.destroy_all
 User.destroy_all
 
+# QUESTIONS = ["question1", "question2"]
+
 5.times do
   User.create(
     first_name: Faker::Name.first_name,
