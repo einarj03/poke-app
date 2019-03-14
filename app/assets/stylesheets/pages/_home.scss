@@ -1,6 +1,42 @@
 // Specific CSS for your home-page
-.purple-background {
-  background-color: $purple;
-  color: white;
+.page-content.home-page {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
   height: 100vh;
+  color: white;
+
+  .company-name {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 24px;
+    float: right;
+    margin: 20px;
+    letter-spacing: 0.25em;
+  }
+
+  .tagline-container {
+    padding-top: 50vh;
+    padding-left: 30px;
+
+    .tagline-first {
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: 20px;
+    }
+
+    .tagline-second {
+      font-family: "Roboto";
+      font-weight: bold;
+      font-size: 48px;
+      float: right;
+      padding-right: 30px;
+    }
+  }
+
+  .call-to-action-flex {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+  }
 }
