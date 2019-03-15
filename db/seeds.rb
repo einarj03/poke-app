@@ -7,23 +7,23 @@ User.destroy_all
 # QUESTIONS = ["question1", "question2"]
 
 Question.create(
-  content: "Nightclub or Netflix..."
+  content: "Truth or Dare..."
 )
 
 Question.create(
-  content: "Greatest travel story..."
+  content: "Preferred drink..."
 )
 
 Question.create(
-  content: "Go-to song is..."
+  content: "Go-to kareoke song is..."
 )
 
 Question.create(
-  content: "We'll get on if..."
+  content: "Best first date..."
 )
 
 Question.create(
-  content: "Most inspiring teacher I've met..."
+  content: "When your drunk what's the first thing you do..."
 )
 
 Question.create(
@@ -31,7 +31,7 @@ Question.create(
 )
 
 Question.create(
-  content: "My secret skill..."
+  content: "My super power..."
 )
 
 Question.create(
@@ -39,7 +39,7 @@ Question.create(
 )
 
 Question.create(
-  content: "We'll get on if..."
+  content: "Last thing you did for the first time..."
 )
 
 einar = User.create(
@@ -48,8 +48,8 @@ einar = User.create(
   email: "einarjonsson@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552579334/d201369b9bd924f183ce5da88aacc42c--lord-of-the-rings-the-lord.jpg'
+  gender: "male",
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658052/leonardo_dicaprio-gt.jpg'
 )
 
 ferdi = User.create(
@@ -59,7 +59,7 @@ ferdi = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552575762/ffa8df39ce894bd78a843d8465832d4f.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658703/tortoise-shell-glasses-for-guys-700x467-700x467.jpg'
 )
 
 darrick = User.create(
@@ -69,7 +69,7 @@ darrick = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570473/pbox.php.gif'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658312/dr_DaveChappelle_CS_w600_h389.jpg'
 )
 
 victoria = User.create(
@@ -89,7 +89,7 @@ andre = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570314/glenn-kelly-waskewitch.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658544/photo-1535441577682-5a7bc0702a7d.jpg'
 )
 
 inou = User.create(
@@ -104,7 +104,7 @@ inou = User.create(
 
 jennifer = User.create(
   first_name: "Jenny",
-  last_name: "Scottland",
+  last_name: "Lou",
   email: "Jenjen@Jenny.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
@@ -139,7 +139,7 @@ jacob = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570399/5523_UnionSuit_Grey_Front2_Web_600x.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658889/main-qimg-0b9b9f17aafc49b6f5d60b31a894ad0e.png'
 )
 
 User.all.each do |user|
@@ -153,9 +153,9 @@ User.all.each do |user|
 end
 
 Poke.create(
-  content: "Hey sweetie. Fancy a fuck?",
-  sender: einar,
-  receiver: ferdi
+  content: "Hey sweetie. Fancy a .....drink?",
+  sender: avalon,
+  receiver: Inou
   )
 
 Poke.create(
@@ -195,13 +195,13 @@ Poke.create(
 )
 
 Poke.create(
-  content: "Hey sweetie. Fancy a fuck?",
+  content: "You must be a small amount of red phosphorus and I must be a tiny wooden stick… Because we're a match",
   sender: ferdi,
   receiver: andre
 )
 
 Poke.create(
-  content: "I've been looking for good german hair",
+  content: "I've been looking for good German hair",
   sender: einar,
   receiver: jacob
 )
