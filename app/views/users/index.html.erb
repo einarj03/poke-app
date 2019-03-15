@@ -1,32 +1,65 @@
-<div class="page-content users-index">
-  <div class="orbit-container">
-  <h2 class="index-heading"> Who's your next shot? </h2>
-    <div class="outer-circle">
-      <%= link_to user_path(User.first) do %>
-        <div class="lg-avatar pos-four avatar-img" style="background-image: url('<%= image_path "boy4"%>')"></div>
-      <% end %>
-      <%= link_to user_path(User.second) do %>
-        <div class="lg-avatar pos-five avatar-img" style="background-image: url('<%= image_path "boy5"%>')"></div>
-      <% end %>
-      <%= link_to user_path(User.third) do %>
-        <div class="lg-avatar pos-six avatar-img" style="background-image: url('<%= image_path "boy6"%>')"></div>
-      <% end %>
-    </div>
+<div class="page-content">
+  <div class="users-index">
+  <h2 class="index-heading" align="center"> Who's your next shot? </h2>
+    <div class="orbit-container">
 
-    <div class="middle-circle">
-      <%= link_to user_path(User.fourth) do %>
-        <div class="md-avatar pos-two avatar-img" style="background-image: url('<%= image_path "boy2"%>')"></div>
-      <% end %>
-      <%= link_to user_path(User.fifth) do %>
-        <div class="md-avatar pos-three avatar-img" style="background-image: url('<%= image_path "boy3"%>')"></div>
-      <% end %>
-    </div>
+      <div class="outer-circle">
+        <%= link_to user_path(User.first) do %>
+          <div class="lg-avatar pos-lg-one avatar-img" style="background-image: url('<%= image_path "boy4"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.second) do %>
+          <div class="lg-avatar pos-lg-two avatar-img" style="background-image: url('<%= image_path "boy5"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.third) do %>
+          <div class="lg-avatar pos-lg-three avatar-img" style="background-image: url('<%= image_path "boy6"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.first) do %>
+          <div class="lg-avatar pos-lg-four avatar-img" style="background-image: url('<%= image_path "boy4"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.second) do %>
+          <div class="lg-avatar pos-lg-five avatar-img" style="background-image: url('<%= image_path "boy5"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.third) do %>
+          <div class="lg-avatar pos-lg-six avatar-img" style="background-image: url('<%= image_path "boy6"%>')"></div>
+        <% end %>
+      </div>
 
-    <div class="inner-circle">
-      <%= link_to user_path(User.second) do %>
-        <div class="sm-avatar pos-one avatar-img" style="background-image: url('<%= image_path "boy1"%>')"></div>
-      <% end %>
-    </div>
+      <div class="middle-circle">
+        <%= link_to user_path(User.fifth) do %>
+          <div class="md-avatar pos-md-one avatar-img" style="background-image: url('<%= image_path "boy3"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.fourth) do %>
+          <div class="md-avatar pos-md-two avatar-img" style="background-image: url('<%= image_path "boy2"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.fifth) do %>
+          <div class="md-avatar pos-md-three avatar-img" style="background-image: url('<%= image_path "boy3"%>')"></div>
+        <%= link_to user_path(User.fourth) do %>
+          <div class="md-avatar pos-md-four avatar-img" style="background-image: url('<%= image_path "boy2"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.fifth) do %>
+          <div class="md-avatar pos-md-five avatar-img" style="background-image: url('<%= image_path "boy3"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.fourth) do %>
+          <div class="md-avatar pos-md-six avatar-img" style="background-image: url('<%= image_path "boy2"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.fifth) do %>
+          <div class="md-avatar pos-md-seven avatar-img" style="background-image: url('<%= image_path "boy3"%>')"></div>
+        <% end %>
+        <%= link_to user_path(User.fourth) do %>
+          <div class="md-avatar pos-md-eight avatar-img" style="background-image: url('<%= image_path "boy2"%>')"></div>
+        <% end %>
+        <% end %>
+      </div>
 
+      <div class="inner-circle">
+        <%= link_to user_path(User.second) do %>
+          <div class="sm-avatar pos-sm-one avatar-img" style="background-image: url('<%= image_path "boy1"%>')"></div>
+          <div class="sm-avatar pos-sm-two avatar-img" style="background-image: url('<%= image_path "boy1"%>')"></div>
+          <div class="sm-avatar pos-sm-three avatar-img" style="background-image: url('<%= image_path "boy1"%>')"></div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
+
+

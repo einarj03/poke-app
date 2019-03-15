@@ -1,10 +1,11 @@
-<div class="page-content pokes-index">
-  <div class="gradient-background-reverse">
+<div class="page-content gradient-background">
+  <div>
     <div class="pokes-tabs">
       <%= link_to "Poked", "#", class: "tab" %>
       <%= link_to "Pokes", "#", class: "tab" %>
     </div>
     <div class="pokes-container">
+<<<<<<< HEAD
       <% @sent_pokes.each do |poke|%>
         <%= link_to poke_path(poke) do %>
           <div class="poke-container">
@@ -16,9 +17,21 @@
               </strong></p>
             </div>
             <h3 class="poke-time-left">4h39min left</h3>
+=======
+      <% @my_sent_pokes.each do |poke|%>
+        <div class="poke-container">
+          <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
+          <div class="poke-content">
+            <h5 class="poke-name"><%= poke.receiver.first_name %></h5>
+            <p class="poke-body"> Poked
+              <%= "#{poke.poke_created_time} ago" %>
+            </p>
+>>>>>>> master
           </div>
-        <% end %>
+          <h3 class="poke-time-left">4h39min left</h3>
+        </div>
       <% end %>
+<<<<<<< HEAD
       <% @received_pokes.each do |poke|%>
         <%= link_to poke_path(poke) do %>
           <div class="poke-container">
@@ -30,8 +43,21 @@
               </strong></p>
             </div>
             <h3 class="poke-time-left">4h39min left</h3>
+=======
+      <% @my_received_pokes.each do |poke|%>
+        <div class="poke-container">
+          <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
+          <div class="poke-name">
+            <h3><%= "#{poke.sender.first_name} ago" %></h3>
           </div>
-        <% end %>
+          <div class="poke-body">
+            <p><strong> Poked
+
+              <%= poke.poke_created_time %>
+            </strong></p>
+>>>>>>> master
+          </div>
+        </div>
       <% end %>
     </div>
   </div>

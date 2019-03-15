@@ -1,14 +1,33 @@
 // <--------------orbit circles-------------->
-.page-content.users-index {
+.page-content {
+  background-color: $light-purple;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
+.users-index {
+  height: 100vh;
+  width: 120%;
+}
 
 .orbit-container {
   position: relative;
+  height: 100vh;
+  width: 50vw;
+  margin: auto;
+}
 
-  background: radial-gradient(300px at 50%, #2E1852 0%, #916AD0 100%);
+@media(max-width: 768px) {
+  .users-index {
+    width: 100%;
+  }
+}
+
+@media(max-width: 375px) {
+  .users-index {
+    width: 50%;
+  }
 }
 
 .outer-circle {
@@ -16,11 +35,10 @@
   border-radius: 50%;
   width: 500px;
   height: 500px;
-  // border: .5px solid black;
   left: -60px;
   top: 156px;
   box-shadow: 0px 0px 10px #FFFFFF;
-  // background: radial-gradient(168.80px at 50% 74.19%, #794EBF 0%, rgba(73, 40, 127, 0) 100%);
+  background: radial-gradient(300px at 50%, #2E1852 0%, #916AD0 100%);
 }
 
 .middle-circle {
@@ -47,52 +65,123 @@
 }
 
 // <--------------avatar positions-------------->
-.pos-one {
+// <--------------small-------------->
+.pos-sm-one {
   position: absolute;
   top: -10px;
   left: 0px;
 }
 
-.pos-two {
+.pos-sm-two {
+  position: absolute;
+  top: 24px;
+  left: 68px;
+}
+
+.pos-sm-three {
+  position: absolute;
+  bottom: -10px;
+  left: 3px;
+}
+
+// <--------------medium-------------->
+
+.pos-md-one {
+  position: absolute;
+  top: -15px;
+  left: 65px;
+}
+
+.pos-md-two {
+  position: absolute;
+  top: -15px;
+  right: 65px;
+}
+
+.pos-md-three {
+  position: absolute;
+  top: 60px;
+  right: -15px;
+}
+
+.pos-md-four {
+  position: absolute;
+  bottom: 60px;
+  right: -15px;
+}
+
+.pos-md-five {
+  position: absolute;
+  bottom: -15px;
+  right: 65px;
+}
+
+.pos-md-six {
+  position: absolute;
+  bottom: -15px;
+  left: 65px;
+}
+
+.pos-md-seven {
+  position: absolute;
+  bottom: 60px;
+  left: -15px;
+}
+
+.pos-md-eight {
+  position: absolute;
+  top: 60px;
+  left: -15px;
+}
+
+// <--------------large-------------->
+
+.pos-lg-one {
   position: absolute;
   top: 0px;
-  right: 28px;
+  left: 70px;
+
 }
 
-.pos-three {
+.pos-lg-two {
   position: absolute;
-  bottom: 5px;
-  left: 15px;
+  top: -40px;
+  left: 205px;
 }
-.pos-four {
+
+.pos-lg-three {
   position: absolute;
   top: 0px;
-  left: 80px;
+  right: 70px;
+
 }
 
-.pos-five {
+.pos-lg-four {
   position: absolute;
-  bottom: -25px;
-  left: 120px;
+  bottom: -40px;
+  left: 205px;
+
 }
 
-.pos-six {
-  position: absolute;
-  bottom: 15px;
-  right: 40px;
-}
-
-.pos-seven {
+.pos-lg-five {
   position: absolute;
   bottom: 0px;
-  right: 100px;
+  left: 70px;
+}
+
+.pos-lg-six {
+  position: absolute;
+  bottom: 0px;
+  right: 70px;
+
 }
 
 // <--------------writing-------------->
 .index-heading {
-  margin: 30px;
   position: absolute;
-  font-variant: small-caps;
-  text-align: webkit-center;
+  color: white;
+  top: 30px;
+  left: 0;
+  right: 0;
 }
 
