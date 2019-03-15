@@ -11,6 +11,7 @@
   color: white;
   line-height: normal;
   font-size: 13px;
+  color: black;
   // font-weight: bolder;
 
   &:hover {
@@ -51,4 +52,9 @@
     margin-bottom: 0;
     font-weight: bolder;
   }
+}
+
+.pokes-index .gradient-background-reverse {
+  background: linear-gradient(rgba(73, 40, 127, 0.15), #300773);
+  min-height: calc(100vh - 50px);
 }
