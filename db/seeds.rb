@@ -179,7 +179,8 @@ Poke.create(
 Poke.create(
   content: "Hey cutie, can I borrow your glasses?",
   sender: einar,
-  receiver: jennifer
+  receiver: jennifer,
+  accepted: true
 )
 
 Poke.create(
@@ -189,9 +190,10 @@ Poke.create(
 )
 
 Poke.create(
-  content: "I'll by you a pony",
+  content: "I'll buy you a pony",
   sender: einar,
-  receiver: avalon
+  receiver: avalon,
+  accepted: true
 )
 
 Poke.create(
