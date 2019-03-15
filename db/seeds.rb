@@ -1,7 +1,7 @@
-Poke.destroy_all
 ProfileAnswer.destroy_all
 Question.destroy_all
 Message.destroy_all
+Poke.destroy_all
 User.destroy_all
 
 # QUESTIONS = ["question1", "question2"]
