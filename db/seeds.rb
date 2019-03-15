@@ -125,7 +125,7 @@ inou = User.create(
 jennifer = User.create(
   first_name: "Jenny",
   last_name: "Scottland",
-  email: "JenjenJenny.com",
+  email: "Jenjen@Jenny.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
@@ -162,13 +162,11 @@ jacob = User.create(
   remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570399/5523_UnionSuit_Grey_Front2_Web_600x.jpg'
 )
 
-5.times do
-  Poke.create(
-    content: "Hey sweetie. Fancy a fuck?",
-    sender: einar,
-    receiver: ferdi
+Poke.create(
+  content: "Hey sweetie. Fancy a fuck?",
+  sender: einar,
+  receiver: ferdi
   )
-end
 
 Poke.create(
   content: "I like em tall and skinny",
