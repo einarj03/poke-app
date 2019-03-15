@@ -7,7 +7,7 @@
 <% @questions.each do |question| %>
   <%= simple_form_for @profile_answer do |f| %>
   <%= f.input :answer, label: question.content %>
-  <%= f.button :submit, 'Add' %>
+  <%= f.submit'Add', class: "btn-primary btn" %>
   <%#= f.submit, class %>
   <% end %>
 <% end %>
