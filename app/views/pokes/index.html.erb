@@ -12,10 +12,10 @@
             <div class="poke-content">
               <h3 class="poke-name"><%= poke.receiver.first_name %></h3>
               <p class="poke-body"><strong> Poked
-                <%= "#{poke.poke_created_time} ago" %>
+                <%= poke.created_time %>
               </strong></p>
             </div>
-            <h3 class="poke-time-left">4h39min left</h3>
+            <h3 class="poke-time-left"><%= poke.time_left %></h3>
           </div>
         <% end %>
       <% end %>
@@ -26,10 +26,10 @@
             <div class="poke-content">
               <h3 class="poke-name"><%= poke.sender.first_name %></h3>
               <p class="poke-body"><strong> Poked
-                <%= "#{poke.poke_created_time} ago" %>
+                <%= poke.created_time %>
               </strong></p>
             </div>
-            <h3 class="poke-time-left">4h39min left</h3>
+            <h3 class="poke-time-left"><%= poke.time_left %></h3>
           </div>
         <% end %>
       <% end %>
