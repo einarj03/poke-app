@@ -14,6 +14,7 @@ h1 {
   // font: $superbold !important;
   font-family: "Poppins" !important;
   font-weight: 900 !important;
+  color: white;
 }
 
 h2 {
@@ -34,6 +35,11 @@ h5 {
 }
 
 h6 {
+  font-family: "Poppins" !important;
+  font-weight: 300 !important;
+}
+
+p {
   font-family: "Poppins" !important;
   font-weight: 300 !important;
 }
