@@ -4,14 +4,15 @@
     </div>
     <div class="profile-details">
       <h1 class="profile-name"><%= @user.full_name %></h1>
-      <h3 class="profile-tagline">come poke me</h3>
+      <!-- <h3 class="profile-tagline">come poke me</h3> -->
+      <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
   <div class="profile-qs">
-    <% @user.profile_questions.each do |question| %>
+    <% @user.profile_answers.each do |profile_answer| %>
       <div class="profile-q">
-        <h5 class="question"><%= question.suggestion.content %></h5>
-        <h6 class="answer"><%= question.answer %></h6>
+        <h5 class="question"><%= profile_answer.question.content %></h5>
+        <h6 class="answer"><%= profile_answer.answer %></h6>
       </div>
     <% end %>
   </div>

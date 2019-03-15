@@ -1,0 +1,26 @@
+<h1> Welcome to Poke </h1>
+<h3> You can add up to five Poke Questions to your profile </h3>
+
+<!-- form simple form firdt input dropdown textre
+5.times do same form 5 times -->
+
+<% @questions.each do |question| %>
+  <%= simple_form_for @profile_answer do |f| %>
+  <%= f.input :answer, label: question.content %>
+  <%= f.submit'Add', class: "btn-primary btn" %>
+  <%#= f.submit, class %>
+  <% end %>
+<% end %>
+
+
+<!-- <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Favourite quality in a Person</h5>
+    <textarea cols="100" rows="2" id="person_description" name="person[description]"
+rows="20"></textarea>
+    <a href="#" class="btn btn-primary">Submit</a>
+  </div>
+</div> -->
+
+
+

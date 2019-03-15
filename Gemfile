@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+#!/usr/bin/env rubysource 'https://rubygems.org'
 ruby '2.5.3'
 
 gem 'bootsnap', "~> 1.1.8", require: false

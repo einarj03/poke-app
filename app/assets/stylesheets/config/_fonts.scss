@@ -5,7 +5,13 @@
 $body-font: "Poppins 300", "Helvetica", "sans-serif";
 $headers-font: "Poppins 700", "Helvetica", "sans-serif";
 
+// $light: "Poppins 300";
+// $regular: "Poppins 400";
+// $bold: "Poppins 700";
+// $superbold: "Poppins 900";
+
 h1 {
+  // font: $superbold !important;
   font-family: "Poppins" !important;
   font-weight: 900 !important;
 }

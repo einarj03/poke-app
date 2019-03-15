@@ -1,6 +1,6 @@
 <div class="page-content gradient-background">
-  <div class="messages-content"></div>
-    <% if @poke.accepted? %>
+  <% if @poke.accepted? %>
+    <div class="messages-content"></div>
       <div class="messages-heading">
         <h3> Poke </h3>
         <h1> <%= @other_user.first_name %> </h1>
@@ -29,21 +29,28 @@
       <% end %>
     <% end %>
   </div>
-    <div class="messaging-container m-fixed">
-      <div class="btn btn-primary btn-inspire">
-        Inspire me!
-      </div>
-      <div class="textfield-container">
-        <div class="messaging-form">
-          <%= form_for [@poke, @message] do |f| %>
-            <%= f.text_field :content, class: "message-content" %>
-            <%= f.hidden_field :user_id, input_html: {value: current_user.id} %>
-            <%= f.hidden_field :poke_id, input_html: {value: @poke.id} %>
-          <% end %>
+  <%= render 'messaging_container', message: @message, poke: @poke %>
+  <% else %>
+    <div class="container">
+
+        <div class="row">
+
+          <div class="col-xs-4 col-md-3 col-lg-4 m-auto col-xs-offset-4">
+            <%= cl_image_tag @poke.sender.photo.url, class:"img-circle" %>
+          </div>
+
+          <div class="col-xs-4 col-md-3 col-lg-4 col-xs-offset-4">
+            <%= cl_image_tag @poke.receiver.photo, class:"img-circle" %>
+          </div>
+
         </div>
-      </div>
-    <% end %>
+        <div class="row">
+
+          <div class="col-xs-12 position_statement">
+            <h1> Good Shot! Fingers Crossed! We will update you once you get a response to your POKE! </h1>
+          </div>
+
+        </div>
     </div>
+  <% end %>
 </div>
-
-

@@ -1,6 +1,6 @@
-.gradient-background {
+.page-content.gradient-background {
   background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
-  size: cover;
+  height: 85vh;
 }
 
 .page-content {
@@ -55,6 +55,7 @@
 }
 
 .messaging-container {
+  position: relative;
   text-align: center;
 }
 
