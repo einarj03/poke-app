@@ -11,6 +11,7 @@ class PokesController < ApplicationController
 
   def create
     @poke = Poke.new(poke_params)
+    @receiver = User.find(poke_params[:receiver_id])
     if @poke.save
       redirect_to poke_path(@poke)
     else

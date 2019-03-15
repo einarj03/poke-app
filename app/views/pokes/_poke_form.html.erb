@@ -1,0 +1,5 @@
+<%= form_for poke do |f| %>
+  <%= f.text_field :content, class: "message-content" %>
+  <%= f.hidden_field :sender_id, value: current_user.id %>
+  <%= f.hidden_field :receiver_id, value: receiver.id %>
+<% end %>
