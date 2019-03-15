@@ -42,26 +42,6 @@ Question.create(
   content: "We'll get on if..."
 )
 
-
-5.times do
-  User.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email,
-    password: "password",
-    date_of_birth: Faker::Date.birthday(12, 65),
-    gender: Faker::Gender.binary_type
-    )
-  5.times do
-
-    ProfileAnswer.create(
-      user: User.last,
-      question: Question.all.sample,
-      answer: Faker::Creature::Animal.name
-      )
-  end
-end
-
 einar = User.create(
   first_name: "Einar",
   last_name: "Jonsson",
@@ -161,6 +141,16 @@ jacob = User.create(
   gender: "male",
   remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570399/5523_UnionSuit_Grey_Front2_Web_600x.jpg'
 )
+
+User.all.each do |user|
+  5.times do
+    ProfileAnswer.create(
+      user: user,
+      question: Question.all.sample,
+      answer: Faker::Creature::Animal.name
+      )
+  end
+end
 
 Poke.create(
   content: "Hey sweetie. Fancy a fuck?",
