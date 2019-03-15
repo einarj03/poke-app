@@ -1,0 +1,14 @@
+<div class="messaging-container">
+  <div class="btn btn-primary btn-inspire">
+    Inspire me!
+  </div>
+  <div class="textfield-container">
+    <div class="messaging-form">
+      <% if poke.id %>
+        <%= render 'message_form', poke: poke, message: message %>
+      <% else %>
+        <%= render 'poke_form', poke: poke, receiver: receiver %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -203,3 +203,44 @@ Poke.create(
     poke: Poke.last
     )
 end
+
+Question.create(
+  content: "Nightclub or Netflix..."
+)
+
+Question.create(
+  content: "Greatest travel story..."
+)
+
+Question.create(
+  content: "Go-to song is..."
+)
+
+Question.create(
+  content: "We'll get on if..."
+)
+
+Question.create(
+  content: "Most inspiring teacher I've met..."
+)
+
+Question.create(
+  content: "Must-see movie..."
+)
+
+Question.create(
+  content: "My secret skill..."
+)
+
+Question.create(
+  content: "If you could teleport to anywhere this weekend it would be..."
+)
+
+Question.create(
+  content: "We'll get on if..."
+)
+
+
+
+
+
