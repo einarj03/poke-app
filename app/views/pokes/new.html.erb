@@ -1,7 +1,7 @@
 <div class="page-content gradient-background">
   <div class="messages-heading">
-    <h3> Poke </h3>
-    <h1> Jessica </h1>
+    <h3>Poke</h3>
+    <h1><%= @receiver.first_name %></h1>
   </div>
   <div class="message-container">
       <%= link_to user_path(@receiver) do %>
@@ -13,4 +13,4 @@
       </div>
   </div>
 </div>
-<%= render 'new_message_form', message: @message, poke: @poke %>
+<%= render 'messaging_container', poke: @poke, receiver: @receiver %>
