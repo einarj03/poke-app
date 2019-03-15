@@ -8,11 +8,10 @@
   border-bottom: 2px solid #9E9E9E;
   padding-right: 50px;
   margin-right: 5px;
-  color: black;
-  font-family: Open Sans;
+  color: white;
   line-height: normal;
   font-size: 13px;
-  font-weight: bolder;
+  // font-weight: bolder;
 
   &:hover {
     text-decoration: none;
@@ -34,17 +33,12 @@
     flex: 1 1 auto;
 
     .poke-name {
-      font-family: Open Sans;
-      font-weight: bolder;
       line-height: normal;
-      font-size: 14px;
       color: black;
     }
 
     .poke-body {
-      font-family: Open Sans;
       font-style: normal;
-      font-weight: 300;
       line-height: normal;
       font-size: 13px;
       margin-bottom: 0;
@@ -52,7 +46,6 @@
   }
 
   .poke-time-left {
-    font-family: Open Sans;
     font-size: 13px;
     color: black;
     margin-bottom: 0;
@@ -61,7 +54,7 @@
 }
 
 
-.gradient-background-reverse {
-  background: linear-gradient(rgba(73, 40, 127, 0.15), #300773);
-  height: 100vh;
-}
+// .gradient-background-reverse {
+//   background: linear-gradient(rgba(73, 40, 127, 0.15), #300773);
+//   height: 100vh;
+// }

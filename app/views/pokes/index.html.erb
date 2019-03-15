@@ -1,5 +1,5 @@
-<div class="page-content">
-  <div class="gradient-background-reverse">
+<div class="page-content gradient-background">
+  <div>
     <div class="pokes-tabs">
       <%= link_to "Poked", "#", class: "tab" %>
       <%= link_to "Pokes", "#", class: "tab" %>
@@ -9,10 +9,10 @@
         <div class="poke-container">
           <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
           <div class="poke-content">
-            <h3 class="poke-name"><%= poke.receiver.first_name %></h3>
-            <p class="poke-body"><strong> Poked
+            <h5 class="poke-name"><%= poke.receiver.first_name %></h5>
+            <p class="poke-body"> Poked
               <%= "#{poke.poke_created_time} ago" %>
-            </strong></p>
+            </p>
           </div>
           <h3 class="poke-time-left">4h39min left</h3>
         </div>

@@ -6,12 +6,35 @@ $body-font: "Poppins 300", "Helvetica", "sans-serif";
 $headers-font: "Poppins 700", "Helvetica", "sans-serif";
 
 h1 {
-  color: white;
+  font-family: "Poppins" !important;
+  font-weight: 900 !important;
+}
+
+h2 {
+  font-family: "Poppins" !important;
+  font-weight: 700 !important;
 }
 
 h3 {
   color: white;
   letter-spacing: 25%;
+  font-family: "Poppins" !important;
+  font-weight: 300 !important;
+}
+
+h5 {
+  font-family: "Poppins" !important;
+  font-weight: 700 !important;
+}
+
+h6 {
+  font-family: "Poppins" !important;
+  font-weight: 300 !important;
+}
+
+a {
+  font-family: "Poppins" !important;
+  font-weight: 700 !important;
 }
 // To use a font file (.woff) uncomment following lines
 // @font-face {
