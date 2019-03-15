@@ -6,10 +6,13 @@
 
 <% @questions.each do |question| %>
   <%= simple_form_for @profile_answer do |f| %>
-  <%= f.input :answer, label: question %>
-  <%= f.submit %>
+  <%= f.input :answer, label: question.content %>
+  <%= f.submit'Add', class: "btn-primary btn" %>
+  <%#= f.submit, class %>
+  <% end %>
 <% end %>
-<% end %>
+
+
 <!-- <div class="card">
   <div class="card-body">
     <h5 class="card-title">Favourite quality in a Person</h5>

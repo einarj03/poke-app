@@ -1,8 +1,8 @@
 class ProfileAnswersController < ApplicationController
   def index
-    @answers = current_user.profile_answer
+    @answers = current_user.profile_answers
     if @answers.count < 5
-      @questions = ["question1", "question2"]
+      @questions = Question.all
       @profile_answer = ProfileAnswer.new
     end
   end
