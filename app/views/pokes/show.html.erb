@@ -1,5 +1,5 @@
   <% if @poke.accepted? %>
-  <div class="page-content gradient-background messenger">
+  <div class="pokes-show gradient-background messenger">
     <div class="messages-content"></div>
       <div class="messages-heading">
         <h3> Poke </h3>
@@ -29,7 +29,6 @@
           <div class="message-container message-me">
             <div class="message-text-me">
               <%= message.content %>
-               <%= message.created_at %>
             </div>
             <div class="lg-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @current_user.photo %>')">
             </div>
@@ -42,7 +41,6 @@
             <% end %>
             <div class="message-text">
               <%= message.content %>
-              <%= message.created_at %>
             </div>
           </div>
         <% end %>
@@ -51,7 +49,7 @@
     <%= render 'messaging_container', message: @message, poke: @poke %>
   </div>
   <% else %>
-    <div class="page-content gradient-background">
+    <div class="pokes-show gradient-background">
       <% if @poke.sender == current_user %>
         <div class="messages-heading">
           <h3>Poke</h3>
