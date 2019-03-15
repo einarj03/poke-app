@@ -8,7 +8,7 @@
       <% @sent_pokes.each do |poke|%>
         <%= link_to poke_path(poke) do %>
           <div class="poke-container">
-            <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
+            <%= cl_image_tag poke.receiver.photo, class: "lg-avatar" %>
             <div class="poke-content">
               <h3 class="poke-name"><%= poke.receiver.first_name %></h3>
               <p class="poke-body"><strong> Poked
@@ -22,16 +22,14 @@
       <% @received_pokes.each do |poke|%>
         <%= link_to poke_path(poke) do %>
           <div class="poke-container">
-            <%= image_tag 'boy1.jpg', class: "lg-avatar" %>
-            <div class="poke-name">
-              <h3><%= "#{poke.sender.first_name} ago" %></h3>
-            </div>
-            <div class="poke-body">
-              <p><strong> Poked
-
-                <%= poke.poke_created_time %>
+            <%= cl_image_tag poke.sender.photo, class: "lg-avatar" %>
+            <div class="poke-content">
+              <h3 class="poke-name"><%= poke.sender.first_name %></h3>
+              <p class="poke-body"><strong> Poked
+                <%= "#{poke.poke_created_time} ago" %>
               </strong></p>
             </div>
+            <h3 class="poke-time-left">4h39min left</h3>
           </div>
         <% end %>
       <% end %>
