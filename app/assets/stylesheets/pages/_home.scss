@@ -7,19 +7,18 @@
   color: white;
 
   .top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     padding: 20px;
+    text-align: center;
 
     .company-name {
-      font-family: "Roboto";
-      font-weight: bold;
-      font-size: 24px;
       letter-spacing: 0.25em;
     }
 
     a {
+      position: absolute;
+      top: 20px;
+      right: 20px;
       color: white;
       &:hover {
         text-decoration: none;
@@ -40,17 +39,27 @@
     }
 
     .tagline-second {
-      font-family: "Roboto";
-      font-weight: bold;
-      font-size: 48px;
+      // font-family: "Roboto";
+      // font-weight: bold;
+      // font-size: 48px;
       float: right;
       padding-right: 30px;
     }
   }
 
   .call-to-action-flex {
-    margin-top: 80px;
-    display: flex;
-    justify-content: space-around;
+    // margin-top: 80px;
+    // display: flex;
+    // justify-content: space-around;
+  }
+
+  .call-to-action {
+    margin-top: 60px;
+    margin-left: 110px;
+  }
+
+  .learn-more {
+    margin-top: 60px;
+    text-align: center;
   }
 }
