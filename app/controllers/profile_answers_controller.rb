@@ -1,19 +1,15 @@
 class ProfileAnswersController < ApplicationController
   def index
     @answers = current_user.profile_answers
-    if @answers.count < 5
-      @questions = Question.all
-      @profile_answer = ProfileAnswer.new
-    end
+    @questions = Question.all
+    @profile_answer = ProfileAnswer.new
   end
 
   def create
-    @questions = ["question1", "question2"]
+    @questions = Question.all
     @profile_answer = ProfileAnswer.new(profile_answer_params)
-    @profile_answer.user = current_user
     if @profile_answer.save
-      raise
-      redirect_to users_path(@profile_answer)
+      redirect_to profile_answers_path
     else
       render :index
     end
@@ -22,7 +18,7 @@ class ProfileAnswersController < ApplicationController
   private
 
   def profile_answer_params
-    params.require(:profile_answer).permit(:answer, :suggestion_id)
+    params.require(:profile_answer).permit(:answer, :question_id, :user_id)
   end
 
   # def update

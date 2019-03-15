@@ -21,4 +21,8 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def finished_quiz?
+    ProfileAnswer.where(user_id: self.id).count >= 5
+  end
 end
