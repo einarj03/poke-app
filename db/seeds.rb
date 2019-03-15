@@ -6,6 +6,43 @@ User.destroy_all
 
 # QUESTIONS = ["question1", "question2"]
 
+Question.create(
+  content: "Nightclub or Netflix..."
+)
+
+Question.create(
+  content: "Greatest travel story..."
+)
+
+Question.create(
+  content: "Go-to song is..."
+)
+
+Question.create(
+  content: "We'll get on if..."
+)
+
+Question.create(
+  content: "Most inspiring teacher I've met..."
+)
+
+Question.create(
+  content: "Must-see movie..."
+)
+
+Question.create(
+  content: "My secret skill..."
+)
+
+Question.create(
+  content: "If you could teleport to anywhere this weekend it would be..."
+)
+
+Question.create(
+  content: "We'll get on if..."
+)
+
+
 5.times do
   User.create(
     first_name: Faker::Name.first_name,
@@ -16,13 +53,10 @@ User.destroy_all
     gender: Faker::Gender.binary_type
     )
   5.times do
-    Question.create(
-      content: Faker::TvShows::HowIMetYourMother.quote
-      )
 
     ProfileAnswer.create(
       user: User.last,
-      question: Question.last,
+      question: Question.all.sample,
       answer: Faker::Creature::Animal.name
       )
   end
@@ -203,42 +237,6 @@ Poke.create(
     poke: Poke.last
     )
 end
-
-Question.create(
-  content: "Nightclub or Netflix..."
-)
-
-Question.create(
-  content: "Greatest travel story..."
-)
-
-Question.create(
-  content: "Go-to song is..."
-)
-
-Question.create(
-  content: "We'll get on if..."
-)
-
-Question.create(
-  content: "Most inspiring teacher I've met..."
-)
-
-Question.create(
-  content: "Must-see movie..."
-)
-
-Question.create(
-  content: "My secret skill..."
-)
-
-Question.create(
-  content: "If you could teleport to anywhere this weekend it would be..."
-)
-
-Question.create(
-  content: "We'll get on if..."
-)
 
 
 
