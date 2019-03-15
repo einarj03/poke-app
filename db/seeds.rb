@@ -155,7 +155,7 @@ end
 Poke.create(
   content: "Hey sweetie. Fancy a .....drink?",
   sender: avalon,
-  receiver: Inou
+  receiver: inou
   )
 
 Poke.create(

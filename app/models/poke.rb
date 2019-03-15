@@ -4,14 +4,25 @@ class Poke < ApplicationRecord
   has_many :messages
   validates :content, presence: true
 
-  def poke_created_time
-    t = (Time.now - self.created_at).to_i
-    # Time.at(t).strftime("%lh%Mm%Ss")
-    Time.at(t).strftime("%lh")
+  def created_time
+    t = DateTime.now - created_at.to_datetime
+    hours = (t * 24).to_i
+    minutes = (t * 24 * 60).to_i
+    seconds = (t * 24 * 60 * 60).to_i
+    if hours.positive?
+      output = "#{hours}h ago"
+      return output
+    elsif minutes.positive?
+      output = "#{minutes}m ago"
+      return output
+    else
+      output = "#{seconds}s ago"
+      return output
+    end
   end
 
-  # def poke_time_left
+  # def time_left
   #   m = Time.now + 12.hours - self.created_at
-  #   Time.at(m.strftime("%l\h %M\m %S\s")
+  #   Time.at(m.strftime("%lh%Mm%Ss")
   # end
 end
