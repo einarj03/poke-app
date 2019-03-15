@@ -63,5 +63,5 @@
 
 .page-content.pokes-index .gradient-background-reverse {
   background: linear-gradient(rgba(73, 40, 127, 0.15), #300773);
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
 }
