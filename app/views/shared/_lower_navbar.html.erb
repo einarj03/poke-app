@@ -5,15 +5,13 @@
       <div class="lower-navbar-strip"></div>
       <div class="lower-navbar-buttons">
         <div class="back-btn-container">
-          <%= link_to :back, class: "navbar-back" do %>
-            <i class="fas fa-angle-left"></i>
+          <%= link_to user_path(current_user) do %>
+            <i class="fas fa-user"></i>
           <% end %>
         </div>
         <div class="poke-btn-container">
           <%= link_to users_path do %>
-            <div class="poke-btn">
-              <!-- <i class="fas fa-home"></i> -->
-            </div>
+            <i class="fas fa-home"></i>
           <% end %>
         </div>
         <%= link_to pokes_path, class: "navbar-messages" do %>
