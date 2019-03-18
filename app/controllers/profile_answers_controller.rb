@@ -15,6 +15,16 @@ class ProfileAnswersController < ApplicationController
     end
   end
 
+  def edit
+    @profile_answer = ProfileAnswer.find(params[:id])
+  end
+
+  def update
+    @profile_answer = ProfileAnswer.find(params[:id])
+    @profile_answer.update(profile_answer_params)
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def profile_answer_params
