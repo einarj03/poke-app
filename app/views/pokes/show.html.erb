@@ -46,7 +46,7 @@
         <% end %>
       <% end %>
     </div>
-    <%= render 'messaging_container', message: @message, poke: @poke %>
+    <%= render 'messaging_container', message: @message, poke: @poke, poke_suggestions: @poke_suggestions %>
   </div>
   <% else %>
     <div class="pokes-show gradient-background">

@@ -90,5 +90,14 @@
   width: 100%;
 }
 
+.messaging-form {
+  background-color: $light-gray;
+
+  .message-content {
+    border-radius: 50px;
+    width: 70%;
+    height: 30px;
+  }
+}
 
 

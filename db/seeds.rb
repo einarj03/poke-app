@@ -341,7 +341,7 @@ jordan = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552906949/lilliya-scarlett-instagram-1528814125-custom-0.png.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552906949/lilliya-scarlett-instagram-1528814125-custom-0.png'
 )
 
 riley = User.create(

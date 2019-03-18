@@ -25,6 +25,7 @@ class PokesController < ApplicationController
   def show
     @message = Message.new
     @messages = @poke.messages
+    @poke_suggestions = PokeSuggestion.all
     if @poke.sender == current_user
       @other_user = @poke.receiver
     else
