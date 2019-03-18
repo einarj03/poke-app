@@ -20,15 +20,4 @@ class ProfileAnswersController < ApplicationController
   def profile_answer_params
     params.require(:profile_answer).permit(:answer, :question_id, :user_id)
   end
-
-  # def update
-  # end
-
-  # def destroy
-  #   @dose = Dose.find(params[:id])
-  #   @dose.destroy
-  #   redirect_to cocktail_path(@dose.cocktail)
-  # end
-
-
 end
