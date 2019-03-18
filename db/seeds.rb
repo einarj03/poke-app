@@ -5,6 +5,17 @@ Poke.destroy_all
 User.destroy_all
 
 # QUESTIONS = ["question1", "question2"]
+PokeSuggestion.create(
+  content: "Do you work at Starbucks? Because I like you a latte."
+)
+
+PokeSuggestion.create(
+  content: "If you were a vegetable you'd be a cute-cumber."
+)
+
+PokeSuggestion.create(
+  content: "Are you an interior decorator? Because when I saw you, the entire room became beautiful."
+)
 
 Question.create(
   content: "Truth or Dare..."
