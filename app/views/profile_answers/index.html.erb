@@ -15,6 +15,8 @@
           </h6>
           <p>
             <%= profile_answer.answer %>
+            <%= render 'edit', profile_answer: profile_answer %>
+            <%#= link_to "Edit", edit_profile_answer_path(profile_answer)  %>
           </p>
         <% else %>
           <%= simple_form_for @profile_answer do |f| %>
