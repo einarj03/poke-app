@@ -1,5 +1,8 @@
 <div class="page-content">
   <div class="profile-photo" style="background-image: url('<%= cl_image_path @user.photo %>');">
+    <% if @user == current_user %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "logout") %>
+    <% end %>
     <div class="profile-photo-gradient">
     </div>
     <div class="profile-details">

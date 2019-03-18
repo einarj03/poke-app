@@ -23,17 +23,11 @@
     padding: 0 20px;
 
     .profile-name {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: bold;
       line-height: normal;
       font-size: 48px;
     }
 
     .profile-tagline {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 300;
       line-height: normal;
       font-size: 20px;
     }
@@ -55,17 +49,11 @@
     margin-bottom: 15px;
 
     .question {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 500;
       line-height: normal;
       font-size: 13px;
     }
 
     .answer {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 300;
       line-height: normal;
       font-size: 20px;
     }
@@ -73,3 +61,9 @@
 
 }
 
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
