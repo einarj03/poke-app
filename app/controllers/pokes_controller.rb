@@ -9,6 +9,7 @@ class PokesController < ApplicationController
   def new
     @poke = Poke.new
     @receiver = User.find(params[:user_id])
+    @poke_suggestions = PokeSuggestion.all
   end
 
   def create
