@@ -31,28 +31,28 @@
         justify-content: space-around;
       }
 
-      .poke-btn-container {
-        position: relative;
-        width: 64px;
-        height: 64px;
+      // .poke-btn-container {
+        // position: relative;
+        // width: 64px;
+        // height: 64px;
 
-        .poke-btn {
-          position: absolute;
-          bottom: 8px;
-          border-radius: 50%;
-          height: 64px;
-          width: 64px;
-          background-color: white;
-          border: 7px solid $dark-purple;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
+      //   .poke-btn {
+      //     position: absolute;
+      //     bottom: 8px;
+      //     border-radius: 50%;
+      //     height: 64px;
+      //     width: 64px;
+      //     background-color: white;
+      //     border: 7px solid $dark-purple;
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: space-around;
 
-          .fas {
-            color: $dark-purple;
-          }
-        }
-      }
+      //     .fas {
+      //       color: $dark-purple;
+      //     }
+      //   }
+      // }
 
 
       .fas {
