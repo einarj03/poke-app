@@ -1,6 +1,8 @@
 <%= form_for [poke, message] do |f| %>
-  <%= f.text_field :content, class: "message-content" %>
+  <%= f.text_field :content, class: "message-content", placeholder: "Your message here..." %>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.hidden_field :poke_id, value: poke.id %>
-  <%= f.submit "Send", class: "btn btn-primary"%>
+  <%= f.button class: "btn-send" do %>
+    <i class="fas fa-arrow-circle-up"></i>
+  <% end %>
 <% end %>

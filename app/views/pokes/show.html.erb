@@ -10,13 +10,17 @@
           <div class="message-text-me">
             <%= @poke.content %>
           </div>
-          <div class="lg-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
+          <div class="avatar-container">
+            <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
+            </div>
           </div>
         </div>
       <% else %>
         <div class="message-container message-other">
           <%= link_to user_path(@poke.sender) do %>
-            <div class="lg-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
+            <div class="avatar-container">
+              <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
+              </div>
             </div>
           <% end %>
           <div class="message-text">
@@ -30,13 +34,17 @@
             <div class="message-text-me">
               <%= message.content %>
             </div>
-            <div class="lg-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @current_user.photo %>')">
+            <div class="avatar-container">
+              <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @current_user.photo %>')">
+              </div>
             </div>
           </div>
         <% else %>
           <div class="message-container message-other">
             <%= link_to user_path(message.user) do %>
-              <div class="lg-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @other_user.photo %>')">
+              <div class="avatar-container">
+                <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @other_user.photo %>')">
+                </div>
               </div>
             <% end %>
             <div class="message-text">

@@ -7,7 +7,7 @@
 
 .pokes-new, .pokes-show {
   &.gradient-background.messenger {
-  min-height: 85vh;
+  min-height: 89vh;
   }
 }
 
@@ -37,6 +37,9 @@
   padding: 10px 20px 10px 20px;
   &.message-me {
     justify-content: flex-end;
+  }
+  .avatar-container {
+    flex: 0 0 auto;
   }
 }
 
@@ -73,15 +76,8 @@
 .textfield-container {
   border-top: 1px solid $light-purple;
   width: 100%;
-  height: 10vh;
   background-color: white;
   align-self: center;
-}
-
-.message-content {
-  width: 90%;
-  height: 7vh;
-  margin: auto;
 }
 
 .m-fixed {
@@ -92,11 +88,22 @@
 
 .messaging-form {
   background-color: $light-gray;
+  form {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
 
   .message-content {
     border-radius: 50px;
-    width: 70%;
+    flex: 1 1 auto;
     height: 30px;
+    padding: 0 12px;
+  }
+
+  .btn-send {
+    color: $purple;
+    font-size: 22px;
   }
 }
 
