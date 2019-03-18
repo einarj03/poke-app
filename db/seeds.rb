@@ -49,7 +49,7 @@ einar = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658052/leonardo_dicaprio-gt.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552907457/eww.jpg'
 )
 
 ferdi = User.create(
@@ -355,19 +355,19 @@ end
 
 Poke.create(
   content: "Hey sweetie. Fancy a .....drink?",
-  sender: avalon,
+  sender: victoria,
   receiver: inou
   )
 
 Poke.create(
   content: "Would you like to do homework wih me?",
-  sender: ferdi,
-  receiver: einar
+  sender: einar,
+  receiver: ferdi
 )
 
 Poke.create(
-  content: "I'm obviously in love!",
-  sender: einar,
+  content: "Where is the yoga I've been waiting for? I think it's at the bar. Join?",
+  sender: ferdi,
   receiver: victoria
 )
 
@@ -380,7 +380,7 @@ Poke.create(
 Poke.create(
   content: "Hey cutie, can I borrow your glasses?",
   sender: jennifer,
-  receiver: einar,
+  receiver: ferdi,
   accepted: true
 )
 
@@ -392,20 +392,20 @@ Poke.create(
 
 Poke.create(
   content: "I'll buy you a pony",
-  sender: einar,
+  sender: ferdi,
   receiver: avalon,
   accepted: true
 )
 
 Poke.create(
   content: "You must be a small amount of red phosphorus and I must be a tiny wooden stick… Because we're a match",
-  sender: ferdi,
+  sender: einar,
   receiver: andre
 )
 
 Poke.create(
   content: "I've been looking for good German hair",
-  sender: einar,
+  sender: ferdi,
   receiver: jacob
 )
 
