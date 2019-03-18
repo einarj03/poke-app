@@ -204,8 +204,8 @@ Poke.create(
 
 Poke.create(
   content: "I've been looking for good German hair",
-  sender: einar,
-  receiver: jacob
+  sender: jacob,
+  receiver: einar
 )
 
 Poke.create(
