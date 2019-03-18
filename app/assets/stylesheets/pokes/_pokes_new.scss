@@ -1,7 +1,19 @@
+.page-content.messages-page {
+  display: flex;
+  flex-direction: column;
+  max-height: 94vh;
+  .pokes-new, .pokes-show {
+    &.gradient-background.messenger {
+    flex: 0 1 89vh;
+    min-height: 0;
+    }
+  }
+}
+
 .pokes-new, .pokes-show {
   &.gradient-background {
   background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
-  // min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   }
 }
 
@@ -63,6 +75,7 @@
 }
 
 .messaging-container {
+  flex: 1 0 auto;
   position: relative;
   text-align: center;
 }
