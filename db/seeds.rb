@@ -391,9 +391,9 @@ Poke.create(
 
 Poke.create(
   content: "Hey cutie, can I borrow your glasses?",
-  sender: jennifer,
-  receiver: ferdi,
-  accepted: true
+  sender: einar,
+  receiver: jennifer,
+  status: "accepted"
 )
 
 Poke.create(
@@ -406,7 +406,7 @@ Poke.create(
   content: "I'll buy you a pony",
   sender: ferdi,
   receiver: avalon,
-  accepted: true
+  status: "rejected"
 )
 
 Poke.create(
