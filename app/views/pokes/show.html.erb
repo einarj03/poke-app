@@ -1,4 +1,4 @@
-  <% if @poke.accepted? %>
+  <% if @poke.status == "accepted" %>
   <div class="pokes-show gradient-background messenger">
     <div class="messages-content"></div>
       <div class="messages-heading">
@@ -93,10 +93,10 @@
                 <h5 class="time-text">to accept this poke</h5>
               </div>
               <div class="poke-pending-actions">
-                <%= link_to poke_path(@poke, poke: { accepted: true } ), method: :patch, class: "accept" do %>
+                <%= link_to poke_path(@poke, poke: { status: "accepted" } ), method: :patch, class: "accept" do %>
                   <i class="fas fa-check"></i>
                 <% end %>
-                <%= link_to poke_path(@poke, poke: { accepted: false }), method: :patch, class: "reject" do %>
+                <%= link_to poke_path(@poke, poke: { status: "rejected" }), method: :patch, class: "reject" do %>
                   <i class="fas fa-times"></i>
                 <% end %>
               </div>
