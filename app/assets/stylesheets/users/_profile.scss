@@ -33,6 +33,13 @@
     }
   }
 
+  .actions a {
+    font-size: 30px;
+    &:hover {
+      color: white;
+    }
+  }
+
 }
 
 .profile-qs {
