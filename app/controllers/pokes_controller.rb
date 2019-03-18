@@ -1,5 +1,6 @@
 class PokesController < ApplicationController
   before_action :find_poke, only: [:show, :update]
+  before_action :find_poke_suggestions, only: [:new, :create, :show]
 
   def index
     @sent_pokes = Poke.where(sender: current_user)
@@ -9,7 +10,6 @@ class PokesController < ApplicationController
   def new
     @poke = Poke.new
     @receiver = User.find(params[:user_id])
-    @poke_suggestions = PokeSuggestion.all
   end
 
   def create
@@ -25,7 +25,6 @@ class PokesController < ApplicationController
   def show
     @message = Message.new
     @messages = @poke.messages
-    @poke_suggestions = PokeSuggestion.all
     if @poke.sender == current_user
       @other_user = @poke.receiver
     else
@@ -46,5 +45,9 @@ class PokesController < ApplicationController
 
   def find_poke
     @poke = Poke.find(params[:id])
+  end
+
+  def find_poke_suggestions
+    @poke_suggestions = PokeSuggestion.all
   end
 end
