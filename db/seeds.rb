@@ -17,6 +17,7 @@ PokeSuggestion.create(
   content: "Are you an interior decorator? Because when I saw you, the entire room became beautiful."
 )
 
+
 Question.create(
   content: "Truth or Dare..."
 )
