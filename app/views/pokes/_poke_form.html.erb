@@ -1,5 +1,6 @@
-<%= form_for poke do |f| %>
+<%= form_for poke, class: "form-inline" do |f| %>
   <%= f.text_field :content, class: "message-content" %>
   <%= f.hidden_field :sender_id, value: current_user.id %>
   <%= f.hidden_field :receiver_id, value: receiver.id %>
+  <%= f.submit "Send", class: "btn btn-primary"%>
 <% end %>
