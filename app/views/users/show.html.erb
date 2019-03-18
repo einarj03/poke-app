@@ -26,5 +26,10 @@
         <h6 class="answer"><%= profile_answer.answer %></h6>
       </div>
     <% end %>
+  <div>
+    <% if @user == current_user %>
+      <%= link_to "Profile Questions", profile_answers_path(@user), class: "btn btn-primary" %>
+    <% end %>
+  </div>
   </div>
 </div>
