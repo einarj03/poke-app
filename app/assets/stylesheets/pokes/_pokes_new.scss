@@ -38,6 +38,9 @@
   &.message-me {
     justify-content: flex-end;
   }
+  .avatar-container {
+    flex: 0 0 auto;
+  }
 }
 
 .message-text {
@@ -95,7 +98,7 @@
     border-radius: 50px;
     flex: 1 1 auto;
     height: 30px;
-    padding: 0 10px;
+    padding: 0 12px;
   }
 
   .btn-send {
