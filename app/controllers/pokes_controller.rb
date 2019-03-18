@@ -1,4 +1,6 @@
 class PokesController < ApplicationController
+  before_action :find_poke, only: [:show, :update]
+
   def index
     @sent_pokes = Poke.where(sender: current_user)
     @received_pokes = Poke.where(receiver: current_user)
@@ -7,6 +9,7 @@ class PokesController < ApplicationController
   def new
     @poke = Poke.new
     @receiver = User.find(params[:user_id])
+    @poke_suggestions = PokeSuggestion.all
   end
 
   def create
@@ -20,7 +23,6 @@ class PokesController < ApplicationController
   end
 
   def show
-    @poke = Poke.find(params[:id])
     @message = Message.new
     @messages = @poke.messages
     if @poke.sender == current_user
@@ -30,11 +32,18 @@ class PokesController < ApplicationController
     end
   end
 
+  def update
+    @poke.update(poke_params)
+    redirect_to poke_path(@poke)
+  end
+
   private
 
   def poke_params
-    params.require(:poke).permit(:content, :sender_id, :receiver_id)
+    params.require(:poke).permit(:content, :sender_id, :receiver_id, :status)
   end
 
-
+  def find_poke
+    @poke = Poke.find(params[:id])
+  end
 end

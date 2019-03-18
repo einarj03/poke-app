@@ -58,3 +58,10 @@
   background: linear-gradient(rgba(73, 40, 127, 0.15), #300773);
   min-height: calc(100vh - 50px);
 }
+
+.poke-status {
+  i {
+    font-size: 30px;
+    padding-right: 5px;
+  }
+}

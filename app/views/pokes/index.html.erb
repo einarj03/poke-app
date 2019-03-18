@@ -15,7 +15,15 @@
                 <%= poke.created_time %>
               </strong></p>
             </div>
-            <h3 class="poke-time-left"><%= poke.time_left %></h3>
+            <div class="poke-status">
+              <% if poke.status == "accepted" %>
+                <i class="fas fa-check"></i>
+              <% elsif poke.status == "rejected" %>
+                <i class="fas fa-times"></i>
+              <% else %>
+                <h3 class="poke-time-left"><%= poke.time_left %></h3>
+              <% end %>
+            </div>
           </div>
         <% end %>
       <% end %>
