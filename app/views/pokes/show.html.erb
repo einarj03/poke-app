@@ -1,60 +1,62 @@
   <% if @poke.status == "accepted" %>
-  <div class="pokes-show gradient-background messenger">
-    <div class="messages-content"></div>
-      <div class="messages-heading">
-        <h3> Poke </h3>
-        <h1> <%= @other_user.first_name %> </h1>
-      </div>
-      <% if @poke.sender == current_user %>
-        <div class="message-container message-me">
-          <div class="message-text-me">
-            <%= @poke.content %>
-          </div>
-          <div class="avatar-container">
-            <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
-            </div>
-          </div>
+  <div class="page-content messages-page">
+    <div class="pokes-show gradient-background messenger">
+      <div class="messages-content"></div>
+        <div class="messages-heading">
+          <h3> Poke </h3>
+          <h1> <%= @other_user.first_name %> </h1>
         </div>
-      <% else %>
-        <div class="message-container message-other">
-          <%= link_to user_path(@poke.sender) do %>
-            <div class="avatar-container">
-              <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
-              </div>
-            </div>
-          <% end %>
-          <div class="message-text">
-            <%= @poke.content %>
-          </div>
-        </div>
-      <% end %>
-      <% @messages.order(created_at: :asc).each do |message| %>
-        <% if message.user == current_user %>
+        <% if @poke.sender == current_user %>
           <div class="message-container message-me">
             <div class="message-text-me">
-              <%= message.content %>
+              <%= @poke.content %>
             </div>
             <div class="avatar-container">
-              <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @current_user.photo %>')">
+              <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
               </div>
             </div>
           </div>
         <% else %>
           <div class="message-container message-other">
-            <%= link_to user_path(message.user) do %>
+            <%= link_to user_path(@poke.sender) do %>
               <div class="avatar-container">
-                <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @other_user.photo %>')">
+                <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
                 </div>
               </div>
             <% end %>
             <div class="message-text">
-              <%= message.content %>
+              <%= @poke.content %>
             </div>
           </div>
         <% end %>
-      <% end %>
+        <% @messages.order(created_at: :asc).each do |message| %>
+          <% if message.user == current_user %>
+            <div class="message-container message-me">
+              <div class="message-text-me">
+                <%= message.content %>
+              </div>
+              <div class="avatar-container">
+                <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @current_user.photo %>')">
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="message-container message-other">
+              <%= link_to user_path(message.user) do %>
+                <div class="avatar-container">
+                  <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @other_user.photo %>')">
+                  </div>
+                </div>
+              <% end %>
+              <div class="message-text">
+                <%= message.content %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <%= render 'messaging_container', message: @message, poke: @poke, poke_suggestions: @poke_suggestions %>
     </div>
-    <%= render 'messaging_container', message: @message, poke: @poke, poke_suggestions: @poke_suggestions %>
   </div>
   <% else %>
     <div class="pokes-show gradient-background">
