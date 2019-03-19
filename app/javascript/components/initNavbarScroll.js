@@ -2,6 +2,7 @@ const initNavbarScroll = () => {
   $(function () {
     var lastScrollTop = 0;
     var $navbar = $('.lower-navbar');
+    var $navbarSpace = $('.navbar-space');
     var navbarHeight = $navbar.outerHeight();
     var movement = 0;
     var lastDirection = 0;
@@ -19,7 +20,8 @@ const initNavbarScroll = () => {
           margin = navbarHeight;
         }
         margin = -margin;
-        $navbar.css('margin-top', margin+"px")
+        $navbar.css('margin-top', margin+"px");
+        $navbarSpace.css('display', 'none');
 
         lastDirection = 1;
       } else { // scroll up
@@ -31,7 +33,8 @@ const initNavbarScroll = () => {
           margin = navbarHeight;
         }
         margin = margin-navbarHeight;
-        $navbar.css('margin-top', margin+"px")
+        $navbar.css('margin-top', margin+"px");
+        $navbarSpace.css('display', 'block');
 
         lastDirection = -1;
       }
