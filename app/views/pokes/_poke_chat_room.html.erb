@@ -5,11 +5,25 @@
       <h1> <%= @other_user.first_name %> </h1>
     </div>
     <div class="messages-container">
-      <%= render 'messages/message', message: Message.new(content: @poke.content, user: @poke.sender) %>
+      <%= render 'messages/message', message: Message.new(content: @poke.content, user: @poke.sender), user_is_messages_author: current_user == @poke.sender %>
       <% @messages.order(created_at: :asc).each do |message| %>
-        <%= render 'messages/message', message: message %>
+        <%= render 'messages/message', message: message, user_is_messages_author: current_user == message.user %>
       <% end %>
     </div>
   </div>
   <%= render 'messaging_container', message: @message, poke: @poke, poke_suggestions: @poke_suggestions %>
 </div>
+<% content_for :after_js do %>
+  <script>
+    scrollLastMessageIntoView();
+    App['chat_room_<%= @poke.id %>'] = App.cable.subscriptions.create({ channel: 'ChatRoomsChannel', chat_room_id: <%= @poke.id %>}, {
+      received: (data) => {
+        if (data.current_user_id !== <%= current_user.id %>) {
+          const messagesContainer = document.querySelector('.messages-container');
+          messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+          scrollLastMessageIntoView();
+        }
+      }
+    })
+  </script>
+<% end %>
