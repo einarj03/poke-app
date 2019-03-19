@@ -39,37 +39,7 @@
           </div>
         </div>
       <% else %>
-        <div class="messages-heading">
-          <h3>Poke</h3>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 m-auto">
-              <h1 class="text-center poke-pending-heading"><%= @poke.sender.first_name %> poked you!</h1>
-              <div class="center-flex">
-                <%= cl_image_tag @poke.sender.photo, class: "avatar-img lg-avatar poke-pending-poker" %>
-              </div>
-              <div class="center-flex">
-                <div class="message-text">
-                  <%= @poke.content %>
-                </div>
-              </div>
-              <div class="poke-pending-content">
-                <h5 class="time-text">You have</h5>
-                <h2 class="time"><%= @poke.time_left %></h2>
-                <h5 class="time-text">to accept this poke</h5>
-              </div>
-              <div class="poke-pending-actions">
-                <%= link_to poke_path(@poke, poke: { status: "accepted" } ), method: :patch, class: "accept" do %>
-                  <i class="fas fa-check"></i>
-                <% end %>
-                <%= link_to poke_path(@poke, poke: { status: "rejected" }), method: :patch, class: "reject" do %>
-                  <i class="fas fa-times"></i>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
+        <%= render "poke_accept_reject" %>
       <% end %>
     </div>
   <% end %>
