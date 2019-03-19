@@ -11,7 +11,7 @@
         </div>
         <div class="poke-btn-container">
           <%= link_to users_path do %>
-            <i class="fas fa-home"></i>
+            <%= image_tag("poke-home-button.png", :alt => "home", class: "fas", size: "25x23") %>
           <% end %>
         </div>
         <%= link_to pokes_path, class: "navbar-messages" do %>
@@ -21,3 +21,15 @@
     </div>
   </div>
 <% end %>
+      <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.querySelector(".lower-navbar").style.bottom = "0";
+          } else {
+            document.querySelector(".lower-navbar").style.bottom = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+      </script>

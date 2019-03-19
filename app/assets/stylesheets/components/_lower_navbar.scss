@@ -5,6 +5,7 @@
 
   .lower-navbar {
     position: relative;
+    transition: ease 0.3s;
 
     .lower-navbar-strip {
       position: absolute;
@@ -12,7 +13,7 @@
       left: 0;
       right: 0;
       height: 50px;
-      background-color: $dark-purple;
+      background-color: #f8f9fa;
     }
 
     .lower-navbar-buttons {
@@ -56,8 +57,13 @@
 
 
       .fas {
-        color: white;
-        font-size: 30px;
+        color: $purple;
+        font-size: 25px;
+      }
+
+      svg {
+        color: $purple;
+        font-size: 25px;
       }
     }
   }
