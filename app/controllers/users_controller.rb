@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:show, :edit, :update]
+  before_action :find_user, only: [:show]
 
   def index
     @users = User.all
@@ -7,15 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @report = Report.new
-  end
-
-  def update
-    if @user.update(user_params)
-      redirect_to user_path(@user)
-    else
-      render :edit
-    end
-
   end
 
   private
