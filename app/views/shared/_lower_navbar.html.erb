@@ -21,15 +21,15 @@
     </div>
   </div>
 <% end %>
-      <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-          if (prevScrollpos > currentScrollPos) {
-            document.querySelector(".lower-navbar").style.bottom = "0";
-          } else {
-            document.querySelector(".lower-navbar").style.bottom = "-50px";
-          }
-          prevScrollpos = currentScrollPos;
-        }
-      </script>
+<script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.querySelector(".lower-navbar").style.bottom = "0";
+    } else {
+      document.querySelector(".lower-navbar").style.bottom = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>

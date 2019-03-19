@@ -1,7 +1,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <div class="page-content users-index">
   <div class="users-index-container">
-  <h2 class="index-heading" align="center"> Who's your next shot? </h2>
+    <h2 class="index-heading" align="center"> Who's your next shot? </h2>
     <div class="orbit-container orbit-one">
 
       <div class="outer-circle circle-one">
@@ -37,18 +37,18 @@
         <%= link_to user_path(User.fifth) do %>
           <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
         <% end %>
-        <% end %>
       </div>
 
       <div class="inner-circle circle-three">
           <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+            <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
           <% end %>
           <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+            <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
           <% end %>
           <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+            <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+          <% end %>
           <% end %>
       </div>
     </div>
@@ -88,19 +88,19 @@
         <%= link_to user_path(User.fifth) do %>
           <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
         <% end %>
-        <% end %>
       </div>
 
       <div class="inner-circle circle-six">
-          <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
+        <%= link_to user_path(User.second) do %>
+        <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+        <% end %>
+        <%= link_to user_path(User.second) do %>
+        <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+        <% end %>
+        <%= link_to user_path(User.second) do %>
+        <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+        <% end %>
+        <% end %>
       </div>
     </div>
 
@@ -139,21 +139,19 @@
         <%= link_to user_path(User.fifth) do %>
           <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
         <% end %>
-        <%= link_to user_path(@users[13]) do %>
-          <div class="md-avatar pos-md-eight avatar-img" style="background-image: url('<%= cl_image_path @users[13].photo %>')"></div>
-        <% end %>
       </div>
 
       <div class="inner-circle circle-six">
-          <%= link_to user_path(User.second) do %>
+        <%= link_to user_path(User.second) do %>
           <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(User.second) do %>
+        <% end %>
+        <%= link_to user_path(User.second) do %>
           <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(User.second) do %>
+        <% end %>
+        <%= link_to user_path(User.second) do %>
           <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
+        <% end %>
+        <% end %>
       </div>
     </div>
 
@@ -192,22 +190,15 @@
         <%= link_to user_path(User.fifth) do %>
           <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
         <% end %>
-        <% end %>
       </div>
 
       <div class="inner-circle circle-six">
-          <%= link_to user_path(User.second) do %>
+        <%= link_to user_path(User.second) do %>
           <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
-<!--           <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(User.second) do %>
-          <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <% end %> -->
+        <% end %>
+        <% end %>
       </div>
     </div>
-
   </div>
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
