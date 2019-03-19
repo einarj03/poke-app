@@ -1,6 +1,6 @@
 class ProfileAnswersController < ApplicationController
-  before_action :find_profile_answer, only: [:edit, :update]
-  
+  before_action :find_profile_answer, only: [:edit, :update, :destroy]
+
   def index
     @answers = current_user.profile_answers
     @questions = Question.all
@@ -17,7 +17,7 @@ class ProfileAnswersController < ApplicationController
     end
   end
 
-  def edit  
+  def edit
   end
 
   def update
@@ -25,12 +25,17 @@ class ProfileAnswersController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def destroy
+    @profile_answer.destroy
+    redirect_to profile_answers_path
+  end
+
   private
 
   def profile_answer_params
     params.require(:profile_answer).permit(:answer, :question_id, :user_id)
   end
-  
+
   def find_profile_answer
     @profile_answer = ProfileAnswer.find(params[:id])
   end

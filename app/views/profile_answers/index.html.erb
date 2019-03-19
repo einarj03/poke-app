@@ -16,7 +16,7 @@
           <p>
             <%= profile_answer.answer %>
             <%= render 'edit', profile_answer: profile_answer %>
-            <%#= link_to "Edit", edit_profile_answer_path(profile_answer)  %>
+            <%= link_to "Delete", profile_answer_path(profile_answer), class: "btn btn-primary", method: :delete %>
           </p>
         <% else %>
           <%= simple_form_for @profile_answer do |f| %>
@@ -28,7 +28,7 @@
           <% end %>
 
 
-          <% break %>
+          <%# break %>
         <% end %>
       <% end %>
 
