@@ -9,9 +9,9 @@ Rails.application.routes.draw do
     resources :report, only: [:new, :create]
   end
 
-  resources :profile_answers, only: [:update, :destroy, :index, :create]
+  resources :profile_answers, only: [:edit, :update, :destroy, :index, :create]
 
-  resources :pokes, only: [:index, :show, :create] do
+  resources :pokes, only: [:index, :show, :create, :update] do
     resources :messages, only: [:index, :create]
   end
 

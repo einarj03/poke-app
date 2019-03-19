@@ -1,34 +1,50 @@
 // <--------------orbit circles-------------->
 .page-content.users-index {
   background-color: $light-purple;
-  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
-.users-index {
-  height: 100vh;
-  width: 120%;
+.users-index-container {
+  height: 200vh;
+  width: 100%;
 }
 
 .orbit-container {
   position: relative;
-  height: 100vh;
-  width: 50vw;
-  margin: auto;
-}
-
-@media(max-width: 768px) {
-  .users-index {
-    width: 100%;
+  width: 100vw;
+  &.orbit-one {
+    margin-top: -75px;
+  }
+  &.orbit-two {
+    margin-top: 410px;
+  }
+  &.orbit-three {
+    margin-top: 810px;
+  }
+  &.orbit-four {
+    margin-top: 1210px;
   }
 }
 
-@media(max-width: 375px) {
-  .users-index {
-    width: 50%;
-  }
-}
+
+// @media(max-width: 1024px) {
+//   .users-index-container {
+//     width: 115vw;
+//   }
+// }
+
+// @media(max-width: 768px) {
+//   .users-index-container {
+//     width: 100%;
+//   }
+// }
+
+// @media(max-width: 375px) {
+//   .users-index-container {
+//     width: 50%;
+//   }
+// }
 
 .outer-circle {
   position: absolute;
@@ -38,7 +54,7 @@
   left: -60px;
   top: 156px;
   box-shadow: 0px 0px 10px #FFFFFF;
-  background: radial-gradient(300px at 50%, #2E1852 0%, #916AD0 100%);
+  background: radial-gradient(300px at 50%, #2E1852 10%, #916ad000 90%);
 }
 
 .middle-circle {
@@ -68,117 +84,168 @@
 // <--------------small-------------->
 .pos-sm-one {
   position: absolute;
-  top: -10px;
+  top: -25px;
   left: 0px;
 }
 
 .pos-sm-two {
   position: absolute;
-  top: 24px;
-  left: 68px;
+  top: 25px;
+  left: 70px;
 }
 
 .pos-sm-three {
   position: absolute;
-  bottom: -10px;
-  left: 3px;
+  bottom: -15px;
+  left: -5px;
+}
+
+.pos-sm-four {
+  position: absolute;
+  top: -25px;
+  right: 0px;
+}
+
+.pos-sm-five {
+  position: absolute;
+  top: 25px;
+  right: 70px;
+}
+
+.pos-sm-six {
+  position: absolute;
+  bottom: -15px;
+  right: -5px;
 }
 
 // <--------------medium-------------->
 
 .pos-md-one {
   position: absolute;
-  top: -15px;
-  left: 65px;
+  bottom: 10px;
+  left: 20px;
 }
 
 .pos-md-two {
   position: absolute;
-  top: -15px;
-  right: 65px;
+  top: 120px;
+  left: -25px;
 }
 
 .pos-md-three {
   position: absolute;
-  top: 60px;
-  right: -15px;
+  top: 10px;
+  left: 20px;
 }
 
 .pos-md-four {
   position: absolute;
-  bottom: 60px;
-  right: -15px;
+  top: -30px;
+  left: 125px;
 }
 
 .pos-md-five {
   position: absolute;
-  bottom: -15px;
-  right: 65px;
+  top: 10px;
+  right: 20px;
 }
 
 .pos-md-six {
   position: absolute;
-  bottom: -15px;
-  left: 65px;
+  top: 120px;
+  right: -25px;
 }
 
 .pos-md-seven {
   position: absolute;
-  bottom: 60px;
-  left: -15px;
+  bottom: 10px;
+  right: 20px;
 }
 
-.pos-md-eight {
-  position: absolute;
-  top: 60px;
-  left: -15px;
-}
+// .pos-md-eight {
+//   position: absolute;
+//   top: 60px;
+//   left: -15px;
+// }
 
 // <--------------large-------------->
 
 .pos-lg-one {
   position: absolute;
-  top: 0px;
-  left: 70px;
+  top: 15px;
+  left: 75px;
 
 }
 
 .pos-lg-two {
   position: absolute;
-  top: -40px;
-  left: 205px;
+  top: -30px;
+  left: 220px;
 }
 
 .pos-lg-three {
   position: absolute;
-  top: 0px;
-  right: 70px;
-
+  top: 15px;
+  right: 75px;
 }
 
 .pos-lg-four {
   position: absolute;
-  bottom: -40px;
-  left: 205px;
-
+  top: 90px;
+  right: -10px;
 }
 
 .pos-lg-five {
+  position: absolute;
+  bottom: 210px;
+  left: 220px;
+}
+
+.pos-lg-six {
+  position: absolute;
+  bottom: 90px;
+  right: -10px;
+}
+
+.pos-lg-seven {
+  position: absolute;
+  bottom: 0px;
+  right: 70px;
+}
+
+.pos-lg-eight {
+  position: absolute;
+  bottom: -40px;
+  left: 205px
+}
+
+.pos-lg-nine {
   position: absolute;
   bottom: 0px;
   left: 70px;
 }
 
-.pos-lg-six {
+.pos-lg-ten {
   position: absolute;
-  bottom: 0px;
-  right: 70px;
+  bottom: 90px;
+  left: -10px;
+}
 
+.pos-lg-eleven {
+  position: absolute;
+  bottom: 210px;
+  left: -40px;
+}
+
+.pos-lg-twelve {
+  position: absolute;
+  top: 90px;
+  left: -10px;
 }
 
 // <--------------writing-------------->
 .index-heading {
-  position: absolute;
+  position: sticky;
   color: white;
   top: 30px;
   left: 0;

@@ -1,0 +1,25 @@
+.login-form {
+  padding: 30px;
+  color: white;
+  h2 {
+    color: white;
+  }
+}
+
+.page-content.login-page {
+    background-size: cover;
+    opacity: 50%;
+    background-repeat: no-repeat;
+    background-position: top;
+    color: white;
+}
+
+.login-background {
+  height: 100vh;
+  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
+  min-height: calc(100vh - 50px);
+}
+
+.company-name {
+  padding: 20px;
+}

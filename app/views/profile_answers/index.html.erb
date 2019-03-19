@@ -15,15 +15,20 @@
           </h6>
           <p>
             <%= profile_answer.answer %>
+            <%= render 'edit', profile_answer: profile_answer %>
+            <%= link_to "Delete", profile_answer_path(profile_answer), class: "btn btn-primary", method: :delete %>
           </p>
         <% else %>
           <%= simple_form_for @profile_answer do |f| %>
-            <%= f.input :answer, label: question.content %>
+            <%= f.input :answer, label: question.content, input_html: { value: (f.object.answer.present?) ? f.object.answer : nil }%>
             <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
             <%= f.input :question_id, as: :hidden, input_html: { value: question.id } %>
-          <%= f.submit'Add', class: "btn-primary btn" %>
+          <%= f.submit 'Add', class: "btn-primary btn" %>
+          <%= f.submit 'Next', class: "btn-primary btn" %>
           <% end %>
-          <% break %>
+
+
+          <%# break %>
         <% end %>
       <% end %>
 

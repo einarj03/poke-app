@@ -1,13 +1,21 @@
-.pokes-new, .pokes-show {
-  &.gradient-background {
-  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
-  min-height: calc(100vh - 50px);
+.page-content.messages-page {
+  display: flex;
+  flex-direction: column;
+  max-height: 94vh;
+  .pokes-new, .pokes-show {
+    &.gradient-background.messenger {
+    flex: 0 1 89vh;
+    min-height: 0;
+    }
   }
 }
 
-.pokes-new, .pokes-show {
-  &.gradient-background.messenger {
-  min-height: 85vh;
+.pokes-new, .pokes-show, .pokes-index {
+  &.gradient-background {
+  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
+  min-height: calc(100vh - 50px);
+  overflow: auto;
+  padding-bottom: 20px;
   }
 }
 
@@ -38,6 +46,9 @@
   &.message-me {
     justify-content: flex-end;
   }
+  .avatar-container {
+    flex: 0 0 auto;
+  }
 }
 
 .message-text {
@@ -45,7 +56,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   color: white;
-  padding: 15px;
+  padding: 10px 15px;
   margin-left: 15px;
 }
 
@@ -54,12 +65,13 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   color: $dark-purple;
-  padding: 15px;
+  padding: 10px 15px;
   margin-right: 15px;
   opacity: .9;
 }
 
 .messaging-container {
+  flex: 1 0 auto;
   position: relative;
   text-align: center;
 }
@@ -73,15 +85,8 @@
 .textfield-container {
   border-top: 1px solid $light-purple;
   width: 100%;
-  height: 10vh;
   background-color: white;
   align-self: center;
-}
-
-.message-content {
-  width: 90%;
-  height: 7vh;
-  margin: auto;
 }
 
 .m-fixed {
@@ -90,5 +95,29 @@
   width: 100%;
 }
 
+.messaging-form {
+  background-color: $light-gray;
+  form {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .message-content {
+    border-radius: 15px;
+    flex: 1 1 auto;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 2px 12px;
+    max-height: 146px;
+  }
+
+  .btn-send {
+    color: $purple;
+    font-size: 22px;
+    border: none;
+    background: none;
+  }
+}
 
 

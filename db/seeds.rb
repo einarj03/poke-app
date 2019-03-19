@@ -17,6 +17,7 @@ PokeSuggestion.create(
   content: "Are you an interior decorator? Because when I saw you, the entire room became beautiful."
 )
 
+
 Question.create(
   content: "Truth or Dare..."
 )
@@ -390,9 +391,9 @@ Poke.create(
 
 Poke.create(
   content: "Hey cutie, can I borrow your glasses?",
-  sender: jennifer,
-  receiver: ferdi,
-  accepted: true
+  sender: einar,
+  receiver: jennifer,
+  status: "accepted"
 )
 
 Poke.create(
@@ -405,7 +406,7 @@ Poke.create(
   content: "I'll buy you a pony",
   sender: ferdi,
   receiver: avalon,
-  accepted: true
+  status: "rejected"
 )
 
 Poke.create(
