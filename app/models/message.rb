@@ -1,14 +1,8 @@
 class Message < ApplicationRecord
   belongs_to :poke
   belongs_to :user
-
   validates :content, presence: true
-
   after_create :broadcast_message
-
-  def from?(some_user)
-    some_user == user
-  end
 
   def broadcast_message
     ActionCable.server.broadcast("chat_room_#{poke.id}", {
