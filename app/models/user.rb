@@ -14,6 +14,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :date_of_birth, presence: true
   validates :gender, presence: true
+  validates :photo, presence: true
 
   def positive_age
     date_of_birth < Date.today

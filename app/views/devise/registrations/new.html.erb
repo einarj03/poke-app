@@ -41,8 +41,13 @@
               <%= f.input :interest_gender,
                           required: true,
                           input_html: { autocomplete: "interest_gender" } %>
-              <%= f.input :photo, required: true %>
-              <%= f.input :photo_cache, as: :hidden %>
+              <%= f.input :photo,
+                          required: true,
+                          input_html: { autocomplete: "interest_gender" } %>
+              <%= f.input :photo_cache,
+                          as: :hidden,
+                          required: true,
+                          input_html: { autocomplete: "interest_gender" } %>
 
             </div>
 
