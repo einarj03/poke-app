@@ -139,6 +139,8 @@
         <%= link_to user_path(User.fifth) do %>
           <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
         <% end %>
+        <%= link_to user_path(@users[13]) do %>
+          <div class="md-avatar pos-md-eight avatar-img" style="background-image: url('<%= cl_image_path @users[13].photo %>')"></div>
         <% end %>
       </div>
 
