@@ -1,38 +1,59 @@
 <div class="edit-questions-bg">
-  <div class="container">
+  <div class="edit-questions-container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-
-        <h3> You can add up to five Poke Questions to your profile </h3>
-
+        <div class="eq-headline">
+          <h3> Tell us your secrets! </h3>
+          <p> You can answer up to five questions </p>
+        </div>
         <!-- form simple form firdt input dropdown textre
         5.times do same form 5 times -->
 
         <% @questions.each do |question| %>
           <% if profile_answer = question.answered?(current_user) %>
-            <h6><%= question.content %></h6>
-            <p>
-              <%= profile_answer.answer %>
-              <%= render 'edit', profile_answer: profile_answer %>
-              <%= link_to "Delete", profile_answer_path(profile_answer), class: "btn btn-primary", method: :delete %>
-            </p>
+          <div class="eq-card">
+            <div class="question-to-edit">
+
+              <%= simple_form_for profile_answer do |f| %>
+                <%= f.input :answer, label: question.content %>
+                <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+                <%= f.button :button do %>
+                  <i class="fas fa-check"></i>
+                <% end %>
+                <%#= link_to "Delete", profile_answer_path(profile_answer), class: "btn btn-primary", method: :delete %>
+
+                <%= link_to profile_answer_path(profile_answer), method: :delete  do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
+
+              <% end %>
+            <!--   <h5> <%= question.content %> </h5>
+              <p> <%= profile_answer.answer %> </p>
+              <div class="eq-icon">
+                <%#= render 'edit', profile_answer: profile_answer %>
+              </div> -->
+            </div>
+          </div>
           <% else %>
-            <%= simple_form_for @profile_answer do |f| %>
-              <%= f.input :answer, label: question.content, input_html: { value: (f.object.answer.present?) ? f.object.answer : nil }%>
-              <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
-              <%= f.input :question_id, as: :hidden, input_html: { value: question.id } %>
-            <%= f.submit 'Add', class: "btn-primary btn" %>
-            <%= f.submit 'Next', class: "btn-primary btn" %>
-            <% end %>
-
-
+          <div class="eq-card">
+            <div class="question-to-edit">
+              <%= simple_form_for @profile_answer do |f| %>
+                <%= f.input :answer, label: question.content, input_html: { value: (f.object.answer.present?) ? f.object.answer : nil }%>
+                  <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+                  <%= f.input :question_id, as: :hidden, input_html: { value: question.id } %>
+                  <%= f.button :button do %>
+                    <i class="fas fa-check"></i>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
             <%# break %>
           <% end %>
         <% end %>
 
 
         <% if current_user.finished_quiz? %>
-          <%= link_to "SUBMIT THIS THING!!=", user_path(current_user)  %>
+          <%= link_to "Save all", user_path(current_user), class: "btn btn-primary"  %>
         <% end %>
       </div>
     </div>
