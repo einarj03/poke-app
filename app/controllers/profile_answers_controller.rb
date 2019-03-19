@@ -27,7 +27,7 @@ class ProfileAnswersController < ApplicationController
 
   def destroy
     @profile_answer.destroy
-    redirect_to profile_answers_path
+    redirect_to user_path(current_user)
   end
 
   private

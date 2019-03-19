@@ -20,18 +20,36 @@
     </div>
   </div>
   <div class="profile-qs">
-    <% @user.profile_answers.each do |profile_answer| %>
-    <% unless profile_answer.answer == "" %>
-      <div class="profile-q">
-        <h5 class="question"><%= profile_answer.question.content %></h5>
-        <h6 class="answer"><%= profile_answer.answer %></h6>
-      </div>
-    <% end %>
-    <% end %>
-  <div>
     <% if @user == current_user %>
-      <%= link_to "Profile Questions", profile_answers_path, class: "btn btn-primary" %>
+
+      <% @user.profile_answers.each do |profile_answer| %>
+        <% unless profile_answer.answer == "" %>
+          <div class="profile-q">
+            <h5 class="question"><%= profile_answer.question.content %></h5>
+            <h6 class="answer"><%= profile_answer.answer %></h6>
+            <%= render "profile_answers/edit", profile_answer: profile_answer %>
+          </div>
+        <% end %>
+      <% end %>
+      <%= link_to "Profile Questions", profile_answers_path, class: " pg-btn btn btn-primary" %>
+
+    <% else %>
+
+      <% @user.profile_answers.each do |profile_answer| %>
+        <% unless profile_answer.answer == "" %>
+          <div class="profile-q">
+            <h5 class="question"><%= profile_answer.question.content %></h5>
+            <h6 class="answer"><%= profile_answer.answer %></h6>
+          </div>
+        <% end %>
+      <% end %>
+
     <% end %>
-  </div>
+
+
+
+
+
+
   </div>
 </div>
