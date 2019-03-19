@@ -6,29 +6,7 @@
         <h1> <%= @other_user.first_name %> </h1>
       </div>
       <div class="messages-container">
-        <% if @poke.sender == current_user %>
-          <div class="message-container message-me">
-            <div class="message-text-me">
-              <%= @poke.content %>
-            </div>
-            <div class="avatar-container">
-              <div class="sm-avatar msg-avatar-right avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
-              </div>
-            </div>
-          </div>
-        <% else %>
-          <div class="message-container message-other">
-            <%= link_to user_path(@poke.sender) do %>
-              <div class="avatar-container">
-                <div class="sm-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @poke.sender.photo %>')">
-                </div>
-              </div>
-            <% end %>
-            <div class="message-text">
-              <%= @poke.content %>
-            </div>
-          </div>
-        <% end %>
+        <%= render 'messages/message', message: Message.new(content: @poke.content, user: @poke.sender) %>
         <% @messages.order(created_at: :asc).each do |message| %>
           <%= render 'messages/message', message: message %>
         <% end %>
