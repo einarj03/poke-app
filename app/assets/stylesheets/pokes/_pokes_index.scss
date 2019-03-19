@@ -1,3 +1,7 @@
+a:hover {
+  text-decoration: none;
+}
+
 .pokes-tabs {
   padding-top: 40px;
   margin-left: 20px;
@@ -11,12 +15,20 @@
   color: white;
   line-height: normal;
   font-size: 13px;
-  color: black;
+  color: white;
   // font-weight: bolder;
 
   &:hover {
-    text-decoration: none;
+    opacity: 0.8;
+    color: white;
   }
+
+  &.active {
+    color: $teal;
+    border-color: $teal;
+  }
+
+
 }
 
 .poke-container {
