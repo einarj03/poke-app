@@ -1,8 +1,7 @@
-<div class="pokes-index">
-  <div class="gradient-background-reverse">
+<div class="pokes-index gradient-background">
     <div class="pokes-tabs">
-      <%= link_to "Poked", "#", class: "tab" %>
-      <%= link_to "Pokes", "#", class: "tab" %>
+      <%= link_to "Poked", "#", class: "tab active" %>
+      <%= link_to "Pokes", "#", class: "tab inactive" %>
     </div>
     <div class="pokes-container">
       <% @sent_pokes.each do |poke|%>
@@ -29,7 +28,7 @@
       <% end %>
       <% @received_pokes.each do |poke|%>
         <%= link_to poke_path(poke) do %>
-          <div class="poke-container">
+          <div class="poke-container active">
             <%= cl_image_tag poke.sender.photo, class: "lg-avatar" %>
             <div class="poke-content">
               <h3 class="poke-name"><%= poke.sender.first_name %></h3>
@@ -42,5 +41,4 @@
         <% end %>
       <% end %>
     </div>
-  </div>
 </div>
