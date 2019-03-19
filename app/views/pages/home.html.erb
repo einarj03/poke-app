@@ -1,18 +1,61 @@
-<div class="page-content home-page" style="background-image: url('<%= image_path "home-page.png" %>');">
-  <div class="top-nav">
-    <h3 class="company-name">POKE</h3>
-    <%= link_to "Login", new_user_session_path %>
-  </div>
-  <div class="tagline-container">
-    <h3 class="tagline-first">You've got one shot to</h3>
-    <h2 class="tagline-second">break the ice</h2>
-    <div class="call-to-action">
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
-  </div>
+<div class="purple-background">
+  <div class="page-content home-page" style="background-image: url('<%= image_path "home-page.png" %>');">
+    <div class="top-nav">
+      <h3 class="company-name">POKE</h3>
+      <%= link_to "Login", new_user_session_path %>
     </div>
-  <div class="learn-more">
-      <p> Learn more </p>
-      <i class="fas fa-angle-down"></i>
+    <div class="tagline-container">
+      <h3 class="tagline-first">You've got one shot to</h3>
+      <h2 class="tagline-second">break the ice</h2>
+      <div class="call-to-action">
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+    </div>
+      </div>
+    <div class="learn-more">
+        <p> How To Poke: </p>
+        <i class="fas fa-angle-down"></i>
+    </div>
+
   </div>
+
+   <div class="how-it-works-container">
+
+    <div class="HIW-step-container">
+      <div class="background-number-one">
+       <p>1</p>
+      </div>
+
+
+      <div class="message-text-HIW">
+        <h2> See Someone </h2> <p> Check out profiles within 500 meters!</p>
+      </div>
+    </div>
+
+    <div class="HIW-step-container">
+      <div class="background-numbers">
+        <p>2</p>
+      </div>
+
+      <div class="message-text-HIW">
+        <h2> POKE! </h2> <p>POKE! You’ve got 1 shot – 1 message, 100 words, 1 picture – to get the person’s attention. Make it creative!</p>
+      </div>
+    </div>
+
+    <div class="HIW-step-container">
+      <div class="background-numbers">
+        <p>3</p>
+      </div>
+
+      <div class="message-text-HIW">
+        <h2> Meet </h2> <p> Your Pokee has 2 hours to accept your Poke. From here you each have a maximum of 10 messages to set up a date!</p>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="call-to-action-HIW">
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+    </div>
+
   </div>
 </div>

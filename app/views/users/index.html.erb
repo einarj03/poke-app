@@ -13,49 +13,53 @@
         <%= link_to user_path(User.third) do %>
           <div class="lg-avatar pos-lg-three avatar-img" style="background-image: url('<%= cl_image_path User.third.photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.first) do %>
-          <div class="lg-avatar pos-lg-four avatar-img" style="background-image: url('<%= cl_image_path User.first.photo %>')"></div>
+        <%= link_to user_path(User.fourth) do %>
+          <div class="lg-avatar pos-lg-four avatar-img" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.second) do %>
-          <div class="lg-avatar pos-lg-five avatar-img" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+        <%= link_to user_path(User.fifth) do %>
+          <div class="lg-avatar pos-lg-five avatar-img" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.third) do %>
-          <div class="lg-avatar pos-lg-six avatar-img" style="background-image: url('<%= cl_image_path User.third.photo %>')"></div>
+        <%= link_to user_path(@users[5]) do %>
+          <div class="lg-avatar pos-lg-six avatar-img" style="background-image: url('<%= cl_image_path @users[5].photo %>')"></div>
         <% end %>
       </div>
 
       <div class="middle-circle">
-        <%= link_to user_path(User.fifth) do %>
-          <div class="md-avatar pos-md-one avatar-img" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
+        <%= link_to user_path(@users[6]) do %>
+          <div class="md-avatar pos-md-one avatar-img" style="background-image: url('<%= cl_image_path @users[6].photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.fourth) do %>
-          <div class="md-avatar pos-md-two avatar-img" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
+        <%= link_to user_path(@users[7]) do %>
+          <div class="md-avatar pos-md-two avatar-img" style="background-image: url('<%= cl_image_path @users[7].photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.fifth) do %>
-          <div class="md-avatar pos-md-three avatar-img" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
-        <%= link_to user_path(User.fourth) do %>
-          <div class="md-avatar pos-md-four avatar-img" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
+        <%= link_to user_path(@users[8]) do %>
+          <div class="md-avatar pos-md-three avatar-img" style="background-image: url('<%= cl_image_path @users[8].photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.fifth) do %>
-          <div class="md-avatar pos-md-five avatar-img" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
+        <%= link_to user_path(@users[9]) do %>
+          <div class="md-avatar pos-md-four avatar-img" style="background-image: url('<%= cl_image_path @users[9].photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.fourth) do %>
-          <div class="md-avatar pos-md-six avatar-img" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
+        <%= link_to user_path(@users[10]) do %>
+          <div class="md-avatar pos-md-five avatar-img" style="background-image: url('<%= cl_image_path @users[10].photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.fifth) do %>
-          <div class="md-avatar pos-md-seven avatar-img" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
+        <%= link_to user_path(@users[11]) do %>
+          <div class="md-avatar pos-md-six avatar-img" style="background-image: url('<%= cl_image_path @users[11].photo %>')"></div>
         <% end %>
-        <%= link_to user_path(User.fourth) do %>
-          <div class="md-avatar pos-md-eight avatar-img" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
+        <%= link_to user_path(@users[12]) do %>
+          <div class="md-avatar pos-md-seven avatar-img" style="background-image: url('<%= cl_image_path @users[12].photo %>')"></div>
         <% end %>
+        <%= link_to user_path(@users[13]) do %>
+          <div class="md-avatar pos-md-eight avatar-img" style="background-image: url('<%= cl_image_path @users[13].photo %>')"></div>
         <% end %>
       </div>
 
       <div class="inner-circle">
-        <%= link_to user_path(User.second) do %>
-          <div class="sm-avatar pos-sm-one avatar-img" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <div class="sm-avatar pos-sm-two avatar-img" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
-          <div class="sm-avatar pos-sm-three avatar-img" style="background-image: url('<%= cl_image_path User.second.photo %>')"></div>
+        <%= link_to user_path(@users[14]) do %>
+          <div class="sm-avatar pos-sm-one avatar-img" style="background-image: url('<%= cl_image_path @users[14].photo %>')"></div>
+        <% end %>
+        <%= link_to user_path(@users[15]) do %>
+            <div class="sm-avatar pos-sm-two avatar-img" style="background-image: url('<%= cl_image_path @users[15].photo %>')"></div>
+        <% end %>
+        <%= link_to user_path(@users[16]) do %>
+            <div class="sm-avatar pos-sm-three avatar-img" style="background-image: url('<%= cl_image_path @users[16].photo %>')"></div>
         <% end %>
       </div>
     </div>
