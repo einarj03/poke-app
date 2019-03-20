@@ -14,7 +14,7 @@
     </div>
     <div class="profile-details">
       <h1 class="profile-name"><%= @user.first_name %></h1>
-      <% if @user == current_user %>
+      <% unless @user == current_user %>
         <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
       <% end %>
       <!-- <h3 class="profile-tagline">come poke me</h3> -->
