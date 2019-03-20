@@ -4,13 +4,13 @@ a:hover {
 
 .pokes-tabs {
   padding-top: 40px;
-  margin-left: 20px;
-  margin-bottom: 30px;
+  margin: 0 40px 30px 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tab {
   border-bottom: 2px solid #9E9E9E;
-  padding-right: 50px;
   margin-right: 5px;
   color: white;
   line-height: normal;
@@ -30,7 +30,7 @@ a:hover {
 }
 
 .poke-container {
-  display: none;
+  display: flex;
   align-items: center;
   color: black;
   padding: 10px;
@@ -38,9 +38,6 @@ a:hover {
   background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  &.active {
-    display: flex;
-  }
 
   .poke-content {
     margin-left: 10px;
@@ -77,5 +74,12 @@ a:hover {
     &.rejected {
       text-shadow: 0px 4px 4px rgba(255, 0, 0, 0.25);
     }
+  }
+}
+
+.sent-pokes, .received-pokes, .connections-pokes {
+  display: none;
+  &.active {
+    display: block;
   }
 }
