@@ -1,16 +1,20 @@
 const tabs = document.querySelectorAll('.tab');
-const pokeContainers = document.querySelectorAll('.poke-container')
+const sentPokes = document.querySelector('.sent-pokes');
+const receivedPokes = document.querySelector('.received-pokes')
+const connectionsPokes = document.querySelector('.connections-pokes')
 
 const initPokesIndexTabs = () => {
   tabs.forEach((tab) => {
     tab.addEventListener('click', (event) => {
       if (!(tab.classList.contains('active'))) {
-        tabs.forEach((tab) => {
-          tab.classList.toggle('active');
-        });
-        pokeContainers.forEach((pokeContainer) => {
-          pokeContainer.classList.toggle('active');
-        });
+        const activeTab = document.querySelector('.tab.active');
+        activeTab.classList.toggle('active');
+        event.target.classList.toggle('active');
+
+        const activeContainer = document.querySelector(`[data-anchor=${activeTab.dataset.target}]`)
+        const targetContainer = document.querySelector(`[data-anchor=${event.target.dataset.target}]`)
+        activeContainer.classList.toggle('active');
+        targetContainer.classList.toggle('active');
       }
     });
   });
