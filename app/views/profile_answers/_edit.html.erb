@@ -7,17 +7,17 @@
 <!-- Modal -->
 <div class="modal fade" id="answer-<%= profile_answer.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
+    <div class="modal-content questionedit">
+      <div class="modal-body questionedit">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
         <h5 class="modal-title" id="exampleModalLabel"><%= profile_answer.question.content %></h5>
         <%= simple_form_for profile_answer do |f| %>
-          <%= f.input :answer %>
+          <%= f.input :answer, label: false %>
           <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
           <%= f.submit 'Update', class: "btn-primary btn" %>
-          <%= link_to "Delete", profile_answer_path(profile_answer), class: "btn btn-primary", method: :delete %>
+          <%= link_to "Delete", profile_answer_path(profile_answer), class: "btn btn-success", method: :delete %>
         <% end %>
       </div>
     </div>
