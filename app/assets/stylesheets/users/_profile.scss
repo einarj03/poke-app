@@ -29,6 +29,10 @@
     .profile-name {
       line-height: normal;
       font-size: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90vw;
     }
 
     .profile-tagline {
@@ -90,12 +94,19 @@
 
 .pq-btn {
   margin-bottom: 10px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logout {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   color: white;
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
+.profile-edit {
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
 }
