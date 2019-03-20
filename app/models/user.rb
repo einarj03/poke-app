@@ -8,7 +8,6 @@ class User < ApplicationRecord
 
   has_many :profile_answers
   has_many :pokes
-  # has_many :messages, through: :pokes
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -33,21 +32,30 @@ class User < ApplicationRecord
   end
 
   def new_pokes_count
-    pokes = Poke.where(receiver: self)
-    pokes.count do |poke|
-      poke.created_at > self.last_sign_in_at
+    pokes = Poke.where(receiver: self.id)
+    counter = 0
+    pokes.each do |poke|
+      if poke.seen == false
+        counter += 1
+      end
     end
+    counter
   end
 
   def new_messages_count
-    total_count = 0
-    Poke.all.each do |poke|
-      if poke.receiver == self || poke.sender == self
-        total_count += poke.user_new_messages_count(self)
-      end
-    end
-    total_count
+    messages = Message.joins(:poke).where('pokes.sender_id = user_id OR pokes.receiver_id = user_id').where('messages.user_id = user_id')
+    messages.count
   end
+
+  # def new_messages_count
+  #   total_count = 0
+  #   Poke.all.each do |poke|
+  #     if poke.receiver == self
+  #       total_count += poke.user_new_messages_count(self)
+  #     end
+  #   end
+  #   total_count
+  # end
 
 
 end
