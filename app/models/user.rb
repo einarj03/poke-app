@@ -4,7 +4,7 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable #, :trackable
+         :recoverable, :rememberable, :validatable, :trackable
 
   has_many :profile_answers
   has_many :pokes
@@ -20,9 +20,9 @@ class User < ApplicationRecord
     date_of_birth < Date.today
   end
 
-  def last_sign_in_at
-    super || Time.now + 150
-  end
+  # def last_sign_in_at
+  #   super || Time.now + 150
+  # end
 
   def full_name
     "#{first_name} #{last_name}"
