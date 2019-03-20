@@ -1,0 +1,20 @@
+<div class="messages-heading">
+  <h3>Poke</h3>
+  <h1><%= @other_user.first_name %></h1>
+</div>
+<div class="poke-pending-container">
+  <div class="m-auto">
+    <div class="center-flex">
+      <div class="poke-photos">
+        <%= cl_image_tag current_user.photo, class: "lg-avatar avatar-img" %>
+        <%= cl_image_tag @other_user.photo, class: "lg-avatar avatar-img" %>
+      </div>
+    </div>
+    <div class="poke-pending-content">
+      <h3 class="good-shot">Good Shot!</h3>
+      <h5 class="time-text"><%= @other_user.first_name %> has</h5>
+      <h2 class="time"><%= @poke.time_left %></h2>
+      <h5 class="time-text">to accept your poke</h5>
+    </div>
+  </div>
+</div>

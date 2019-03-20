@@ -1,17 +1,18 @@
 class MessagesController < ApplicationController
-
-  # def index
-  #   @poke = Poke.find(params[:poke_id])
-  #   @messages = Message.where(poke: @poke).order(created_at: :desc).first(5)
-  #   @message = Message.new
-  # end
-
   def create
     @message = Message.create(message_params)
     if @message.save
-      redirect_to poke_path(@message.poke)
+      respond_to do |format|
+        format.html { redirect_to poke_path(@message.poke) }
+        format.js
+      end
     else
-      redirect_to new_user_poke_path(@message.user)
+      respond_to do |format|
+        @poke = Poke.new
+        @receiver = @message.poke.receiver
+        format.html { render 'pokes/new' }
+        format.js
+      end
     end
   end
 
@@ -20,5 +21,4 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content, :user_id, :poke_id)
   end
-
 end
