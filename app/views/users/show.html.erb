@@ -1,10 +1,5 @@
-<div class="page-content">
+<div class="page-content profile">
   <div class="profile-photo" style="background-image: url('<%= cl_image_path @user.photo %>');">
-    <div class="profile-photo-gradient">
-    </div>
-    <div class="profile-details">
-      <h1 class="profile-name"><%= @user.first_name %></h1>
-      <!-- <h3 class="profile-tagline">come poke me</h3> -->
       <div class="actions">
         <% if @user == current_user %>
           <%= link_to edit_user_registration_path do %>
@@ -17,6 +12,11 @@
           <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
         <% end %>
       </div>
+    <div class="profile-photo-gradient">
+    </div>
+    <div class="profile-details">
+      <h1 class="profile-name"><%= @user.first_name %></h1>
+      <!-- <h3 class="profile-tagline">come poke me</h3> -->
     </div>
   </div>
   <div class="profile-qs">
@@ -27,11 +27,15 @@
           <div class="profile-q">
             <h5 class="question"><%= profile_answer.question.content %></h5>
             <h6 class="answer"><%= profile_answer.answer %></h6>
-            <%= render "profile_answers/edit", profile_answer: profile_answer %>
+            <div class="q-edit">
+              <%= render "profile_answers/edit", profile_answer: profile_answer %>
+            </div>
           </div>
         <% end %>
       <% end %>
-      <%= link_to "Profile Questions", profile_answers_path, class: " pg-btn btn btn-primary" %>
+      <div class="pq-btn">
+        <%= link_to "Edit Profile Questions", profile_answers_path, class: "btn btn-primary" %>
+      </div>
 
     <% else %>
 

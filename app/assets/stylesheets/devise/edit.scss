@@ -1,0 +1,17 @@
+.editpage-background {
+  background-size: cover;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: white;
+  background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
+  min-height: calc(100vh - 50px);
+  padding: 20px;
+  h3 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .fas {
+    color: white;
+  }
+}
