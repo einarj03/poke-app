@@ -9,16 +9,18 @@
       <h2 class="tagline-second">break the ice</h2>
       <div class="call-to-action">
         <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
-    </div>
       </div>
-    <div class="learn-more">
-        <p> How To Poke: </p>
-        <i class="fas fa-angle-down"></i>
     </div>
+    <%= link_to '#learn-more', class: "learn-more-link" do %>
+      <div class="learn-more">
+          <p> How To Poke </p>
+          <i class="fas fa-angle-down"></i>
+      </div>
+    <% end %>
 
   </div>
 
-   <div class="how-it-works-container">
+   <div class="how-it-works-container" id="learn-more">
 
     <div class="HIW-step-container">
       <div class="background-number-one">
