@@ -14,7 +14,7 @@
         <p> Make it be awesome! </p>
         <div class="poke-suggestions-container">
           <% poke_suggestions.each do |suggestion| %>
-            <div class="poke-suggestions-content-container">
+            <div class="poke-suggestions-content-container" data-dismiss="modal" aria-label="Close">
               <%= suggestion.content %>
             </div>
           <% end %>
