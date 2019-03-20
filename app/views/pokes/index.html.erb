@@ -1,3 +1,5 @@
+<%= current_user.new_messages_count %>
+<%= current_user.new_pokes_count %>
 <div class="pokes-index gradient-background">
     <div class="pokes-tabs">
       <%= link_to "Poked", "#", class: "tab active" %>
@@ -12,6 +14,7 @@
               <h3 class="poke-name"><%= poke.receiver.first_name %></h3>
               <p class="poke-body"><strong> Poked
                 <%= poke.created_time %>
+                <%#= current_user.last_sign_in %>
               </strong></p>
             </div>
             <div class="poke-status">
@@ -42,3 +45,4 @@
       <% end %>
     </div>
 </div>
+
