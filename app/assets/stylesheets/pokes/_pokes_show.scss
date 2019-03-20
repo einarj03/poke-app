@@ -93,6 +93,9 @@
       opacity: 0.9;
     }
   }
+  .avatar-img {
+    flex-shrink: 0;
+  }
 }
 
 .message-content {
