@@ -1,0 +1,4 @@
+meta_product_name: "Poke"
+meta_title: "Poke - One shot to break the ice"
+meta_description: "Relevant description"
+meta_image: "cover.png" # should exist in `app/assets/images/`
