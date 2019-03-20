@@ -4,7 +4,9 @@ Message.destroy_all
 Poke.destroy_all
 User.destroy_all
 
-# QUESTIONS = ["question1", "question2"]
+
+# PICK UP LINE SUGGESTIONS
+
 PokeSuggestion.create(
   content: "Do you work at Starbucks? Because I like you a latte."
 )
@@ -14,44 +16,73 @@ PokeSuggestion.create(
 )
 
 PokeSuggestion.create(
+  content: "I’m not a photographer, but I can picture me and you together."
+)
+
+PokeSuggestion.create(
+  content: "What can I do to see you smile one more time?"
+)
+
+PokeSuggestion.create(
+  content: "If I had food in my teeth, would you tell me?"
+)
+
+PokeSuggestion.create(
+  content: "How can I come over to you without getting a drink splashed in my face?"
+)
+
+PokeSuggestion.create(
   content: "Are you an interior decorator? Because when I saw you, the entire room became beautiful."
 )
 
+# QUESTIONS = ["question1", "question2"]
 
 Question.create(
-  content: "Truth or Dare..."
+  content: "Truth or Dare...?"
 )
 
 Question.create(
-  content: "Preferred drink..."
+  content: "If I could donate a million Euros..."
 )
 
 Question.create(
-  content: "Go-to kareoke song is..."
+  content: "Two truths and a lie..."
 )
 
 Question.create(
-  content: "Best first date..."
+  content: "My go-to karaoke song is..."
 )
 
 Question.create(
-  content: "When your drunk what's the first thing you do..."
+  content: "The best first date would be..."
 )
 
 Question.create(
-  content: "Must-see movie..."
+  content: "The first thing I do when I'm drunk is..."
 )
 
 Question.create(
-  content: "My super power..."
+  content: "My must-see movie..."
 )
 
 Question.create(
-  content: "If you could teleport to anywhere this weekend it would be..."
+  content: "My super secret superpower..."
 )
 
 Question.create(
-  content: "Last thing you did for the first time..."
+  content: "If I could teleport to anywhere this weekend it would be..."
+)
+
+Question.create(
+  content: "The last thing I did for the first time..."
+)
+
+Question.create(
+  content: "I should be famous for..."
+)
+
+Question.create(
+  content: "If you ask my mom about me..."
 )
 
 einar = User.create(
