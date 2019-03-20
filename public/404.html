@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
+  .error-page-container {
+    margin-top: 0px;
+    position: relative;
+    align-items: center;
+  }
+
   .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
+    background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
+    min-height: calc(100vh - 50px);
+    overflow: auto;
+    padding-bottom: 20px;
   }
+
+  .background-404 {
+    position: absolute;
+  }
+
+  .background-404 p {
+      font-size: 95px;
+      line-height: 335px;
+      position: absolute;
+      opacity: .5;
+      font-weight: 800;
+      top:-60px;
+      margin-left: 20px;
+    }
 
   .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
     margin: 4em auto 0;
+    position: absolute;
+    margin-left: 10px;
   }
 
   .rails-default-error-page div.dialog > div {
@@ -23,12 +50,13 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    border-top: #6640A6 solid 4px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-color: white;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+    margin-top: 200px;
   }
 
   .rails-default-error-page h1 {
@@ -55,13 +83,22 @@
 </head>
 
 <body class="rails-default-error-page">
+
+<div class="error-page-container">
+
+    <div class="background-404">
+       <p> 404 <br> ERROR </p>
+    </div>
+
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+      <h1>Looks like our serves aren't Pokin each other correctly!</h1>
+      <p>Sorry for the hassel! You may have mistyped the address or the page may have moved. Please try again</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>Try reloading to keep pokin!</p>
   </div>
 </body>
+
+ </div>
 </html>
