@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
+  mount ActionCable.server => "/cable"
 
   # require "sidekiq/web"
   # authenticate :user, lambda { |u| u.admin } do
