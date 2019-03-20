@@ -52,15 +52,24 @@
   box-shadow: 0px 2px 4px rgba(#6c757d, 18);
   border-radius: 20px;
   color: white;
+  .btn {
+    margin: 2px;
+  }
+}
+
+.modal-content.questionedit {
+  margin-top: 50%;
 }
 
 .modal-dialog {}
 
-.modal-content {}
 
 .modal-header {}
 
-.modal-title {}
+.modal-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 .close {
   position: absolute !important;
