@@ -94,12 +94,15 @@
 
 .pq-btn {
   margin-bottom: 10px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logout {
   color: white;
   font-size: 14px;
+  font-weight: 400 !important;
 }
 
 .profile-edit {
