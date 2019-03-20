@@ -120,4 +120,43 @@
   }
 }
 
+.inspiration-message-container {
+  margin-bottom: 45px;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.message-background-one-shot {
+  z-index: 2;
+  position: absolute;
+  color: $light-purple;
+  margin-top: 75px;
+
+  p {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 125px;
+  opacity: .4;
+  text-align: center;
+  line-height: 115px;
+  }
+}
+
+.message-inspire {
+  position: absolute;
+  color: white;
+  padding: 9px 3px 1px 3px;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 220px;
+  z-index: 3;
+  text-align: center;
+  opacity: .6;
+
+  p {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+}
+
 
