@@ -37,4 +37,17 @@ class Poke < ApplicationRecord
       return output
     end
   end
+
+  def user_new_messages_count(current_user)
+    messages.count do |message|
+      message.created_at > current_user.last_sign_in_at && message.created_at < DateTime.now
+    end
+  end
+
+  # def new_message?(current_user)
+  #   messages = self.messages.where.not(user_id: current_user.id)
+  #   if messages.last != nil
+  #     return true if messages.last.created_at > current_user.last_sign_in_at
+  #   end
+  # end
 end
