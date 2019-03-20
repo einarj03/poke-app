@@ -2,7 +2,6 @@ const tabs = document.querySelectorAll('.tab');
 const sentPokes = document.querySelector('.sent-pokes');
 const receivedPokes = document.querySelector('.received-pokes')
 const connectionsPokes = document.querySelector('.connections-pokes')
-const pokeContainers = document.querySelectorAll('.poke-container')
 
 const initPokesIndexTabs = () => {
   tabs.forEach((tab) => {
