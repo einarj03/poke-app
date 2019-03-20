@@ -2,8 +2,8 @@
 <%#= current_user.new_pokes_count %>
 <div class="pokes-index gradient-background">
     <div class="pokes-tabs">
-      <%= link_to "Poked", "#", class: "tab active" %>
-      <%= link_to "Pokes", "#", class: "tab" %>
+      <%= link_to "Recieved Pokes", "#", class: "tab active" %>
+      <%= link_to "Sent Pokes", "#", class: "tab" %>
     </div>
     <div class="pokes-container">
       <% @sent_pokes.each do |poke|%>
