@@ -20,6 +20,10 @@ class User < ApplicationRecord
     date_of_birth < Date.today
   end
 
+  def last_sign_in_at
+    super || Time.now + 150
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end
@@ -31,7 +35,7 @@ class User < ApplicationRecord
   def new_pokes_count
     pokes = Poke.where(receiver: self)
     pokes.count do |poke|
-      poke.created_at > self.last_sign_in_at && poke.created_at < DateTime.now
+      poke.created_at > self.last_sign_in_at
     end
   end
 

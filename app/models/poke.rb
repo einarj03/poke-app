@@ -40,7 +40,7 @@ class Poke < ApplicationRecord
 
   def user_new_messages_count(current_user)
     messages.count do |message|
-      message.created_at > current_user.last_sign_in_at && message.created_at < DateTime.now
+      message.created_at > current_user.last_sign_in_at
     end
   end
 
