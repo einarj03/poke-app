@@ -29,6 +29,10 @@
     .profile-name {
       line-height: normal;
       font-size: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
 
     .profile-tagline {
@@ -94,8 +98,12 @@
 }
 
 .logout {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   color: white;
+  font-size: 14px;
+}
+
+.profile-edit {
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
 }
