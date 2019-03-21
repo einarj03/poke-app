@@ -5,8 +5,10 @@
     <div class="profile-details">
       <h1 class="profile-name">
         <%= @user.first_name %>
-        <%= link_to edit_user_registration_path, class: "profile-edit" do %>
-          <i class="fas fa-user-edit"></i>
+        <% if @user == current_user %>
+          <%= link_to edit_user_registration_path, class: "profile-edit" do %>
+            <i class="fas fa-user-edit"></i>
+          <% end %>
         <% end %>
       </h1>
       <div class="actions">
