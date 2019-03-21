@@ -561,13 +561,6 @@ Poke.create(
   receiver: victoria
 )
 
-5.times do
-  Message.create(
-    content: Faker::TvShows::Friends.quote,
-    user: User.last,
-    poke: Poke.last
-    )
-end
 
 
 

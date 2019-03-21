@@ -21,23 +21,20 @@
 
 
 .messages-heading {
-  padding: 40px;
-  position: relative;
-  // padding: 15px;
-    h3 {
-      position: absolute;
-      left: 25px;
-      top: 20px;
-      color: white;
-      font-weight: lighter;
-      font-variant: all-small-caps;
-      letter-spacing: 15px;
-    }
-    h1 {
-      position: absolute;
-      right: 25px;
-      top: 20px;
-    }
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: $dark-purple;
+  margin-bottom: 10px;
+  h3 {
+    color: white;
+    font-weight: lighter;
+    font-variant: all-small-caps;
+    letter-spacing: 15px;
+  }
 }
 
 .message-container {
