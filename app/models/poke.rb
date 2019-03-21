@@ -39,7 +39,7 @@ class Poke < ApplicationRecord
   end
 
   def time_left
-    t = DateTime.now + 1.hours - created_at.to_datetime
+    t = DateTime.now + 2.hours - created_at.to_datetime
     hours = (t * 24).to_i
     minutes = (t * 24 * 60).to_i
     seconds = (t * 24 * 60 * 60).to_i
