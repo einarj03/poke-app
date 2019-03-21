@@ -74,6 +74,7 @@
   position: sticky;
   bottom: 0;
   text-align: center;
+  z-index: 1041;
 }
 
 .btn-inspire {
@@ -83,10 +84,10 @@
 }
 
 .textfield-container {
-  border-top: 1px solid $light-purple;
-  width: 100%;
-  background-color: white;
+  margin: 0 auto;
+  background-color: $light-purple;
   align-self: center;
+  padding: 0 7%;
 }
 
 .m-fixed {
