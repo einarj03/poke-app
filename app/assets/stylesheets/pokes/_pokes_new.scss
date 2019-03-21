@@ -28,7 +28,8 @@
   position: sticky;
   top: 0;
   background-color: $dark-purple;
-  margin-bottom: 10px;
+  z-index: 2;
+  // margin-bottom: 10px;
   h3 {
     color: white;
     font-weight: lighter;
