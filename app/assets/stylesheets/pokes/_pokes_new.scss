@@ -70,7 +70,8 @@
 
 .messaging-container {
   flex: 1 0 auto;
-  position: relative;
+  position: sticky;
+  bottom: 0;
   text-align: center;
 }
 
