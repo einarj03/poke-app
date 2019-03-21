@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_170756) do
+ActiveRecord::Schema.define(version: 2019_03_21_113207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_03_19_170756) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "seen", default: false
     t.index ["poke_id"], name: "index_messages_on_poke_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
@@ -45,6 +46,9 @@ ActiveRecord::Schema.define(version: 2019_03_19_170756) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "pending"
+    t.boolean "seen", default: false
+    t.datetime "receiver_last_visit", default: -> { "CURRENT_TIMESTAMP" }
+    t.datetime "sender_last_visit", default: -> { "CURRENT_TIMESTAMP" }
   end
 
   create_table "profile_answers", force: :cascade do |t|

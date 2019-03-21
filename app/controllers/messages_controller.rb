@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
   def create
+    @messages.seen = true
+    @message.save!
     @message = Message.create(message_params)
     if @message.save
       respond_to do |format|
