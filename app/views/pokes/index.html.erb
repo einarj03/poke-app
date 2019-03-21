@@ -1,13 +1,17 @@
-<%#= current_user.new_messages_count %>
+<%= current_user.new_messages_count %>
+<%= current_user.new_pokes_count %>
 <div class="pokes-index gradient-background">
     <div class="pokes-tabs">
       <%= link_to "Recieved", "#", class: "tab active", data: { target: "received" } %>
+      <%#= current_user.new_pokes_count %>
       <%= link_to "Sent", "#", class: "tab", data: { target: "sent" } %>
       <%= link_to "Connections", "#", class: "tab", data: { target: "connections" } %>
+      <%#= current_user.new_messages_count %>
 
     </div>
     <div class="pokes-container">
       <div class="received-pokes active" data-anchor="received">
+
         <% @received_pokes.each do |poke|%>
           <%= render "poke", poke: poke, user: poke.sender %>
         <% end %>

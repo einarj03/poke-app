@@ -16,7 +16,9 @@
         </div>
         <%= link_to pokes_path, class: "navbar-messages" do %>
           <i class="fas fa-comment-alt"></i>
-          <%= current_user.new_pokes_count > 0 ? current_user.new_pokes_count : "" %>
+          <%#= current_user.new_message > 0 ? current_user.new_message : "" %>
+          <%#= current_user.new_pokes_count > 0 ? current_user.new_pokes_count : "" %>
+          <%= current_user.new_messages_count + current_user.new_pokes_count %>
         <% end %>
       </div>
     </div>
