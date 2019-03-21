@@ -43,7 +43,7 @@ class User < ApplicationRecord
   end
 
   def new_messages_count
-    messages = Message.joins(:poke).where('pokes.sender_id = user_id OR pokes.receiver_id = user_id').where('messages.user_id = user_id')
+    messages = Message.joins(:poke).where('pokes.sender_id = user_id OR pokes.receiver_id = user_id').where.not('messages.user_id = user_id')
     messages.count
     # counter = 0
     # messages.each do |message|
