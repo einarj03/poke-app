@@ -8,6 +8,12 @@
 .users-index-container {
   height: 200vh;
   width: 100%;
+  h2 {
+    margin-top: -25px;
+  }
+  p {
+    margin-top: 15px;
+  }
 }
 
 .orbit-container {
@@ -250,8 +256,16 @@
 .index-heading {
   position: sticky;
   color: white;
-  top: 30px;
-  left: 0;
-  right: 0;
+  // margin-top: 20px;
+  text-align: center;
 }
 
+// .index-heading h6 {
+//   position: absolute;
+//   top: 20px;
+// }
+
+// .index-heading h2 {
+//   position: absolute;
+//   top: 10px;
+// }

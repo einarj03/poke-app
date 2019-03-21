@@ -92,7 +92,7 @@ einar = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552907457/eww.jpg'
+  remote_photo_url: 'https://avatars1.githubusercontent.com/u/17878011?v=4'
 )
 
 ferdi = User.create(
@@ -112,17 +112,17 @@ darrick = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658312/dr_DaveChappelle_CS_w600_h389.jpg'
+  remote_photo_url: 'https://avatars0.githubusercontent.com/u/44401835?v=4'
 )
 
 victoria = User.create(
   first_name: "Tori",
-  last_name: "Yogi",
+  last_name: "Golightly",
   email: "victoria@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570370/0073_06813254_0740.jpg'
+  remote_photo_url: 'http://simpletwentysomething.com/wp-content/uploads/2018/12/IMG_5867-955x1024@2x.jpg'
 )
 
 andre = User.create(
@@ -146,23 +146,23 @@ inou = User.create(
 )
 
 jennifer = User.create(
-  first_name: "Jenny",
+  first_name: "Jennifer",
   last_name: "Lou",
-  email: "Jenjen@Jenny.com",
+  email: "Jennifer@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1553077066/pexels-photo-733872.jpeg.jpg'
+  remote_photo_url: 'https://scontent.fmad3-7.fna.fbcdn.net/v/t1.0-9/41269128_10216160512713112_6958566757254561792_o.jpg?_nc_cat=105&_nc_ht=scontent.fmad3-7.fna&oh=e79405fb540077e49005050cc317cee0&oe=5D4F2BB2'
 )
 
 avalon = User.create(
   first_name: "Avalon",
-  last_name: "Pony",
-  email: "Ava@pony.com",
+  last_name: "vdH",
+  email: "Avalon@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552572295/5e81371c890a88377dd2195a99d3deba.jpg'
+  remote_photo_url: 'https://scontent.fmad3-7.fna.fbcdn.net/v/t1.0-9/33609377_2006754169397298_4984177657152274432_o.jpg?_nc_cat=103&_nc_ht=scontent.fmad3-7.fna&oh=9994195294c95724a4746b073c5c766f&oe=5D01EA72'
 )
 
 picasso = User.create(
@@ -172,7 +172,7 @@ picasso = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552570529/220px-Jason_at_golf.jpg'
+  remote_photo_url: 'https://res-4.cloudinary.com/crunchbase-production/image/upload/c_thumb,h_256,w_256,f_auto,g_faces,z_0.7,q_auto:eco/t7qpgbljdc5isp3eoqi3'
 )
 
 jacob = User.create(
@@ -182,7 +182,7 @@ jacob = User.create(
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658889/main-qimg-0b9b9f17aafc49b6f5d60b31a894ad0e.png'
+  remote_photo_url: 'https://scontent.fmad3-8.fna.fbcdn.net/v/t1.0-9/10314756_10203865682633352_4354059326055160332_n.jpg?_nc_cat=108&_nc_ht=scontent.fmad3-8.fna&oh=e11081d024937b3867c83c746cb7061f&oe=5D17D6D3'
 )
 
 antoine = User.create(
@@ -195,84 +195,84 @@ antoine = User.create(
   remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552903656/5aa7dd877388d_man0.jpg'
 )
 
-edgar = User.create(
-  first_name: "Edgar",
-  last_name: "Elwin",
-  email: "EdgarE@mac.com",
-  password: "password",
-  date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552903656/close-up-serious-mans-face-with-hipster-mustache-and-beard-chroma-key-green-screen-background_brafdr9kx_thumbnail-full01.png'
-)
-
-raymond = User.create(
-  first_name: "Raymond",
-  last_name: "Jackson",
-  email: "bjackson@supa.com",
-  password: "password",
-  date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552579430/qehlhetqdlbn8rgzwdtg.gif'
-)
-
-donovan = User.create(
-  first_name: "Donovan",
-  last_name: "Jones",
-  email: "adrian@mac.com",
-  password: "password",
-  date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552904841/woman-confronts-man-entering-his-building13.jpg'
-)
-
-fasika = User.create(
-  first_name: "Fasika",
-  last_name: "Lem",
-  email: "africa@mac.com",
-  password: "password",
-  date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552904951/hqdefault.jpg'
-)
-
-christina = User.create(
-  first_name: "Christina",
-  last_name: "Yun",
-  email: "ChrisYun@yahoo.com",
+ellyn = User.create(
+  first_name: "Ellyn",
+  last_name: "Bsc",
+  email: "Ellyn@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552905068/beautiful_asian_girls_4.jpg'
+  remote_photo_url: 'https://scontent.fmad3-7.fna.fbcdn.net/v/t31.0-8/13268172_10207889734574214_6820227807929960753_o.jpg?_nc_cat=105&_nc_ht=scontent.fmad3-7.fna&oh=db9b4594c9c4244a1b9f5468e8eb4c35&oe=5D4CE996'
+)
+
+chris = User.create(
+  first_name: "Chris",
+  last_name: "B",
+  email: "chris@mac.com",
+  password: "password",
+  date_of_birth: Faker::Date.birthday(12, 65),
+  gender: "male",
+  remote_photo_url: 'https://avatars0.githubusercontent.com/u/27666567?v=4'
+)
+
+julia = User.create(
+  first_name: "Julia",
+  last_name: "S",
+  email: "julia@mac.com",
+  password: "password",
+  date_of_birth: Faker::Date.birthday(12, 65),
+  gender: "female",
+  remote_photo_url: 'https://avatars3.githubusercontent.com/u/45966114?v=4'
+)
+
+rebecca = User.create(
+  first_name: "Rebecca",
+  last_name: "Green",
+  email: "rebecca@mac.com",
+  password: "password",
+  date_of_birth: Faker::Date.birthday(12, 65),
+  gender: "female",
+  remote_photo_url: 'https://scontent.fmad3-8.fna.fbcdn.net/v/t31.0-8/18595201_10155375699508708_8494542241948096377_o.jpg?_nc_cat=108&_nc_ht=scontent.fmad3-8.fna&oh=f9e7592089383dd0bde60d24e10ef5c9&oe=5D128CBA'
 )
 
 marina = User.create(
   first_name: "Marina",
-  last_name: "K",
-  email: "marina@lewagon.com",
+  last_name: "Kjaer",
+  email: "marina@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552905353/maxresdefault.jpg'
+  remote_photo_url: 'https://scontent.fmad3-6.fna.fbcdn.net/v/t1.0-9/14691148_10154328390678801_6903469277469096535_n.jpg?_nc_cat=111&_nc_ht=scontent.fmad3-6.fna&oh=43b6793aadbfa15fc789c105d74783d7&oe=5D498B52'
+)
+
+antoine = User.create(
+  first_name: "Antoine",
+  last_name: "Ginger",
+  email: "antoine@mac.com",
+  password: "password",
+  date_of_birth: Faker::Date.birthday(12, 65),
+  gender: "male",
+  remote_photo_url: 'https://avatars3.githubusercontent.com/u/44864883?v=4'
 )
 
 valerie = User.create(
   first_name: "Valerie",
   last_name: "V",
-  email: "V@code.com",
+  email: "Valerie@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552905611/science_makeup.jpg'
+  remote_photo_url: 'https://scontent.fmad3-7.fna.fbcdn.net/v/t31.0-8/13738089_10154464328224170_1321423150436375485_o.jpg?_nc_cat=100&_nc_ht=scontent.fmad3-7.fna&oh=5338b8d4e4d520f3a06bed2ee2d9cd30&oe=5D0EE52B'
 )
 
-julia = User.create(
-  first_name: "Julia",
+augustin = User.create(
+  first_name: "Augustin",
   last_name: "W",
-  email: "Jewlz@oart.com",
+  email: "augustin@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552905602/271843A300000578-0-image-m-85_1427687461901.jpg'
+  gender: "male",
+  remote_photo_url: 'https://avatars1.githubusercontent.com/u/46055255?v=4'
 )
 
 stephanie = User.create(
@@ -285,84 +285,84 @@ stephanie = User.create(
   remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552905738/1395252161-attractive-women-more-pull-investors-answer.jpg'
 )
 
-lou = User.create(
-  first_name: "Louis",
-  last_name: "J",
-  email: "louey@yahoo.com",
+doncho = User.create(
+  first_name: "Dondon",
+  last_name: "P",
+  email: "Doncho@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658052/leonardo_dicaprio-gt.jpg'
+  remote_photo_url: 'https://scontent.fmad3-6.fna.fbcdn.net/v/t31.0-8/10517424_1069677773044548_748181538013369622_o.jpg?_nc_cat=109&_nc_ht=scontent.fmad3-6.fna&oh=f10f801ecf8d231d080288f25b9aa789&oe=5D1B8DBA'
 )
 
- gus = User.create(
-  first_name: "Gus",
+jordi = User.create(
+  first_name: "Jordi",
   last_name: "N",
-  email: "Zozo@yahoo.com",
+  email: "Jordi@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1553013333/Love-these-Glasses-very-classic-and-amazing-1.jpg'
+  remote_photo_url: 'https://avatars0.githubusercontent.com/u/46191243?v=4'
 )
 
-drake = User.create(
-  first_name: "Drake",
-  last_name: "D",
-  email: "Drizzy@supa.com",
+marin = User.create(
+  first_name: "Marin",
+  last_name: "B",
+  email: "Marin@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1553011064/768ad9b512d5190b4a7f9022ee8abe94.jpg'
+  remote_photo_url: 'https://scontent.fmad3-5.fna.fbcdn.net/v/t31.0-8/14361260_10209661265189457_619619398408859087_o.jpg?_nc_cat=102&_nc_ht=scontent.fmad3-5.fna&oh=277be96d25d62811f4c555c694d76b05&oe=5D18E5DB'
 )
 
-steven = User.create(
-  first_name: "Steven",
+nico = User.create(
+  first_name: "Nico",
   last_name: "M",
-  email: "Stev@oracle.com",
+  email: "nico@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1553011233/1oqoretilqna8xsftbxt62sniru5pgpo_0.jpg'
+  remote_photo_url: 'https://scontent.fmad3-6.fna.fbcdn.net/v/t31.0-8/11426805_10205889221282660_4812064409108246188_o.jpg?_nc_cat=111&_nc_ht=scontent.fmad3-6.fna&oh=c5c3f3e60b19e10b9304faef73b05e66&oe=5D057F04'
 )
 
-willy = User.create(
-  first_name: "Willy Wonka",
+paulus = User.create(
+  first_name: "Paulus",
   last_name: "D",
-  email: "coastarica@mac.com",
+  email: "Paulus@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
   gender: "male",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552658544/photo-1535441577682-5a7bc0702a7d.jpg'
+  remote_photo_url: 'https://avatars0.githubusercontent.com/u/18395225?v=4'
 )
 
-ami = User.create(
-  first_name: "Ami",
-  last_name: "P",
-  email: "ami@yahoo.com",
+pontus = User.create(
+  first_name: "Pontus",
+  last_name: "D",
+  email: "pontus@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552906873/girl-nature-bubbles-mood.jpg'
+  gender: "male",
+  remote_photo_url: 'https://avatars2.githubusercontent.com/u/45567309?v=4'
 )
 
-sarah = User.create(
-  first_name: "Sarah",
-  last_name: "L",
-  email: "sillysarah@Jenny.com",
+gus = User.create(
+  first_name: "Gus",
+  last_name: "De Vita",
+  email: "gus@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552906807/endurance-24-hours-of-the-nurburgring-2015-black-falcon-party-girl-on-the-starting-grid.jpg'
+  gender: "male",
+  remote_photo_url: 'https://scontent.fmad3-7.fna.fbcdn.net/v/t1.0-9/21765183_10155820552924459_1050900139843986205_n.jpg?_nc_cat=103&_nc_ht=scontent.fmad3-7.fna&oh=6598417ac8c0fc8f50f2cf9e0fa12cec&oe=5D508709'
 )
 
-helen = User.create(
-  first_name: "Helen",
-  last_name: "P",
-  email: "helentattoo@pony.com",
+ollie = User.create(
+  first_name: "Ollie",
+  last_name: "S",
+  email: "ollie@mac.com",
   password: "password",
   date_of_birth: Faker::Date.birthday(12, 65),
-  gender: "female",
-  remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1552906949/lilliya-scarlett-instagram-1528814125-custom-0.png'
+  gender: "male",
+  remote_photo_url: 'https://scontent.fmad3-5.fna.fbcdn.net/v/t31.0-8/10379731_10204209391928418_6532640256250207604_o.jpg?_nc_cat=102&_nc_ht=scontent.fmad3-5.fna&oh=efc63545400983768241f9f8170cbfc6&oe=5D49E4BF'
 )
 
 jordan = User.create(
@@ -455,8 +455,8 @@ izzy = User.create(
   remote_photo_url: 'https://res.cloudinary.com/poke-practice/image/upload/v1553009788/116.jpg'
 )
 
-ellyn = User.create(
-  first_name: "Ellyn",
+elena = User.create(
+  first_name: "Elena",
   last_name: "N",
   email: "FrenchWine@pony.com",
   password: "password",
@@ -488,7 +488,7 @@ User.all.each do |user|
     ProfileAnswer.create(
       user: user,
       question: Question.all.sample,
-      answer: Faker::Creature::Animal.name
+      answer: Faker::TvShows::Friends.quote
       )
   end
 end
@@ -560,7 +560,6 @@ Poke.create(
   sender: andre,
   receiver: victoria
 )
-
 
 
 
