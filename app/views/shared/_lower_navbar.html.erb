@@ -1,4 +1,4 @@
-<% if user_signed_in? && !current_page?(poke_path) %>
+<% if user_signed_in? && !(controller_name == "pokes" && (action_name == "show" || action_name == "new" )) %>
   <div class="navbar-space"></div>
   <div class="bottom-fixed">
     <div class="lower-navbar">
