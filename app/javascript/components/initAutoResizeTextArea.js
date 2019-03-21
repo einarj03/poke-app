@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 const initAutoResizeTextArea = () => {
-  console.log("init");
   $(document)
     .one('focus.autoExpand', 'textarea.autoExpand', function(){
         var savedValue = this.value;

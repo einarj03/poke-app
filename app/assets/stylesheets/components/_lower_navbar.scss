@@ -74,3 +74,13 @@
 .navbar-space {
   height: 35px;
 }
+
+.navbar-messages {
+  position: relative;
+}
+
+.nav-message-count {
+  position: absolute;
+  top: -1px;
+  left: 7px;
+}
