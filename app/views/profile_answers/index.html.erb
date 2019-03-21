@@ -2,6 +2,9 @@
   <div class="edit-questions-container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <%= link_to user_path(current_user), class: "back-btn" do %>
+            <i class="fas fa-chevron-left"></i>
+          <% end %>
         <div class="eq-headline">
           <h3> Tell us your secrets! </h3>
           <p> You can answer up to five questions </p>
