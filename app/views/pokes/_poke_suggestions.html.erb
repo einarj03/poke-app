@@ -2,24 +2,24 @@
   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
     Inspire me!
   </button>
-</div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body suggestions">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h5 class="modal-title" id="exampleModalLabel">You've got ONE SHOT </h5>
-        <p> Make it be awesome! </p>
-        <div class="poke-suggestions-container">
-          <% poke_suggestions.each do |suggestion| %>
-            <div class="poke-suggestions-content-container" data-dismiss="modal" aria-label="Close">
-              <%= suggestion.content %>
-            </div>
-          <% end %>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body suggestions">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="modal-title" id="exampleModalLabel">You've got ONE SHOT </h5>
+          <p> Make it be awesome! </p>
+          <div class="poke-suggestions-container">
+            <% poke_suggestions.each do |suggestion| %>
+              <div class="poke-suggestions-content-container" data-dismiss="modal" aria-label="Close">
+                <%= suggestion.content %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
