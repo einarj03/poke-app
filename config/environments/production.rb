@@ -85,7 +85,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   config.action_cable.url = "wss://www.pokemesoftly.com/cable"
-  config.action_cable.allowed_request_origins = [ "http://www.pokemesoftly.com", "https://www.pokemesoftly.com" ]
+  config.action_cable.allowed_request_origins = [ "http://www.pokemesoftly.com", "https://www.pokemesoftly.com", "http://www.pokemesoftly.com/*" ]
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
