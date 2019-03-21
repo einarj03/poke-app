@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_20_152850) do
+ActiveRecord::Schema.define(version: 2019_03_21_113207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2019_03_20_152850) do
     t.datetime "updated_at", null: false
     t.string "status", default: "pending"
     t.boolean "seen", default: false
+    t.datetime "receiver_last_visit", default: -> { "CURRENT_TIMESTAMP" }
+    t.datetime "sender_last_visit", default: -> { "CURRENT_TIMESTAMP" }
   end
 
   create_table "profile_answers", force: :cascade do |t|

@@ -1,5 +1,5 @@
 class PokesController < ApplicationController
-  before_action :find_poke, only: [:show, :update]
+  before_action :find_poke, only: [:show, :update, :update_last_seen]
   before_action :find_poke_suggestions, only: [:new, :create, :show]
 
   def index
@@ -33,17 +33,22 @@ class PokesController < ApplicationController
     else
       @other_user = current_user
     end
-    @messages.each do |message|
-      if message.seen == false
-        message.seen = true
-        message.save!
-      end
-    end
+    # @messages.each do |message|
+    #   if message.seen == false
+    #     message.seen = true
+    #     message.save!
+    #   end
+    # end
   end
 
   def update
     @poke.update(poke_params)
     redirect_to poke_path(@poke)
+  end
+
+  def update_last_seen
+    @poke.update_last_seen(current_user)
+    @poke.save!
   end
 
   private

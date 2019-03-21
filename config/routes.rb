@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   resources :profile_answers, only: [:edit, :update, :destroy, :index, :create]
 
   resources :pokes, only: [:index, :show, :create, :update] do
+    member do
+      patch "update_last_seen"
+    end
     resources :messages, only: [:index, :create]
   end
 
