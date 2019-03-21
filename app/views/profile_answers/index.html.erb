@@ -53,10 +53,8 @@
           <% end %>
         <% end %>
 
+        <%= link_to "Back to Profile", user_path(current_user), class: "btn btn-success"  %>
 
-        <% if current_user.finished_quiz? %>
-          <%= link_to "Save all", user_path(current_user), class: "btn btn-success"  %>
-        <% end %>
       </div>
     </div>
   </div>
