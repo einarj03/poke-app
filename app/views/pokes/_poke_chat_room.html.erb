@@ -1,7 +1,5 @@
 <div class="page-content messages-page">
-  <div class="heading-container">
-    <%= render "heading" %>
-  </div>
+  <%= render "heading" %>
   <div class="pokes-show gradient-background messenger">
     <div class="messages-container">
       <%= render 'messages/message', message: Message.new(content: @poke.content, user: @poke.sender), user_is_messages_author: current_user == @poke.sender %>
@@ -10,9 +8,7 @@
       <% end %>
     </div>
   </div>
-  <div class="messaging-container-holder">
-    <%= render 'messaging_container', message: @message, poke: @poke, poke_suggestions: @poke_suggestions %>
-  </div>
+  <%= render 'messaging_container', message: @message, poke: @poke, poke_suggestions: @poke_suggestions %>
 </div>
 <% content_for :after_js do %>
   <script>
