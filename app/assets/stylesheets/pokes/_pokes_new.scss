@@ -19,6 +19,7 @@
   }
 }
 
+
 .messages-heading {
   padding: 40px;
   position: relative;
@@ -96,7 +97,7 @@
 }
 
 .messaging-form {
-  background-color: $light-gray;
+  background-color: $light-purple;
   form {
     display: flex;
     align-items: center;
@@ -104,6 +105,9 @@
   }
 
   #message_content, #poke_content {
+    font-family: poppins;
+    width: 80vw;
+    border: 0.5px solid $light-gray;
     border-radius: 15px;
     flex: 1 1 auto;
     font-size: 14px;
@@ -113,10 +117,11 @@
   }
 
   .btn-send {
-    color: $purple;
+    color: white;
     font-size: 22px;
     border: none;
     background: none;
+    text-align: right;
   }
 }
 
@@ -155,8 +160,5 @@
 
   p {
   font-family: 'Roboto', sans-serif !important;
+  }
 }
-
-}
-
-

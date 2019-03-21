@@ -1,47 +1,27 @@
 <%#= current_user.new_messages_count %>
 <div class="pokes-index gradient-background">
     <div class="pokes-tabs">
-      <%= link_to "Poked  #{current_user.new_pokes_count > 0 ? current_user.new_pokes_count : "" }", "#", class: "tab active" %>
-      <%= link_to "Pokes #{current_user.new_messages_count > 0 ? current_user.new_messages_count : "" } ", "#", class: "tab" %>
+      <%= link_to "Recieved", "#", class: "tab active", data: { target: "received" } %>
+      <%= link_to "Sent", "#", class: "tab", data: { target: "sent" } %>
+      <%= link_to "Connections", "#", class: "tab", data: { target: "connections" } %>
+
     </div>
     <div class="pokes-container">
-      <% @sent_pokes.each do |poke|%>
-        <%= link_to poke_path(poke) do %>
-          <div class="poke-container">
-            <%= cl_image_tag poke.receiver.photo, class: "lg-avatar" %>
-            <div class="poke-content">
-              <h3 class="poke-name"><%= poke.receiver.first_name %></h3>
-              <p class="poke-body"><strong> Poked
-                <%= poke.created_time %>
-                <%#= current_user.last_sign_in %>
-              </strong></p>
-            </div>
-            <div class="poke-status">
-              <% if poke.status == "accepted" %>
-                <i class="fas fa-check accepted"></i>
-              <% elsif poke.status == "rejected" %>
-                <i class="fas fa-times rejected"></i>
-              <% else %>
-                <h3 class="poke-time-left"><%= poke.time_left %></h3>
-              <% end %>
-            </div>
-          </div>
+      <div class="received-pokes active" data-anchor="received">
+        <% @received_pokes.each do |poke|%>
+          <%= render "poke", poke: poke, user: poke.sender %>
         <% end %>
-      <% end %>
-      <% @received_pokes.each do |poke|%>
-        <%= link_to poke_path(poke) do %>
-          <div class="poke-container active">
-            <%= cl_image_tag poke.sender.photo, class: "lg-avatar" %>
-            <div class="poke-content">
-              <h3 class="poke-name"><%= poke.sender.first_name %></h3>
-              <p class="poke-body"><strong> Poked
-                <%= poke.created_time %>
-              </strong></p>
-            </div>
-            <h3 class="poke-time-left"><%= poke.time_left %></h3>
-          </div>
+      </div>
+      <div class="sent-pokes" data-anchor="sent">
+        <% @sent_pokes.each do |poke|%>
+          <%= render "poke", poke: poke, user: poke.receiver %>
         <% end %>
-      <% end %>
+      </div>
+      <div class="connections-pokes" data-anchor="connections">
+        <% @connections.each do |poke|%>
+          <%= render "poke", poke: poke, user: poke.sender == current_user ? poke.receiver : poke.sender %>
+        <% end %>
+      </div>
     </div>
 </div>
 

@@ -1,22 +1,20 @@
 <div class="page-content profile">
   <div class="profile-photo" style="background-image: url('<%= cl_image_path @user.photo %>');">
-      <div class="user-actions">
-        <% if @user == current_user %>
-          <%= link_to edit_user_registration_path do %>
-            <i class="fas fa-user-edit"></i>
-          <% end %>
-          <%= link_to destroy_user_session_path, method: :delete do %>
-            <i class="fas fa-sign-out-alt"></i>
-          <% end %>
-        <% end %>
-      </div>
     <div class="profile-photo-gradient">
     </div>
     <div class="profile-details">
-      <h1 class="profile-name"><%= @user.first_name %></h1>
-      <% unless @user == current_user %>
-        <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
-      <% end %>
+      <h1 class="profile-name">
+        <%= @user.first_name %>
+        <%= link_to edit_user_registration_path, class: "profile-edit" do %>
+          <i class="fas fa-user-edit"></i>
+        <% end %>
+      </h1>
+      <div class="actions">
+        <% unless @user == current_user %>
+          <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
+        <% end %>
+      </div>
+
       <!-- <h3 class="profile-tagline">come poke me</h3> -->
     </div>
   </div>
@@ -35,6 +33,7 @@
         <% end %>
       <% end %>
       <div class="pq-btn">
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "logout" %>
         <%= link_to "Edit Profile Questions", profile_answers_path, class: "btn btn-primary" %>
       </div>
 

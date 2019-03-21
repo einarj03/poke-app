@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 const initAutoResizeTextArea = () => {
+  console.log("init");
   $(document)
     .one('focus.autoExpand', 'textarea.autoExpand', function(){
         var savedValue = this.value;
@@ -13,7 +14,8 @@ const initAutoResizeTextArea = () => {
         this.rows = 1;
         rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 21) + 1;
         this.rows = rows;
-    });}
+    });
+}
 
 export { initAutoResizeTextArea };
 

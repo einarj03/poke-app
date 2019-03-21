@@ -3,8 +3,9 @@ class PokesController < ApplicationController
   before_action :find_poke_suggestions, only: [:new, :create, :show]
 
   def index
+    @received_pokes = Poke.where(receiver: current_user, status: "pending").order('created_at DESC')
     @sent_pokes = Poke.where(sender: current_user).order('created_at DESC')
-    @received_pokes = Poke.where(receiver: current_user).order('created_at DESC')
+    @connections = Poke.where(sender: current_user).or(Poke.where(receiver: current_user)).where(status: "accepted").order('created_at DESC')
   end
 
   def new
