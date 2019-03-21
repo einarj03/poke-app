@@ -1,4 +1,4 @@
-<% if user_signed_in? %>
+<% if user_signed_in? && !current_page?(poke_path) %>
   <div class="navbar-space"></div>
   <div class="bottom-fixed">
     <div class="lower-navbar">
