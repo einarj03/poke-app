@@ -1,10 +1,10 @@
 .page-content.messages-page {
   display: flex;
   flex-direction: column;
-  max-height: 94vh;
+  max-height: 100vh;
   .pokes-new, .pokes-show {
     &.gradient-background.messenger {
-    flex: 0 1 89vh;
+    flex: 0 1 96vh;
     min-height: 0;
     }
   }
@@ -13,7 +13,7 @@
 .pokes-new, .pokes-show, .pokes-index {
   &.gradient-background {
   background: linear-gradient(177.13deg, #300773 1.32%, rgba(73, 40, 127, 0.15) 98.68%);
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
   overflow: auto;
   padding-bottom: 20px;
   }
@@ -21,23 +21,21 @@
 
 
 .messages-heading {
-  padding: 40px;
-  position: relative;
-  // padding: 15px;
-    h3 {
-      position: absolute;
-      left: 25px;
-      top: 20px;
-      color: white;
-      font-weight: lighter;
-      font-variant: all-small-caps;
-      letter-spacing: 15px;
-    }
-    h1 {
-      position: absolute;
-      right: 25px;
-      top: 20px;
-    }
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: $dark-purple;
+  z-index: 2;
+  // margin-bottom: 10px;
+  h3 {
+    color: white;
+    font-weight: lighter;
+    font-variant: all-small-caps;
+    letter-spacing: 15px;
+  }
 }
 
 .message-container {
@@ -73,8 +71,10 @@
 
 .messaging-container {
   flex: 1 0 auto;
-  position: relative;
+  position: sticky;
+  bottom: 0;
   text-align: center;
+  z-index: 1041;
 }
 
 .btn-inspire {
@@ -84,10 +84,10 @@
 }
 
 .textfield-container {
-  border-top: 1px solid $light-purple;
-  width: 100%;
-  background-color: white;
+  margin: 0 auto;
+  background-color: $light-purple;
   align-self: center;
+  padding: 0 7%;
 }
 
 .m-fixed {
@@ -160,8 +160,5 @@
 
   p {
   font-family: 'Roboto', sans-serif !important;
+  }
 }
-
-}
-
-

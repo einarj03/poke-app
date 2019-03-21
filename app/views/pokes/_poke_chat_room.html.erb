@@ -1,9 +1,6 @@
 <div class="page-content messages-page">
+  <%= render "heading" %>
   <div class="pokes-show gradient-background messenger">
-    <div class="messages-heading">
-      <h3> Poke </h3>
-      <h1> <%= @other_user.first_name %> </h1>
-    </div>
     <div class="messages-container">
       <%= render 'messages/message', message: Message.new(content: @poke.content, user: @poke.sender), user_is_messages_author: current_user == @poke.sender %>
       <% @messages.order(created_at: :asc).each do |message| %>
