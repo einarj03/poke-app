@@ -24,7 +24,7 @@ class PokesController < ApplicationController
   end
 
   def show
-    @poke.seen = true
+    @poke.seen = true if poke.receiver == current_user
     @poke.save!
     @message = Message.new
     @messages = @poke.messages

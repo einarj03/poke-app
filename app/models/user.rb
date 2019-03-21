@@ -33,27 +33,14 @@ class User < ApplicationRecord
 
   def new_pokes_count
     pokes = Poke.where(receiver: self.id)
-    counter = 0
-    pokes.each do |poke|
-      if poke.seen == false
-        counter += 1
-      end
+    pokes.count do |poke|
+      !poke.seen
     end
-    counter
   end
 
   def new_messages_count
     messages = Message.joins(:poke).where('pokes.sender_id = user_id OR pokes.receiver_id = user_id').where.not('messages.user_id = user_id')
     messages.count
-    # counter = 0
-    # messages.each do |message|
-    #   if message.seen == false
-    #     counter += 1
-    #   elsif status == "pending"
-    #     counter += 1
-    #   end
-    # end
-    # counter
   end
 
   # def sum_notification
