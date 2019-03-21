@@ -31,8 +31,7 @@ class PokesController < ApplicationController
     if @poke.sender == current_user
       @other_user = @poke.receiver
     else
-      @other_user = current_user
-    end
+      @other_user = @poke.sender
     # @messages.each do |message|
     #   if message.seen == false
     #     message.seen = true
