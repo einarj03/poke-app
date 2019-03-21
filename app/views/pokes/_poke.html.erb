@@ -2,7 +2,12 @@
   <div class="poke-container">
     <%= cl_image_tag user.photo, class: "lg-avatar" %>
     <div class="poke-content">
-      <h3 class="poke-name"><%= user.first_name %></h3>
+      <h3 class="poke-name">
+        <%= user.first_name %>
+        <small>
+          <%= poke.new_messages_for(current_user) %>
+        </small>
+      </h3>
       <p class="poke-body"><strong> Poked
         <%= poke.created_time %>
         <%#= current_user.last_sign_in %>

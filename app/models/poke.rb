@@ -21,6 +21,23 @@ class Poke < ApplicationRecord
     end
   end
 
+  def sender_or_receiver(user)
+    receiver == user ? :receiver_last_visit : :sender_last_visit
+  end
+
+  def new_messages_for(user)
+    last_visit = send(sender_or_receiver(user))
+    messages.where.not(user_id: user.id).count do |msg|
+      msg.created_at > last_visit
+    end
+  end
+
+  def update_last_seen(user)
+    attribute = sender_or_receiver(user)
+    update_attribute(attribute, DateTime.now)
+    save
+  end
+
   def time_left
     t = DateTime.now + 1.hours - created_at.to_datetime
     hours = (t * 24).to_i
@@ -38,11 +55,7 @@ class Poke < ApplicationRecord
     end
   end
 
-  def user_new_messages_count(current_user)
-    messages.count do |message|
-      message.created_at > current_user.last_sign_in_at && message.created_at < DateTime.now
-    end
-  end
+
 
   # def new_message?(current_user)
   #   messages = self.messages.where.not(user_id: current_user.id)
