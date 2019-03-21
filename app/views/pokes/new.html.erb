@@ -1,9 +1,6 @@
 <div class="page-content messages-page">
   <div class="pokes-new gradient-background messenger">
-    <div class="messages-heading">
-      <h3>Poke</h3>
-      <h1><%= @receiver.first_name %></h1>
-    </div>
+    <%= render "heading" %>
     <div class="message-container">
         <%= link_to user_path(@receiver) do %>
           <div class="lg-avatar msg-avatar-left avatar-img" style="background-image: url('<%= cl_image_path @receiver.photo %>')">
