@@ -22,8 +22,10 @@
 
 .messages-heading {
   padding: 40px;
-  position: relative;
-  // padding: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #341E75;
+  margin-bottom: 10px;
     h3 {
       position: absolute;
       left: 25px;
