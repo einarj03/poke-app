@@ -20,7 +20,9 @@
           <%#= current_user.new_pokes_count > 0 ? current_user.new_pokes_count : "" %>
           <div class="nav-message-count">
             <% if current_user.new_messages_count + current_user.new_pokes_count > 0 %>
-              <%= current_user.new_messages_count + current_user.new_pokes_count %>
+              <div class="message-count">
+                <%= current_user.new_messages_count + current_user.new_pokes_count %>
+              </div>
             <% end %>
           </div>
         <% end %>
