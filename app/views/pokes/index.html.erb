@@ -1,11 +1,21 @@
-<%= current_user.new_messages_count %>
-<%= current_user.new_pokes_count %>
 <div class="pokes-index gradient-background">
     <div class="pokes-tabs">
-      <%= link_to "Recieved", "#", class: "tab active", data: { target: "received" } %>
+      <div class="received">
+        <%= link_to "Recieved", "#", class: "tab active", data: { target: "received" } %>
+        <div class="received-notification">
+          <%= current_user.new_pokes_count%>
+        </div>
+      </div>
       <%#= current_user.new_pokes_count %>
-      <%= link_to "Sent", "#", class: "tab", data: { target: "sent" } %>
-      <%= link_to "Connections", "#", class: "tab", data: { target: "connections" } %>
+      <div class="sent">
+        <%= link_to "Sent", "#", class: "tab", data: { target: "sent" } %>
+      </div>
+      <div class="messages">
+        <%= link_to "Connections", "#", class: "tab", data: { target: "connections" } %>
+        <div class="message-notification">
+          <%= current_user.new_messages_count%>
+        </div>
+      </div>
       <%#= current_user.new_messages_count %>
 
     </div>
