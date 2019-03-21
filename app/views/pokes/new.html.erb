@@ -17,19 +17,13 @@
     </div>
 
   <div class="inspiration-message-container">
-
     <div class="message-background-one-shot">
        <p> ONE SHOT </p>
     </div>
-
-    <div class="message-inspire">
-      <!--  <p>You only have one message.<br>Make it count!</p> -->
-    </div>
-
   </div>
 
+  <%= render 'poke_suggestions', poke_suggestions: @poke_suggestions %>
+
   </div>
-  <%= render 'messaging_container', poke: @poke, receiver: @receiver, poke_suggestions: @poke_suggestions
-   %>
+  <%= render 'messaging_container', poke: @poke, receiver: @receiver %>
 </div>
-<%#= render 'poke_suggestions', poke_suggestions: @poke_suggestions %>

@@ -32,12 +32,7 @@ class PokesController < ApplicationController
       @other_user = @poke.receiver
     else
       @other_user = @poke.sender
-    # @messages.each do |message|
-    #   if message.seen == false
-    #     message.seen = true
-    #     message.save!
-    #   end
-    # end
+    end
   end
 
   def update
