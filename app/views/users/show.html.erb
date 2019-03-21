@@ -13,7 +13,7 @@
       </h1>
       <div class="actions">
         <% unless @user == current_user %>
-          <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-primary" %>
+          <%= link_to "POKE", new_user_poke_path(@user), class: "btn btn-success" %>
         <% end %>
       </div>
 
@@ -36,7 +36,7 @@
       <% end %>
       <div class="pq-btn">
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "logout" %>
-        <%= link_to "Edit Profile Questions", profile_answers_path, class: "btn btn-primary" %>
+        <%= link_to "Edit Profile Questions", profile_answers_path, class: "btn btn-success" %>
       </div>
 
     <% else %>
