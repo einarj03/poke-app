@@ -1,211 +1,217 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <div class="page-content users-index">
   <div class="users-index-container">
-      <p align="center" class="index-heading"> WHO'S YOUR </p>
-      <h2 align="center" class="index-heading"> Next Shot ? </h2>
-    <div class="orbit-container orbit-one">
+    <p align="center" class="index-heading"> WHO'S YOUR </p>
+    <h2 align="center" class="index-heading"> Next Shot ? </h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 m-auto">
+          <div class="orbit-container orbit-one">
 
-      <div class="outer-circle circle-one">
-        <%= link_to user_path(User.first) do %>
-          <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.first.photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[1]) do %>
-          <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[1].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[2]) do %>
-          <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[2].photo %>')"></div>
-        <% end %>
-      </div>
+            <div class="outer-circle circle-one">
+              <%= link_to user_path(User.first) do %>
+                <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.first.photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[1]) do %>
+                <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[1].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[2]) do %>
+                <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[2].photo %>')"></div>
+              <% end %>
+            </div>
 
-      <div class="middle-circle circle-two">
-        <%= link_to user_path(@users[26]) do %>
-          <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[26].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[5]) do %>
-          <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[5].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[23]) do %>
-          <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[23].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[6]) do %>
-          <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[6].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[7]) do %>
-          <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[7].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[8]) do %>
-          <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[8].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[16]) do %>
-          <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[16].photo %>')"></div>
-        <% end %>
-      </div>
+            <div class="middle-circle circle-two">
+              <%= link_to user_path(@users[26]) do %>
+                <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[26].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[5]) do %>
+                <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[5].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[23]) do %>
+                <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[23].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[6]) do %>
+                <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[6].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[7]) do %>
+                <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[7].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[8]) do %>
+                <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[8].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[16]) do %>
+                <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[16].photo %>')"></div>
+              <% end %>
+            </div>
 
-      <div class="inner-circle circle-three">
-          <%= link_to user_path(@users[27]) do %>
-          <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[27].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[11]) do %>
-          <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[11].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[25]) do %>
-          <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[25].photo %>')"></div>
-          <% end %>
+            <div class="inner-circle circle-three">
+                <%= link_to user_path(@users[27]) do %>
+                <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[27].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[11]) do %>
+                <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[11].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[25]) do %>
+                <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[25].photo %>')"></div>
+                <% end %>
+            </div>
+          </div>
+
+          <div class="orbit-container orbit-two">
+
+            <div class="outer-circle circle-four">
+              <%= link_to user_path(@users[13]) do %>
+                <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[13].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[14]) do %>
+                <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[14].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[15]) do %>
+                <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[15].photo %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="middle-circle circle-five">
+              <%= link_to user_path(@users[9]) do %>
+                <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[9].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[17]) do %>
+                <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[17].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[18]) do %>
+                <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[18].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[19]) do %>
+                <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[19].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[20]) do %>
+                <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[20].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[21]) do %>
+                <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[21].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[22]) do %>
+                <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[22].photo %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="inner-circle circle-six">
+                <%= link_to user_path(@users[4]) do %>
+                <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[4].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[24]) do %>
+                <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[24].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[12]) do %>
+                <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[12].photo %>')"></div>
+                <% end %>
+            </div>
+          </div>
+
+          <div class="orbit-container orbit-three">
+
+            <div class="outer-circle circle-four">
+              <%= link_to user_path(@users[3]) do %>
+                <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[3].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[10]) do %>
+                <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[10].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[28]) do %>
+                <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[28].photo %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="middle-circle circle-five">
+              <%= link_to user_path(@users[29]) do %>
+                <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[29].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[30]) do %>
+                <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[30].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[31]) do %>
+                <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[31].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[32]) do %>
+                <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[32].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[33]) do %>
+                <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[33].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[34]) do %>
+                <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[34].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[35]) do %>
+                <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[35].photo %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="inner-circle circle-six">
+                <%= link_to user_path(@users[36]) do %>
+                <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[36].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[37]) do %>
+                <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[37].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[38]) do %>
+                <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[38].photo %>')"></div>
+                <% end %>
+            </div>
+          </div>
+
+          <div class="orbit-container orbit-four">
+
+            <div class="outer-circle circle-four">
+              <%= link_to user_path(@users[28]) do %>
+                <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[28].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[5]) do %>
+                <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[5].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[6]) do %>
+                <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[6].photo %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="middle-circle circle-five">
+              <%= link_to user_path(User.fifth) do %>
+                <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[11]) do %>
+                <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[11].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[32]) do %>
+                <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[32].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(User.fourth) do %>
+                <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[18]) do %>
+                <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[18].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[37]) do %>
+                <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[37].photo %>')"></div>
+              <% end %>
+              <%= link_to user_path(@users[7]) do %>
+                <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[7].photo %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="inner-circle circle-six">
+                <%= link_to user_path(@users[21]) do %>
+                <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[21].photo %>')"></div>
+                <% end %>
+      <!--           <%= link_to user_path(@users[35]) do %>
+                <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[35].photo %>')"></div>
+                <% end %>
+                <%= link_to user_path(@users[33]) do %>
+                <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[33].photo %>')"></div>
+                <% end %> -->
+            </div>
+          </div> <!-- //orbit 4 ends here// -->
+        </div>
       </div>
     </div>
-
-    <div class="orbit-container orbit-two">
-
-      <div class="outer-circle circle-four">
-        <%= link_to user_path(@users[13]) do %>
-          <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[13].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[14]) do %>
-          <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[14].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[15]) do %>
-          <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[15].photo %>')"></div>
-        <% end %>
-      </div>
-
-      <div class="middle-circle circle-five">
-        <%= link_to user_path(@users[9]) do %>
-          <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[9].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[17]) do %>
-          <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[17].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[18]) do %>
-          <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[18].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[19]) do %>
-          <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[19].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[20]) do %>
-          <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[20].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[21]) do %>
-          <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[21].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[22]) do %>
-          <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[22].photo %>')"></div>
-        <% end %>
-      </div>
-
-      <div class="inner-circle circle-six">
-          <%= link_to user_path(@users[4]) do %>
-          <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[4].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[24]) do %>
-          <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[24].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[12]) do %>
-          <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[12].photo %>')"></div>
-          <% end %>
-      </div>
-    </div>
-
-    <div class="orbit-container orbit-three">
-
-      <div class="outer-circle circle-four">
-        <%= link_to user_path(@users[3]) do %>
-          <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[3].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[10]) do %>
-          <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[10].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[28]) do %>
-          <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[28].photo %>')"></div>
-        <% end %>
-      </div>
-
-      <div class="middle-circle circle-five">
-        <%= link_to user_path(@users[29]) do %>
-          <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[29].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[30]) do %>
-          <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[30].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[31]) do %>
-          <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[31].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[32]) do %>
-          <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[32].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[33]) do %>
-          <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[33].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[34]) do %>
-          <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[34].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[35]) do %>
-          <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[35].photo %>')"></div>
-        <% end %>
-      </div>
-
-      <div class="inner-circle circle-six">
-          <%= link_to user_path(@users[36]) do %>
-          <div class="md-avatar pos-sm-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[36].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[37]) do %>
-          <div class="md-avatar pos-sm-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[37].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[38]) do %>
-          <div class="md-avatar pos-sm-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[38].photo %>')"></div>
-          <% end %>
-      </div>
-    </div>
-
-    <div class="orbit-container orbit-four">
-
-      <div class="outer-circle circle-four">
-        <%= link_to user_path(@users[28]) do %>
-          <div class="md-avatar pos-lg-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[28].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[5]) do %>
-          <div class="md-avatar pos-lg-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[5].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[6]) do %>
-          <div class="md-avatar pos-lg-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[6].photo %>')"></div>
-        <% end %>
-      </div>
-
-      <div class="middle-circle circle-five">
-        <%= link_to user_path(User.fifth) do %>
-          <div class="md-avatar pos-md-one avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fifth.photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[11]) do %>
-          <div class="md-avatar pos-md-two avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[11].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[32]) do %>
-          <div class="md-avatar pos-md-three avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[32].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(User.fourth) do %>
-          <div class="md-avatar pos-md-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path User.fourth.photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[18]) do %>
-          <div class="md-avatar pos-md-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[18].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[37]) do %>
-          <div class="md-avatar pos-md-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[37].photo %>')"></div>
-        <% end %>
-        <%= link_to user_path(@users[7]) do %>
-          <div class="md-avatar pos-md-seven avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[7].photo %>')"></div>
-        <% end %>
-      </div>
-
-      <div class="inner-circle circle-six">
-          <%= link_to user_path(@users[21]) do %>
-          <div class="md-avatar pos-sm-four avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[21].photo %>')"></div>
-          <% end %>
-<!--           <%= link_to user_path(@users[35]) do %>
-          <div class="md-avatar pos-sm-five avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[35].photo %>')"></div>
-          <% end %>
-          <%= link_to user_path(@users[33]) do %>
-          <div class="md-avatar pos-sm-six avatar-img" data-aos="fade-up" style="background-image: url('<%= cl_image_path @users[33].photo %>')"></div>
-          <% end %> -->
-      </div>
-    </div> <!-- //orbit 4 ends here// -->
   </div>
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
