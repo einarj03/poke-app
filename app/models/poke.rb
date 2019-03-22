@@ -3,6 +3,7 @@ class Poke < ApplicationRecord
   belongs_to :receiver, class_name: "User", foreign_key: "receiver_id"
   has_many :messages
   validates :content, presence: true
+  after_create :broadcast_notification
 
   def created_time
     t = DateTime.now - created_at.to_datetime
@@ -58,6 +59,11 @@ class Poke < ApplicationRecord
     end
   end
 
+  def broadcast_notification
+    ActionCable.server.broadcast("notifications_#{receiver_id}", {
+      sender_id: sender_id
+    })
+  end
 
 
   # def new_message?(current_user)
