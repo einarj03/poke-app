@@ -1,7 +1,9 @@
 <div class="inspire-me-container">
-  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-    Inspire me!
-  </button>
+  <% if @poke.id %>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+      Inspire me!
+    </button>
+  <% end %>
 
 <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
