@@ -1,5 +1,5 @@
 <div class="inspire-me-container">
-  <% if @poke.id %>
+  <% unless @poke.id %>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
       Inspire me!
     </button>
