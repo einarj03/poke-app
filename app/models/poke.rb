@@ -61,7 +61,7 @@ class Poke < ApplicationRecord
 
   def broadcast_notification
     ActionCable.server.broadcast("notifications_#{receiver_id}", {
-      sender_id: sender_id
+      sender: sender.first_name
     })
   end
 

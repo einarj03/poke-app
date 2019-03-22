@@ -34,8 +34,8 @@
         App['notifications_<%= current_user.id %>'] = App.cable.subscriptions.create(
           { channel: 'NotificationsChannel', user_id: <%= current_user.id %> },
           { received: (data) => {
-            document.insertAdjacentHTML('afterbegin',
-                `<div class="alert alert-info alert-dismissible fade show m-1" role="alert">${data.sender_id}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>`
+            document.querySelector('body').insertAdjacentHTML('afterbegin',
+                `<div class="alert alert-info alert-dismissible fade show m-1" role="alert">You've been poked!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>`
               )
             }
           })
