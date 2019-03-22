@@ -39,7 +39,7 @@ class Poke < ApplicationRecord
   end
 
   def time_left
-    t = DateTime.now + 2.hours - created_at.to_datetime
+    t = created_at.to_datetime + 2.hours - DateTime.now
     hours = (t * 24).to_i
     minutes = (t * 24 * 60).to_i
     seconds = (t * 24 * 60 * 60).to_i
@@ -49,8 +49,11 @@ class Poke < ApplicationRecord
     elsif minutes.positive?
       output = "#{minutes}m left"
       return output
-    else
+    elsif seconds.positive?
       output = "#{seconds}s left"
+      return output
+    else
+      output = "Expired"
       return output
     end
   end
